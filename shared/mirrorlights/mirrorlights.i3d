@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="mirrorlights.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Asset>
+        <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+    </Asset>
+    <Files>
+        <File fileId="9" filename="$data/shaders/vehicleShader.xml"/>
+        <File fileId="8" filename="$data/shared/default_specular.dds"/>
+        <File fileId="7" filename="$data/shared/window_diffuse.dds"/>
+        <File fileId="3" filename="Addons/MirrorLightsHanging/parts/Addons/Spiegellicht/parts/textures/chrom.dds"/>
+        <File fileId="1" filename="Addons/MirrorLightsHanging/parts/Addons/Spiegellicht/parts/textures/lights.dds"/>
+    </Files>
+    <Materials>
+        <Material name="default" materialId="42" alphaBlending="true" customShaderId="9" customShaderVariation="staticLight">
+            <Texture fileId="7"/>
+            <Glossmap fileId="8"/>
+        </Material>
+        <Material name="highline_cab_2:_vehicle_truck_scania_chrom__dif_spec_add_env_nofresnel__chrom_dds1" materialId="71" specularColor="0.337255 1 0.337255">
+            <Texture fileId="3"/>
+        </Material>
+        <Material name="lollipop:acmat_1" materialId="78" specularColor="0.27451 1 0.27451">
+            <Texture fileId="1"/>
+        </Material>
+        <Material name="plain_dds1" materialId="140" diffuseColor="0 0 0 1" specularColor="1 1 0"/>
+    </Materials>
+    <Shapes externalShapesFile="mirrorlights.i3d.shapes"/>
+    <Dynamics/>
+    <Scene>
+        <TransformGroup name="mirrorLightSet" translation="0 -1.56681 -0.989326" scale="0.982838 1 1" nodeId="1308">
+            <Shape shapeId="1" name="Hella_windows" translation="0.00129448 0.49 0.251" clipDistance="200" nodeId="1309" materialIds="78,71,140" receiveShadows="true"/>
+            <Shape shapeId="2" name="LeftFront" translation="1.36259 2.602 2.688" rotation="90 0 0" scale="0.058 0.058 0.058" clipDistance="200" nodeId="1310" materialIds="42" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="2" name="RightFront" translation="-1.35755 2.60229 2.688" rotation="90 0 0" scale="0.058 0.058 0.058" clipDistance="200" nodeId="1311" materialIds="42" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="2" name="LeftRear" translation="1.36225 2.60229 2.65" rotation="90 180 0" scale="0.058 0.058 0.058" clipDistance="200" nodeId="1312" materialIds="42" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="2" name="rightRear" translation="-1.3598 2.60229 2.65" rotation="90 180 0" scale="0.058 0.058 0.058" clipDistance="200" nodeId="1313" materialIds="42" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+    </Scene>
+</i3D>

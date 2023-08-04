@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>DennisK</translationContributors>
+	
+	<!-- $l10n_ -->
+
+    <texts>
+		<text name="configuration_chassistype" 				text="Soort chassis"/>
+		<text name="configuration_chassistype_semi" 		text="Trekker"/>
+		<text name="configuration_chassistype_baler" 		text="Balenwagen"/>
+		<text name="configuration_wheelbrand" 				text="Merk wielen"/>
+		<text name="configuration_hubs_default" 			text="Standaard steekassen"/>
+		<text name="configuration_hubs_heavy" 				text="Verzwaarde steekassen"/>
+		<text name="configuration_nokian_wheelrings" 		text="Wielringen"/>
+		<text name="configuration_lizard_wheelrings" 		text="Wielringen"/>
+		<text name="configuration_rimcolor" 				text="Kleur wielen"/>
+		<text name="configuration_engine" 					text="Soort motor"/>
+		
+		<text name="configuration_tensionbelts" 			text="Spanbanden"/>
+		<text name="configuration_tensionbelts_yes" 		text="Gebruik spanbanden"/>
+		<text name="configuration_tensionbelts_no" 			text="Geen spanbanden"/>
+		
+		<text name="configuration_cabinetype" 				text="Soort cabine"/>
+		<text name="configuration_cabinetype_ComfortCab"	text="Comfort Cab"/>
+		<text name="configuration_cabinetype_SpaceCab" 		text="Space Cab"/>
+		
+		<text name="configuration_bullbar" 					text="Koeienvanger"/>
+		<text name="configuration_bullbar_no" 				text="Niks"/>
+		<text name="configuration_bullbar_bullbar" 			text="Alleen koeienvanger"/>
+		<text name="configuration_bullbar_stonecatcher" 	text="Alleen stenenvanger"/>
+		<text name="configuration_bullbar_both" 			text="Koeienvanger & stenenvanger"/>
+			
+		<text name="configuration_exhaust" 					text="Soort uitlaat"/>
+		<text name="configuration_exhaust_stacks" 			text="Staande uitlaten"/>
+		<text name="configuration_exhaust_side" 			text="Sidepipes"/>
+		
+		<text name="configuration_ramps" 					text="Oprijplaten"/>
+		<text name="configuration_ramps_yes" 				text="Met oprijplaten"/>
+		<text name="configuration_ramps_no" 				text="Zonder oprijplaten"/>
+		
+		<text name="vehicle_color" 							text="Kleur voertuig"/>
+		
+		
+		
+    </texts>
+</l10n>

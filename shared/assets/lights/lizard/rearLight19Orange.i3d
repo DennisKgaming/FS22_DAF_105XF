@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="rearLight19Orange.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="2" filename="$data/shared/assets/lights/lizard/rearLight19_normal.png"/>
+    <File fileId="3" filename="$data/shared/assets/lights/lizard/rearLight19_vmask.png"/>
+    <File fileId="8" filename="$data/shared/clearPlastic_diffuse.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="clearPlastic_mat" materialId="5" alphaBlending="true" customShaderId="4" customShaderVariation="staticLight">
+      <Texture fileId="8"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="rearLight19_mat" materialId="6" diffuseColor="0.498039 0.498039 0.498039 1" customShaderId="4" customShaderVariation="staticLight">
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="colorMat0" value="1 1 1 2"/>
+      <CustomParameter name="colorMat1" value="1 0.25 0 2"/>
+      <CustomParameter name="colorMat2" value="0.5 0 0 2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="rearLight19Orange.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="rearLight19Orange" clipDistance="300" nodeId="11" materialIds="6" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="2" name="innerPartStatic" clipDistance="75" nodeId="12" materialIds="6" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+        <Shape shapeId="3" name="glassStatic" translation="-6.19507e-05 0.0778647 -9.33362e-05" clipDistance="75" nodeId="13" materialIds="5" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+      </Shape>
+  </Scene>
+
+</i3D>

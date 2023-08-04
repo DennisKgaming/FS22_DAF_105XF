@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/vehicle_sounds.xsd">
+    <motorized>
+        <sounds>
+			<motorStart template="TRUCK_MOTOR_START" file="sounds/engine_on.ogg" linkNode="0>"/>
+			<motorStop template="TRUCK_MOTOR_STOP" file="sounds/engine_off.ogg" linkNode="0>"/>
+
+			<motor template="TRUCK_MOTOR_IDLE" file="sounds/engine_idle.ogg" linkNode="0>"/>
+			<motor template="TRUCK_MOTOR_OFFLOAD_RUN" file="sounds/engine_Run.ogg" linkNode="0>"/>
+			<motor template="TRUCK_MOTOR_ONLOAD_RUN" file="sounds/engine_Load.ogg" linkNode="0>"/>
+			
+			<retarder file="sounds/engine_Brake.ogg" linkNode="0>" innerRadius="23.5" outerRadius="110.0" >
+				<volume indoor="1.0" outdoor="1.0" >
+					<modifier type="SPEED" value="5.0" modifiedValue="0.0"/>
+					<modifier type="SPEED" value="30.0" modifiedValue="0.6"/>
+					<modifier type="SPEED" value="60.0" modifiedValue="0.9"/>
+					<modifier type="SPEED" value="100.0" modifiedValue="1.1"/>
+					<modifier type="ACCELERATE" value="0" modifiedValue="1.0"/>
+					<modifier type="ACCELERATE" value="0.01" modifiedValue="0.0"/>
+					<modifier type="CRUISECONTROL" value="0" modifiedValue="1.0"/>
+					<modifier type="CRUISECONTROL" value="0.01" modifiedValue="0.0"/>
+				</volume>
+				<pitch indoor="1" outdoor="1" >
+					<modifier type="SPEED" value="5.0" modifiedValue="0.7"/>
+					<modifier type="SPEED" value="30.0" modifiedValue="0.9"/>
+					<modifier type="SPEED" value="60.0" modifiedValue="1.1"/>
+					<modifier type="SPEED" value="120.0" modifiedValue="1.4"/>
+				</pitch>
+				<lowpassGain indoor="0.80" outdoor="1.0" />
+			</retarder>
+			
+			<motor template="indoorCabinRumble" />
+			
+            <gearbox template="transmissionLarge" file="sounds/turbo.wav" pitchScale="0.7" volumeScale="0.15"/>
+            
+			
+            <compressedAir template="compressedAir" file="sounds/AirRelease.ogg" linkNode="0>"/>
+            <airCompressorRun template="brakeCompressorLarge" file="sounds/CompressorIdle.ogg" linkNode="0>" />
+            <airCompressorStop template="compressedAir" file="sounds/CompressorStop.ogg" linkNode="0>" />
+            <airRelease template="TRUCK_BRAKE_REGULATOR_VALVE" file="sounds/BrakeOn.ogg" linkNode="0>" />
+            <gearLeverStart template="gearDisengaged"/>
+            <gearLeverEnd template="gearEngaged"/>
+            <reverseDrive template="REVERSE_BEEP_03" file="sounds/Reverse.ogg" linkNode="0>" />
+        </sounds>
+    </motorized>
+
+    <lights>
+        <sounds>
+            <toggleLights template="SWITCH_01" />
+            <turnLight template="SWITCH_TURNLIGHT" />
+        </sounds>
+    </lights>
+
+    <attacherJoints>
+        <sounds>
+            <attach template="truckAttach" linkNode="0>" />
+            <detach template="truckDetach" linkNode="0>" />
+            <hydraulic template="defaultHydraulicSound" />
+        </sounds>
+    </attacherJoints>
+
+    <drivable>
+        <sounds>
+            <waterSplash template="WATER_SPLASH_01" />
+        </sounds>
+    </drivable>
+	
+	<cylindered> 
+        
+        <sounds>
+			<!-- <hydraulic template="AR" file="$data/sounds/tools/baler/baler_knot_cleaning.ogg" linkNode="LiftableLeft" /> -->
+        </sounds>
+		
+    </cylindered>
+
+    <honk>
+        <sound template="HONK_TRUCK" volumeScale="1.5"/>
+    </honk>
+</sounds>

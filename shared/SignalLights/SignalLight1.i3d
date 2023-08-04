@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="SignalLight1.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+  </Asset>
+
+  <Files>
+  </Files>
+
+
+  <Materials>
+  </Materials>
+
+
+  <Shapes>
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <TransformGroup name="SignalLight1" clipDistance="300" nodeId="10">
+        <TransformGroup name="Glas" clipDistance="300" nodeId="11"/>
+        <TransformGroup name="Reflector" clipDistance="300" nodeId="12"/>
+        <TransformGroup name="SignalLight_STATIC" translation="0 0 0.000546259" clipDistance="800" nodeId="13"/>
+      </TransformGroup>
+  </Scene>
+
+</i3D>

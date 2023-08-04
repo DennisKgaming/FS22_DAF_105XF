@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>DennisK</translationContributors>
+	
+	<!-- $l10n_ -->
+
+    <texts>
+		<text name="configuration_chassistype" 				text="Chassis type"/>
+		<text name="configuration_chassistype_semi" 		text="Semi"/>
+		<text name="configuration_chassistype_baler" 		text="Baler"/>
+		<text name="configuration_wheelbrand" 				text="Wheel Brand"/>
+		<text name="configuration_hubs_default" 			text="Default Hubs"/>
+		<text name="configuration_hubs_heavy" 				text="Heavy Hubs"/>
+		<text name="configuration_nokian_wheelrings" 		text="Wheelrings"/>
+		<text name="configuration_lizard_wheelrings" 		text="Wheelrings"/>
+		<text name="configuration_rimcolor" 				text="Rim color"/>
+		<text name="configuration_engine" 					text="Engine setup"/>
+		
+		<text name="configuration_tensionbelts" 			text="Tensionbelts"/>
+		<text name="configuration_tensionbelts_yes" 		text="Use tensionbelts"/>
+		<text name="configuration_tensionbelts_no" 			text="No tensionbelts"/>
+		
+		<text name="configuration_cabinetype" 				text="Cabine type"/>
+		<text name="configuration_cabinetype_ComfortCab"	text="Comfort Cab"/>
+		<text name="configuration_cabinetype_SpaceCab" 		text="Space Cab"/>
+		
+		<text name="configuration_bullbar" 					text="Bullbar"/>
+		<text name="configuration_bullbar_no" 				text="None"/>
+		<text name="configuration_bullbar_bullbar" 			text="Bullbar only"/>
+		<text name="configuration_bullbar_stonecatcher" 	text="Stonecatcher only"/>
+		<text name="configuration_bullbar_both" 			text="Bullbar & stonecatcher"/>
+			
+		<text name="configuration_exhaust" 					text="Exhaust type"/>
+		<text name="configuration_exhaust_stacks" 			text="Stacks"/>
+		<text name="configuration_exhaust_side" 			text="Sidepipes"/>
+		
+		<text name="configuration_ramps" 					text="Ramps"/>
+		<text name="configuration_ramps_yes" 				text="With ramps"/>
+		<text name="configuration_ramps_no" 				text="Without ramps"/>
+		
+		<text name="vehicle_color" 							text="Vehicle color"/>
+		
+		<text name="PalletAutoload_Trailer" 				text="Pallet Autoload"/>
+		
+		
+		<text name="function_PalletAutoload_Trailer" 		text="Autoload for pallets"/>
+		<text name="configuration_palletLoadingWagonNormal" text="Autoload for pallets normal"/>
+		<text name="configuration_palletLoadingWagonMax" 	text="Autoload for pallets extreme"/>
+		<text name="configuration_PalletAutoload_Trailer" 	text="Pallet Autoload"/>
+		<text name="configuration_autoLoad_dis" 			text="Pallet Autoload disabled"/>
+		
+		
+		
+    </texts>
+</l10n>
