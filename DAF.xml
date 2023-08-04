@@ -674,10 +674,6 @@
             <beaconLight node="spaceCab_beacon_01" 		filename="$data/shared/assets/beaconLights/lizard/beaconLight01.xml"/>
             <beaconLight node="spaceCab_beacons_02" 	filename="$data/shared/assets/beaconLights/lizard/beaconLight01.xml"/>
 
-            <!-- Flashers -->
-           <!--  <beaconLight node="flasherL_01" 			filename="shared/SignalLights/SignalLight1.xml"/>
-            <beaconLight node="flasherR_01" 			filename="shared/SignalLights/SignalLight2.xml"/> -->
-            <!-- Flashers -->
 
         </beaconLights>
 		<!-- @todo Looks like these aren't working -->

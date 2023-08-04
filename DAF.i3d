@@ -19,18 +19,18 @@
     <File fileId="40" filename="$data/shared/default_specular.dds"/>
     <File fileId="52" filename="$data/shared/window_diffuse.dds"/>
     <File fileId="69" filename="$data/shared/window_specular.dds"/>
-    <File fileId="3" filename="Wheels/Texture/Onzichtbaar.dds"/>
-    <File fileId="42" filename="shared/cvet_spec_dirt3.dds"/>
-    <File fileId="21" filename="shared/dirt_lite.dds"/>
-    <File fileId="5" filename="shared/gen_dirt_1.dds"/>
-    <File fileId="140" filename="shared/spec.dds"/>
-    <File fileId="45" filename="shared/window_specular.png"/>
-    <File fileId="110" filename="texture/Ashray B.dds"/>
-    <File fileId="111" filename="texture/Ashray S.dds"/>
+    <File fileId="3" filename="Wheels/Texture/transparent.dds"/>
+    <File fileId="42" filename="texture/cvet_spec_dirt3.dds"/>
+    <File fileId="21" filename="texture/dirt_lite.dds"/>
+    <File fileId="5" filename="texture/gen_dirt_1.dds"/>
+    <File fileId="140" filename="texture/spec.dds"/>
+    <File fileId="45" filename="texture/window_specular.png"/>
+    <File fileId="110" filename="texture/Ashray_B.dds"/>
+    <File fileId="111" filename="texture/Ashray_S.dds"/>
     <File fileId="49" filename="texture/Blauw.png"/>
     <File fileId="123" filename="texture/BoardComputerOFF.dds"/>
     <File fileId="124" filename="texture/BoardComputerON.dds"/>
-    <File fileId="125" filename="texture/BoardComputerVP.dds"/>
+    <File fileId="125" filename="texture/BoardComputer.dds"/>
     <File fileId="129" filename="texture/C12.dds"/>
     <File fileId="114" filename="texture/CigTexture_notlit.png"/>
     <File fileId="86" filename="texture/Cuir.dds"/>
@@ -39,26 +39,26 @@
     <File fileId="16" filename="texture/Gris1.dds"/>
     <File fileId="15" filename="texture/Gris2.dds"/>
     <File fileId="33" filename="texture/Gris3.dds"/>
-    <File fileId="47" filename="texture/KentekenBaler.dds"/>
-    <File fileId="101" filename="texture/Monster E..dds"/>
-    <File fileId="74" filename="texture/Monster E.dds"/>
+    <File fileId="47" filename="texture/LPBaler.dds"/>
+    <File fileId="101" filename="texture/Monster_E_1.dds"/>
+    <File fileId="74" filename="texture/Monster_E_2.dds"/>
     <File fileId="11" filename="texture/Noir3.dds"/>
     <File fileId="133" filename="texture/Plaat_diffuse.dds"/>
     <File fileId="19" filename="texture/Ref.jpg"/>
     <File fileId="117" filename="texture/Speaker_difusse.jpg"/>
-    <File fileId="67" filename="texture/TafelBruin.jpg"/>
+    <File fileId="67" filename="texture/TableTexture.jpg"/>
     <File fileId="115" filename="texture/Texture.jpg"/>
     <File fileId="34" filename="texture/Transparent.dds"/>
     <File fileId="130" filename="texture/Warning L.png"/>
     <File fileId="131" filename="texture/Warning R.png"/>
-    <File fileId="20" filename="texture/Witcreme.png"/>
+    <File fileId="20" filename="texture/cremeColor_tex.png"/>
     <File fileId="118" filename="texture/Wood_base.dds"/>
-    <File fileId="53" filename="texture/Zwart.dds"/>
+    <File fileId="53" filename="texture/logo_blackBG.dds"/>
     <File fileId="25" filename="texture/alpha.dds"/>
     <File fileId="76" filename="texture/beerCrate_diffuse.dds"/>
     <File fileId="126" filename="texture/black.dds"/>
     <File fileId="139" filename="texture/black1.dds"/>
-    <File fileId="63" filename="texture/bruin-leer.dds"/>
+    <File fileId="63" filename="texture/brownLeather_tex.dds"/>
     <File fileId="82" filename="texture/caseIH1455_diffuse.dds"/>
     <File fileId="83" filename="texture/caseIH1455_specular.dds"/>
     <File fileId="30" filename="texture/daf_XF_105.460_Couleur02_diffuse.png"/>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<beaconLight>
-    <filename>shared/SignalLights/SignalLight2.i3d</filename>
-    <rootNode  node="0" />
-    <light     shaderNode="0|2" intensity="200"/>
-</beaconLight>
