@@ -8,10 +8,10 @@
   <Files>
     <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
     <File fileId="2" filename="../Texture/DefaultMaterial_BaseColor12.dds"/>
-    <File fileId="1" filename="../Texture/Onzichtbaar.dds"/>
+    <File fileId="1" filename="../Texture/transparent.dds"/>
     <File fileId="8" filename="../Texture/tyre_rear.dds"/>
-    <File fileId="3" filename="../../shared/dirt_lite.dds"/>
-    <File fileId="10" filename="../../shared/gen_dirt_1.dds"/>
+    <File fileId="3" filename="../Texture/dirt_lite.dds"/>
+    <File fileId="10" filename="../Texture/gen_dirt_1.dds"/>
   </Files>
 
 
