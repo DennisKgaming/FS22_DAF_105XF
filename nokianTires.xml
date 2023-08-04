@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<wheel>
+	<default>
+		<physics radius="0.56" width="0.42" mass="2.26" tireType="street" frictionScale="1.60" maxLongStiffness="8" maxLatStiffness="100" maxLatStiffnessLoad="2" />
+        <tire filename="$data/shared/wheels/tires/nokian/TRI2/R24_TRI2.i3d" nodeLeft="2|0" nodeRight="2|0" maxDeformation="0.058" isCareWheel="false" tireTrackAtlasIndex="8" />
+        <outerRim filename="$data/shared/wheels/rims/rim001.i3d" node="1|0" widthAndDiam="11 24" />
+        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" nodeLeft="0|0" nodeRight="0|1" offset="0.07" widthAndDiam="10.7 22.3" />
+    </default>
+    <configurations>
+        <configuration id="truck1" >
+            <innerRim nodeLeft="6|0" nodeRight="6|1" offset="0.05" widthAndDiam="16 22" />
+        </configuration>
+        <configuration id="man" >
+            <innerRim nodeLeft="4|0" nodeRight="4|1" offset="0.1" widthAndDiam="16 22" />
+        </configuration>
+        <configuration id="dual" >
+            <innerRim filename="-" nodeLeft="-" nodeRight="-" offset="-" widthAndDiam="-" />
+        </configuration>
+        <configuration id="dualConnector" >
+            <innerRim nodeLeft="5|0" nodeRight="5|1" offset="-0.18" widthAndDiam="21.1 21.1" />
+        </configuration>
+    </configurations>
+</wheel>

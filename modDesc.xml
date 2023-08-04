@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="63">
+    <author>DennisK</author>
+	
+	<contributors>
+       <contributor>Valentinootje</contributor>
+    </contributors>
+	
+    <version>0.7.0.1</version>
+	
+    <iconFilename>store.dds</iconFilename>
+	
+    <storeItems>
+        <storeItem xmlFilename="DAF.xml"/>
+    </storeItems>
+	
+    <title>
+        <en>DAF XF 105</en>
+    </title>
+    <description>
+      <en>
+<![CDATA[
+FS22 DAF 105 XF Truck:
+-Price: 72000€
+-Top speed: 85-110km/h
+-Horse power: 450/510 hp
+-Chassis Options (Tractor or Baler)
+-Motor Configurations
+-Back Attacher
+-Ramps (x-Key and only for Baler)
+-Wheel Options
+-BullBar Configurations
+-Cab Configurations (comfortcab or spacecab)
+-Color configurations
+-Rim color configurations
+-Tension belt support (only for Baler)
+-AutoLoad (only for Baler and requires the mod "Pallet Autoload Specialization" )
+
+Changelog 1.0.0.0:
+- Converted over from FS19
+
+Sidenote:
+Still a few warnings that need to be fixed.
+
+  ]]>
+  </en>
+    </description>
+	
+	
+	
+    <multiplayer supported="true"/>
+	
+	<dependencies>
+        <dependency>FS22_aPalletAutoLoader</dependency>
+    </dependencies>
+	
+    <vehicleTypes>
+        <type name="PalletAutoLoaderCar" parent="carFillable" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="FS22_aPalletAutoLoader.aPalletAutoLoader"/>
+        </type>
+    </vehicleTypes>
+
+    <brands>
+        <brand name="DAF" title="DAF" image="brand.dds"/>
+		<brand name="LIZARDLOGISTICS" title="Lizard Logistics" image="$data/store/brands/brand_lizardLogistics.dds"/>
+    </brands>
+
+	<l10n filenamePrefix="translations/l10n"/>
+
+    <l10n>
+  		
+  		<!-- folding -->
+  		<text name="open">
+              <de>Seite öffnen</de>
+              <en>Open side</en>
+              <ru>Открыть борт</ru>
+          </text>
+          <text name="close">
+              <de>Seite schließen</de>
+              <en>Close side</en>
+              <ru>Закрыть борт</ru>
+          </text>
+
+          <text name="input_Ramps">
+              <de>Open Ramps</de>
+              <en>Open Ramps</en>
+          </text>
+
+          <text name="configuration_bullbar"><en>Bullbar</en></text>
+          <text name="configuration_wheelbrand"><en>Wheel Brand</en></text>
+
+          <text name="configuration_default_hubs">
+              <en>Default Hubs</en>
+          </text>
+          <text name="configuration_heavy_hubs">
+              <en>Heavy Hubs</en>
+          </text>
+      </l10n>
+
+
+  <!-- 	<inputBinding>
+
+      <input name="input_Ramps" key1="KEY_X" key2="" button="" device="0" mouse=""/>
+
+  	</inputBinding> -->
+
+</modDesc>

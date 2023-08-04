@@ -1,0 +1,1684 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="PalletAutoLoaderCar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>DennisK</annotation>
+	
+    <storeData>
+      <name>
+         <en>DAF 105 XF</en></name>
+        <specs>
+            <power>450/510</power>
+            <maxSpeed>100</maxSpeed>
+        </specs>
+        <functions>
+            <function>$l10n_function_truck</function>
+            <function>$l10n_function_PalletAutoload_Trailer</function>
+        </functions>
+        <image>store.dds</image>
+        <price>72000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>DAF</brand>
+        <category>trucks</category>
+		
+        <!-- <shopTranslationOffset>0 0.04 0</shopTranslationOffset>
+        <shopRotationOffset>-0.3 0 0</shopRotationOffset> -->
+		
+        <vertexBufferMemoryUsage>3984248</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>678444</indexBufferMemoryUsage>
+        <textureMemoryUsage>30410616</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+		
+    </storeData>
+	
+    <base>
+        <typeDesc>$l10n_PalletAutoload_Trailer</typeDesc>
+        <filename>DAF.i3d</filename>
+        <sounds filename="sounds/sounds_22.xml"/>
+        <size width="3.5" length="7"/>
+        <components>
+            <component centerOfMass="0 0.65 0" solverIterationCount="10" mass="9535"/>
+            <component centerOfMass="0.02 -0.14 -0.00" solverIterationCount="10" mass="20"/>
+            <component centerOfMass="0.02 -0.14 -0.00" solverIterationCount="10" mass="20"/>
+            <component centerOfMass="0 -0.3 0" solverIterationCount="20" mass="300" />
+            <joint component1="1" component2="2" node="MudFlapFL" 			rotLimit="12 0 0" transLimit="0 0 0"/>
+            <joint component1="1" component2="3" node="MudFlapFR" 			rotLimit="12 0 0" transLimit="0 0 0"/>
+            <joint component1="1" component2="4" node="mudFlap_Component4"	rotLimit="30 0 0" transLimit="0 0 0" rotLimitSpring="0.01 0 0" rotLimitDamping="0.5 0 0" />
+        </components>
+        <schemaOverlay attacherJointPosition="0.5 0" name="TRUCK" />
+        <mapHotspot type="TRUCK" />
+    </base>
+
+	<configurationSets title="$l10n_configuration_chassistype">
+        <configurationSet name="$l10n_configuration_chassistype_semi">
+			<configuration name="vehicleType" 			index="1" />
+			<configuration name="design3" 				index="1" />
+			<configuration name="folding" 				index="1" />
+			<configuration name="tensionBelts" 			index="1" />
+        </configurationSet>
+        <configurationSet name="$l10n_configuration_chassistype_baler">
+			<configuration name="vehicleType" 			index="2" />
+        </configurationSet>
+	</configurationSets>
+	
+	<aPalletAutoLoader>
+		<aPalletAutoLoaderConfigurations title="$l10n_function_PalletAutoload_Trailer">
+		
+			<!-- <aPalletAutoLoaderConfiguration name="$l10n_configuration_autoLoad_dis">
+			</aPalletAutoLoaderConfiguration> -->
+		
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_PalletAutoload_Trailer" maxObjects="80" useBales="true" useTensionBelts="true" supportedObject="data/objects/pallets" UnloadRightOffset="-3 -1 0" UnloadLeftOffset="3 -1 0">
+				<trigger node="loadTrigger"/>
+				<pickupTriggers>
+					<pickupTrigger node="pickupTriggerLeft"/>
+					<pickupTrigger node="pickupTriggerRight"/>
+				</pickupTriggers>
+                <loadArea baseNode="loadingBase" leftRightCornerOffset="1.25 0 0" lenght="7.00" width="2.5" height="3.00"/>
+                <!-- <autoLoadObjectSettings>
+                    <autoLoadObjectSetting name="squarebale120" maxObjects="90"/>
+                </autoLoadObjectSettings> -->
+			</aPalletAutoLoaderConfiguration>
+			
+		</aPalletAutoLoaderConfigurations>
+        
+	</aPalletAutoLoader>
+	
+
+	<wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_hubs_default" price="0" brand="MICHELIN">
+              <wheels autoRotateBackSpeed="1.0">
+                  <wheel filename="Wheels/Wheels/Wheels.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                      <physics rotSpeed="1" restLoad="1.9" repr="wheelInner_03FL" mass="0.2" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                      <tire tireTrackAtlasIndex="1" />
+                  </wheel>
+                  <wheel filename="Wheels/Wheels/Wheels.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                      <physics rotSpeed="1" restLoad="1.9" repr="wheelInner_03FR" mass="0.2" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                      <tire tireTrackAtlasIndex="1" />
+                  </wheel>
+                  <wheel filename="Wheels/WheelsDubbel/WheelsDubbel2.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                      <physics rotSpeed="0" restLoad="2.3" repr="normalVwheelInner_03BR" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                      <tire tireTrackAtlasIndex="1" />
+                  </wheel>
+                  <wheel filename="Wheels/WheelsDubbel/WheelsDubbel2.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                      <physics rotSpeed="0" restLoad="2.3" repr="normalVwheelInner_03BL" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                      <tire tireTrackAtlasIndex="1" />
+                  </wheel>
+                  <wheel filename="Wheels/Wheels/Wheels.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                      <physics rotSpeed="1" restLoad="1.9" repr="normalVwheelInner_03_liftaxle_R" mass="0.089" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                      <tire tireTrackAtlasIndex="1" />
+                  </wheel>
+                  <wheel filename="Wheels/Wheels/Wheels.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                      <physics rotSpeed="1" restLoad="1.9" repr="normalVwheelInner_03_liftaxle_L" mass="0.089" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                      <tire tireTrackAtlasIndex="1" />
+                  </wheel>
+                  <wheel filename="Wheels/WheelsDubbel/WheelsDubbel2.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                      <physics rotSpeed="0" restLoad="2.3" repr="balerVwheelInner_03_liftaxle_L" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                      <tire tireTrackAtlasIndex="1" />
+                  </wheel>
+                  <wheel filename="Wheels/WheelsDubbel/WheelsDubbel2.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                      <physics rotSpeed="0" restLoad="2.3" repr="balerVwheelInner_03_liftaxle_R" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                      <tire tireTrackAtlasIndex="1" />
+                  </wheel>
+              </wheels>
+                <objectChange node="wheelInner_01FL" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="wheelInner_01FR" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_01BR" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_01BL" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_01_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_01_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_01_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_01_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+
+                <objectChange node="wheelInner_02FL" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="wheelInner_02FR" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_02BR" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_02BL" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_02_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_02_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_02_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_02_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_hubs_heavy" price="500" brand="MICHELIN">
+                <wheels autoRotateBackSpeed="1.0">
+                    <wheel filename="Wheels/Wheels/Wheels.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.9" repr="wheelInner_03FL" mass="0.2" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="Wheels/Wheels/Wheels.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.9" repr="wheelInner_03FR" mass="0.2" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="Wheels/WheelsDubbel/WheelsDubbel.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="normalVwheelInner_03BR" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="Wheels/WheelsDubbel/WheelsDubbel.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="normalVwheelInner_03BL" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="Wheels/Wheels/Wheels.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.9" repr="normalVwheelInner_03_liftaxle_R" mass="0.089" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="Wheels/Wheels/Wheels.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.9" repr="normalVwheelInner_03_liftaxle_L" mass="0.089" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="Wheels/WheelsDubbel/WheelsDubbel.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="balerVwheelInner_03_liftaxle_L" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="Wheels/WheelsDubbel/WheelsDubbel.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="balerVwheelInner_03_liftaxle_R" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                </wheels>
+                <objectChange node="wheelInner_01FL" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="wheelInner_01FR" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_01BR" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_01BL" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_01_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_01_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_01_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_01_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+
+                <objectChange node="wheelInner_02FL" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="wheelInner_02FR" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_02BR" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_02BL" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_02_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_02_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_02_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_02_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_nokian_wheelrings" price="0" brand="Nokian">
+                <wheels autoRotateBackSpeed="1.0">
+                    <wheel filename="nokianTires.xml" configId="truck1" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.9" repr="wheelInner_01FL" mass="0.2" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="nokianTires.xml" configId="truck1" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.9" repr="wheelInner_01FR" mass="0.2" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="nokianTires.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="normalVwheelInner_01BR" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                        <additionalWheel filename="nokianTires.xml" configId="dualConnector" isLeft="false" offset="0.06" />
+                    </wheel>
+                    <wheel filename="nokianTires.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="normalVwheelInner_01BL" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                        <additionalWheel filename="nokianTires.xml" configId="dualConnector" isLeft="true" offset="0.06" />
+                    </wheel>
+                    <wheel filename="nokianTires.xml" configId="truck1" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="2.3" repr="normalVwheelInner_01_liftaxle_R" mass="0.089" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="nokianTires.xml" configId="truck1" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="2.3" repr="normalVwheelInner_01_liftaxle_L" mass="0.089" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="nokianTires.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="balerVwheelInner_03_liftaxle_L" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                        <additionalWheel filename="nokianTires.xml" configId="dualConnector" isLeft="true" offset="0.06" />
+                    </wheel>
+                    <wheel filename="nokianTires.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="balerVwheelInner_01_liftaxle_R" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                        <additionalWheel filename="nokianTires.xml" configId="dualConnector" isLeft="false" offset="0.06" />
+                    </wheel>
+                </wheels>
+                <objectChange node="wheelInner_03FL" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="wheelInner_03FR" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_03BR" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_03BL" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_03_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_03_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_03_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_03_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+
+                <objectChange node="wheelInner_02FL" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="wheelInner_02FR" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_02BR" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_02BL" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_02_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_02_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_02_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_02_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_lizard_wheelrings" price="0" brand="Lizard">
+                <wheels autoRotateBackSpeed="1.0">
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/315_80R22_5.xml" configId="truck1" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.9" repr="wheelInner_02FL" mass="0.2" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/315_80R22_5.xml" configId="truck1" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.9" repr="wheelInner_02FR" mass="0.2" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/315_80R22_5.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="normalVwheelInner_02BR" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                        <additionalWheel filename="$data/shared/wheels/tires/lizard/implement/315_80R22_5.xml" configId="dualConnector" isLeft="false" offset="0.06" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/315_80R22_5.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="normalVwheelInner_02BL" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                        <additionalWheel filename="$data/shared/wheels/tires/lizard/implement/315_80R22_5.xml" configId="dualConnector" isLeft="true" offset="0.06" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/315_80R22_5.xml" configId="truck1" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.9" repr="normalVwheelInner_02_liftaxle_R" mass="0.089" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/315_80R22_5.xml" configId="truck1" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.9" repr="normalVwheelInner_02_liftaxle_L" mass="0.089" forcePointRatio="0.5" initialCompression="22" suspTravel="0.25" spring="32" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/315_80R22_5.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="balerVwheelInner_02_liftaxle_L" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                        <additionalWheel filename="$data/shared/wheels/tires/lizard/implement/315_80R22_5.xml" configId="dualConnector" isLeft="true" offset="0.06" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/315_80R22_5.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="2.3" repr="balerVwheelInner_02_liftaxle_R" mass="0.089" forcePointRatio="0.5" initialCompression="15" suspTravel="0.15"  spring="52" damper="50" frictionScale="4"/>
+                        <tire tireTrackAtlasIndex="1" />
+                        <additionalWheel filename="$data/shared/wheels/tires/lizard/implement/315_80R22_5.xml" configId="dualConnector" isLeft="false" offset="0.06" />
+                    </wheel>
+                </wheels>
+                <objectChange node="wheelInner_03FL" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="wheelInner_03FR" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_03BR" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_03BL" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_03_liftaxle_R"	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_03_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_03_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_03_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+
+                <objectChange node="wheelInner_01FL" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="wheelInner_01FR" 					visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_01BR" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_01BL" 			visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_01_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="normalVwheelInner_01_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_01_liftaxle_L" 	visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="balerVwheelInner_01_liftaxle_R" 	visibilityActive="false" visibilityInactive="true"/>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="60" rotMax="47" rotCenterWheel1="3" rotCenterWheel2="5"/>
+        </ackermannSteeringConfigurations>
+    </wheels>
+	
+	<rimColorConfigurations useDefaultColors="true" price="200" defaultColorIndex="8" title="$l10n_configuration_rimcolor">
+  		<rimColorConfiguration name="CHROME" color="1 1 1" material="2" price="200"/>
+        <rimColorConfiguration name="SILVER" color="0.98 0.98 0.98" material="8" price="200"/>
+    </rimColorConfigurations>
+
+	<lights>
+	
+      <sharedLight linkNode="fenderTurnlightR" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange_right.xml"/>
+      <sharedLight linkNode="fenderTurnlightL" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange_left.xml"/>
+		
+		<!-- Rear lights normal configuration -->
+      <sharedLight linkNode="rearLight_normal_conf_L1" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+      <sharedLight linkNode="rearLight_normal_conf_L2" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+      <sharedLight linkNode="rearLight_normal_conf_L3" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+      <sharedLight linkNode="rearLight_normal_conf_R1" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+      <sharedLight linkNode="rearLight_normal_conf_R2" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+      <sharedLight linkNode="rearLight_normal_conf_R3" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+	  
+		<!-- Rear lights baler configuration -->
+      <sharedLight linkNode="rearLight_balerl_conf_L1" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+      <sharedLight linkNode="rearLight_balerl_conf_L2" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+      <sharedLight linkNode="rearLight_balerl_conf_L3" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+      <sharedLight linkNode="rearLight_balerl_conf_L4" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+      <sharedLight linkNode="rearLight_balerl_conf_R1" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+      <sharedLight linkNode="rearLight_balerl_conf_R2" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+      <sharedLight linkNode="rearLight_balerl_conf_R3" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+      <sharedLight linkNode="rearLight_balerl_conf_R4"	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+	  
+      <sharedLight linkNode="NormalbumperL" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange.xml"/>
+      <sharedLight linkNode="NormalbumperR" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange.xml"/>
+	  
+      <sharedLight linkNode="plateNumberLightRF" 		node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+      <sharedLight linkNode="plateNumberLightLF" 		node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+      <sharedLight linkNode="NormalplateNumberLightLB"	node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+      <sharedLight linkNode="NormalplateNumberLightRB" 	node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+      <sharedLight linkNode="BalerplateNumberLightLB" 	node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+      <sharedLight linkNode="BalerplateNumberLightRB" 	node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+	  
+	  
+      <sharedLight linkNode="spaceSunvisorL_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="spaceSunvisorL_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="spaceSunvisorL_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="spaceSunvisorL_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="spaceSunvisorL_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="spaceSunvisorR_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="spaceSunvisorR_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="spaceSunvisorR_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="spaceSunvisorR_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="spaceSunvisorR_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+	  
+      <sharedLight linkNode="comfortSunvisorL_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="comfortSunvisorL_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="comfortSunvisorL_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="comfortSunvisorL_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="comfortSunvisorL_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="comfortSunvisorR_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="comfortSunvisorR_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="comfortSunvisorR_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="comfortSunvisorR_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+      <sharedLight linkNode="comfortSunvisorR_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+	  <!-- @todo: mirrorlights are now blinking. Remove or change -->
+      <sharedLight linkNode="mirrorLightL" 				node="0" filename="shared/assets/lights/lizard/rearLight19Orange.xml"/>
+      <sharedLight linkNode="mirrorLightR" 				node="0" filename="shared/assets/lights/lizard/rearLight19Orange.xml"/>
+	  
+	  
+     <sharedLight linkNode="sideBarlightL_normal_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightL_normal_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightL_normal_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightL_normal_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightR_normal_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightR_normal_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightR_normal_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightR_normal_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+	 
+     <sharedLight linkNode="sideBarlightL_baler_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightL_baler_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightL_baler_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightL_baler_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightL_baler_05" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightL_baler_06" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightR_baler_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightR_baler_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightR_baler_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightR_baler_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightR_baler_05" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+     <sharedLight linkNode="sideBarlightR_baler_06" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+	 
+     <sharedLight linkNode="countourLightBalerL_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+     <sharedLight linkNode="countourLightBalerL_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+     <sharedLight linkNode="countourLightBalerL_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+     <sharedLight linkNode="countourLightBalerL_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+     <sharedLight linkNode="countourLightBalerL_05" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+     <sharedLight linkNode="countourLightBalerR_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+     <sharedLight linkNode="countourLightBalerR_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+     <sharedLight linkNode="countourLightBalerR_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+     <sharedLight linkNode="countourLightBalerR_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+     <sharedLight linkNode="countourLightBalerR_05" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+	 
+     <sharedLight linkNode="sideMarkerNormalL_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
+     <sharedLight linkNode="sideMarkerNormalL_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
+     <sharedLight linkNode="sideMarkerNormalL_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
+     <sharedLight linkNode="sideMarkerNormalL_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
+     <sharedLight linkNode="sideMarkerNormalR_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
+     <sharedLight linkNode="sideMarkerNormalR_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
+     <sharedLight linkNode="sideMarkerNormalR_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
+     <sharedLight linkNode="sideMarkerNormalR_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
+     
+	 <sharedLight linkNode="sideMarkerBalerL_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
+	 <sharedLight linkNode="sideMarkerBalerR_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
+	 
+	 <sharedLight linkNode="reverseLight_balerl_conf_L1"	node="0" filename="$data/shared/assets/lights/lizard/workingLight10.xml"/>
+	 <sharedLight linkNode="reverseLight_balerl_conf_R1"	node="0" filename="$data/shared/assets/lights/lizard/workingLight10.xml"/>
+
+      <states>
+          <state lightTypes="0"/>
+          <state lightTypes="0 1"/>
+          <state lightTypes="0 1 2"/>
+      </states>
+      <realLights>
+          <low>
+              <light node="standardLightLow"		lightTypes="0" />
+              <light node="frontLightLow1"			lightTypes="0" />
+              <light node="NormalLightLow"			lightTypes="0" />
+              <light node="BalerLightLow"			lightTypes="0" />
+              <light node="lightBoxhLow_space"		lightTypes="0" />
+              <!-- <light node="InteriorLightLow"		lightTypes="0" /> -->
+              <!-- <light node="InteriorLightLow1"       lightTypes="0" /> -->
+              <light node="DashLow"					lightTypes="0" />
+              <light node="workLightFrontLow"		lightTypes="2"/>
+              <light node="highBeamLow"				lightTypes="1"/>
+              <light node="ComfortLow"				lightTypes="2" />
+              <light node="SpaceLow"				lightTypes="2" />
+          </low>
+          <high>
+              <light node="standardLightHigh"		lightTypes="0"/>
+              <light node="0>12|0|1|1"		lightTypes="0" intensity="0.50" /> <!-- @todo make named node -->
+              <light node="0>12|0|1|2"		lightTypes="0" intensity="0.50" /> <!-- @todo make named node -->
+              <light node="0>12|0|2|1"		lightTypes="0" intensity="0.50" /> <!-- @todo make named node -->
+              <light node="0>12|0|2|2"		lightTypes="0" intensity="0.50" /> <!-- @todo make named node -->
+              <light node="frontLightHigh1"			lightTypes="0"/>
+              <light node="NormalLightHigh"			lightTypes="0" />
+              <light node="BalerLightHigh"			lightTypes="0" />
+              <light node="lightBoxHigh_space"		lightTypes="0" />		
+              <!-- <light node="InteriorLightHigh"       lightTypes="0" /> -->
+			  
+              <!-- <light node="InteriorLight_01"		lightTypes="0" />
+              <light node="InteriorLight_02"		lightTypes="0" />
+              <light node="InteriorLight_03"		lightTypes="0" /> -->
+			  
+              <!-- <light node="InteriorLightHigh1"		lightTypes="0" /> -->
+              <light node="DashHigh"				lightTypes="0" />
+              <light node="workLightFrontHigh"		lightTypes="2"/>
+              <light node="highBeamHigh"			lightTypes="1"/>
+              <light node="SpaceHigh"				lightTypes="2" />
+              <light node="ComfortHigh"				lightTypes="2" />
+			  
+              <turnLightLeft		node="StandardturnLightLF"/>
+              <turnLightLeft		node="NormalturnLightLB"/>
+              <turnLightRight		node="StandardturnLightRF"/>
+              <turnLightRight		node="NormalturnLightRB"/>
+              <turnLightLeft		node="NormalturnLightL"/>
+              <turnLightRight		node="NormalturnLightR"/>
+              <turnLightLeft		node="turnLightLeftFender"/>
+              <turnLightRight		node="turnLightRightFender"/>
+              <turnLightLeft		node="BalerturnLightLB"/>
+              <turnLightRight		node="BalerturnLightRB"/>
+			  
+              <brakeLight			node="brakeLights_red"/>
+			  
+              <reverseLight			node="reverseLight"/>
+              <reverseLight			node="reverseLightHigh1"/>
+              <reverseLight			node="reverseLightHigh2"/>
+			  
+          </high>
+      </realLights>
+      <defaultLights>
+        <defaultLight 		shaderNode="headLight_L_glassStatic" 		lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="headLight_R_glassStatic" 		lightTypes="0" intensity="0.75" />
+		
+        <defaultLight 		shaderNode="InteriorLight_01" 				lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="InteriorLight_02" 				lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="InteriorLight_03" 				lightTypes="0" intensity="0.75" />
+			
+        <defaultLight 		shaderNode="fogLight_L_02_glassStatic" 		lightTypes="1" />
+        <defaultLight 		shaderNode="fogLight_R_02_glassStatic" 		lightTypes="1" />
+        <defaultLight 		shaderNode="fogLight_L_01_glassStatic" 		lightTypes="1" />
+  		<defaultLight 		shaderNode="fogLight_R_01_glassStatic" 		lightTypes="1" />
+		
+
+
+        <!--ComfortCab-->
+        <defaultLight 		shaderNode="comfortSunvisorL_01" 			lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="comfortSunvisorL_02" 			lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="comfortSunvisorL_03" 			lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="comfortSunvisorL_04" 			lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="comfortSunvisorR_01" 			lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="comfortSunvisorR_02" 			lightTypes="0" intensity="0.25" />
+        <defaultLight		 shaderNode="comfortSunvisorR_03" 			lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="comfortSunvisorR_04" 			lightTypes="0" intensity="0.25" />
+			
+        <defaultLight 		shaderNode="comfortHellaL" 					lightTypes="2" />
+        <defaultLight 		shaderNode="comfortHellaR" 					lightTypes="2" />
+        <!--ComfortCab-->
+
+        <!--SpaceCab-->
+		<defaultLight 		shaderNode="interiorRooflightL_Static" 		lightTypes="0" />
+        <defaultLight 		shaderNode="interiorRooflightR_Static" 		lightTypes="0" />
+        <defaultLight 		shaderNode="spaceSunvisorL_01" 				lightTypes="0" intensity="0.50" />
+        <defaultLight 		shaderNode="spaceSunvisorL_02" 				lightTypes="0" intensity="0.50" />
+        <defaultLight 		shaderNode="spaceSunvisorL_03" 				lightTypes="0" intensity="0.50" />
+        <defaultLight 		shaderNode="spaceSunvisorL_04" 				lightTypes="0" intensity="0.50" />
+        <defaultLight 		shaderNode="spaceSunvisorR_01" 				lightTypes="0" intensity="0.50" />
+        <defaultLight 		shaderNode="spaceSunvisorR_02" 				lightTypes="0" intensity="0.50" />
+        <defaultLight 		shaderNode="spaceSunvisorR_03" 				lightTypes="0" intensity="0.50" />
+        <defaultLight 		shaderNode="spaceSunvisorR_04" 				lightTypes="0" intensity="0.50" />
+		
+        <defaultLight 		shaderNode="spaceLightL_02_Static" 			lightTypes="2" />
+        <defaultLight 		shaderNode="spaceLightR_02_Static" 			lightTypes="2" />
+        <defaultLight 		shaderNode="spaceLightL_01_Static" 			lightTypes="2" />
+        <defaultLight 		shaderNode="spaceLightR_01_Static" 			lightTypes="2" />
+
+        <defaultLight 		shaderNode="roofLightstaticR_01" 			lightTypes="2" />
+        <defaultLight 		shaderNode="roofLightstaticR_02" 			lightTypes="2" />
+        <defaultLight 		shaderNode="roofLightstaticL_02" 			lightTypes="2" />
+        <defaultLight 		shaderNode="roofLightstaticL_01" 			lightTypes="2" />
+        <!--SpaceCab-->
+
+        
+
+        <!--SideBarLightsNormal-->
+		<defaultLight 		shaderNode="sideBarlightL_normal_01" 		lightTypes="0" intensity="0.75"/>
+        <defaultLight 		shaderNode="sideBarlightL_normal_02" 		lightTypes="0" intensity="0.75"/>
+        <defaultLight 		shaderNode="sideBarlightL_normal_03" 		lightTypes="0" intensity="0.75"/>
+        <defaultLight 		shaderNode="sideBarlightL_normal_04" 		lightTypes="0" intensity="0.75"/>
+        <defaultLight 		shaderNode="sideBarlightR_normal_01" 		lightTypes="0" intensity="0.75"/>
+  		<defaultLight 		shaderNode="sideBarlightR_normal_02" 		lightTypes="0" intensity="0.75"/>
+        <defaultLight 		shaderNode="sideBarlightR_normal_03" 		lightTypes="0" intensity="0.75"/>
+        <defaultLight 		shaderNode="sideBarlightR_normal_04" 		lightTypes="0" intensity="0.75"/>
+        <!--SideBarLightsNormal-->
+		
+		<!--SideBarLightsNormal Real-->
+        <defaultLight 		shaderNode="sideBarlightL_normal_01_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightL_normal_02_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightL_normal_03_real" 	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightL_normal_04_real" 	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_normal_01_real" 	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_normal_02_real" 	lightTypes="0" intensity="0.75" />
+        <defaultLight		shaderNode="sideBarlightR_normal_03_real" 	lightTypes="0" intensity="0.75" />
+        <defaultLight		shaderNode="sideBarlightR_normal_04_real" 	lightTypes="0" intensity="0.75" />
+		<!--SideBarLightsNormal Real-->
+
+        <!--SideBarLightsBaler-->
+        <defaultLight 		shaderNode="sideBarlightL_baler_01" 		lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightL_baler_02" 		lightTypes="0" intensity="0.75" />
+        <defaultLight		shaderNode="sideBarlightL_baler_03" 		lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightL_baler_04" 		lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightL_baler_05" 		lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightL_baler_06" 		lightTypes="0" intensity="0.75" />
+
+        <defaultLight 		shaderNode="sideBarlightR_baler_01" 		lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_baler_02" 		lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_baler_03" 		lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_baler_04" 		lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_baler_05" 		lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_baler_06" 		lightTypes="0" intensity="0.75" />
+		<!--SideBarLightsBaler-->
+		
+		<!--SideBarLightsBaler Real-->
+        <defaultLight 		shaderNode="sideBarlightL_balerL_01_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightL_balerL_02_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightL_balerL_03_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightL_balerL_04_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightL_balerL_05_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightL_balerL_06_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_balerR_01_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_balerR_02_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_balerR_03_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_balerR_04_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_balerR_05_real"	lightTypes="0" intensity="0.75" />
+        <defaultLight 		shaderNode="sideBarlightR_balerR_06_real"	lightTypes="0" intensity="0.75" />
+        <!--SideBarLightsBaler Real-->
+
+        <!--ContourLightsBaler-->
+        <defaultLight 		shaderNode="countourLightBalerL_01" 		lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="countourLightBalerL_02" 		lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="countourLightBalerL_03" 		lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="countourLightBalerL_04" 		lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="countourLightBalerL_05" 		lightTypes="0" intensity="0.5" />
+
+        <defaultLight 		shaderNode="countourLightBalerR_01" 		lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="countourLightBalerR_02" 		lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="countourLightBalerR_03" 		lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="countourLightBalerR_04" 		lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="countourLightBalerR_05" 		lightTypes="0" intensity="0.5" />
+		<!--ContourLightsBaler-->
+
+        <!--SideMarkers Normal-->
+		<defaultLight 		shaderNode="sideMarkerNormalL_01" 			lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="sideMarkerNormalL_02" 			lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="sideMarkerNormalL_03" 			lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="sideMarkerNormalL_04" 			lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="sideMarkerNormalR_01" 			lightTypes="0" intensity="0.5" />
+  		<defaultLight 		shaderNode="sideMarkerNormalR_02" 			lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="sideMarkerNormalR_03" 			lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="sideMarkerNormalR_04" 			lightTypes="0" intensity="0.5" />
+		<!--SideMarkers Normal-->
+		
+		<!--SideMarkers Baler-->
+        <defaultLight 		shaderNode="sideMarkerBalerL_01" 			lightTypes="0" />
+        <defaultLight 		shaderNode="sideMarkerBalerR_01" 			lightTypes="0" />
+        <!--SideMarkers Baler-->
+		
+		<!--
+        <defaultLight shaderNode="0>14|0|3|0" lightTypes="0" />
+        <defaultLight shaderNode="0>14|0|3|1" lightTypes="0" />
+        <defaultLight shaderNode="0>14|0|3|2" lightTypes="0" />
+        <defaultLight shaderNode="0>14|0|3|3" lightTypes="0" />
+		-->
+		
+		<defaultLight 		shaderNode="PoppyLight_static" 				lightTypes="0" />
+
+        <defaultLight 		shaderNode="comfortCab_interiorLightL" 		lightTypes="0" />
+        <defaultLight 		shaderNode="comfortCab_interiorLightR" 		lightTypes="0" />
+
+        <defaultLight 		shaderNode="beamLightL_static" 				lightTypes="1" />
+        <defaultLight 		shaderNode="beamLightR_static" 				lightTypes="1" /> 
+
+        <defaultLight 		shaderNode="bullBar_spotlightL_01" 			lightTypes="2" />
+        <defaultLight 		shaderNode="bullBar_spotlightL_02" 			lightTypes="2" />
+        <defaultLight 		shaderNode="bullBar_spotlightR_01" 			lightTypes="2" />
+        <defaultLight 		shaderNode="bullBar_spotlightR_02" 			lightTypes="2" />
+  		</defaultLights>
+
+      <turnLights>
+          <turnLightLeft 	shaderNode="fenderTurnlightL"/>
+          <turnLightLeft 	shaderNode="turnLightLF_static"/>
+          <turnLightRight 	shaderNode="fenderTurnlightR"/>
+          <turnLightRight 	shaderNode="turnLightRF_static"/>
+      </turnLights>
+
+      <reverseLights>
+          <reverseLight 	shaderNode="normalVehicle_reverseLightL"/>
+          <reverseLight 	shaderNode="normalVehicle_reverseLightR"/>
+          <reverseLight 	shaderNode="rooftopWorkinglightsLB"/>
+          <reverseLight 	shaderNode="rooftopWorkinglightsRB"/>
+
+          <reverseLight 	shaderNode="reverseLight_balerl_conf_L1"/>
+          <reverseLight 	shaderNode="reverseLight_balerl_conf_R1"/>
+      </reverseLights>
+
+      <sounds>
+          <switchLight template="SWITCH_01" linkNode="0>" />
+          <turnLight template="SWITCH_TURNLIGHT" linkNode="0>" />
+      </sounds>
+
+        <beaconLights>
+            <beaconLight node="comfortCab_beacon_01" 	filename="$data/shared/assets/beaconLights/lizard/beaconLight01.xml"/>
+            <beaconLight node="comfortCab_beacon_02" 	filename="$data/shared/assets/beaconLights/lizard/beaconLight01.xml"/>
+            <beaconLight node="spaceCab_beacon_01" 		filename="$data/shared/assets/beaconLights/lizard/beaconLight01.xml"/>
+            <beaconLight node="spaceCab_beacons_02" 	filename="$data/shared/assets/beaconLights/lizard/beaconLight01.xml"/>
+
+            <!-- Flashers -->
+           <!--  <beaconLight node="flasherL_01" 			filename="shared/SignalLights/SignalLight1.xml"/>
+            <beaconLight node="flasherR_01" 			filename="shared/SignalLights/SignalLight2.xml"/> -->
+            <!-- Flashers -->
+
+        </beaconLights>
+		<!-- @todo Looks like these aren't working -->
+        <dashboards>
+            <dashboard displayType="EMITTER" 	valueType="lightState" 		node="dashboardLight_beam" 	idleValue="0" intensity="0.5" lightTypes="1" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" 	valueType="turnLightLeft"  	node="dashboardLight_turnL" idleValue="0" intensity="0.5" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER" 	valueType="turnLightRight" 	node="dashboardLight_turnR" idleValue="0" intensity="0.5" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="VISIBILITY" valueType="lightState" 		node="onboardComputerLight" lightTypes="0 1 2 3" groups="MOTOR_ACTIVE" />
+        </dashboards>
+    </lights>
+	
+	<!--
+    <licensePlates defaultPlacement="BOTH">
+        <licensePlate node="licensePlateFront" position="FRONT"  preferedType="SQUARISH" placementArea="0.1 0.15 0.1 0.15"/>
+        <licensePlate node="licensePlateBack"  position="BACK"   preferedType="SQUARISH" placementArea="0.1 0.17 0.1 0.17"/>
+        <licensePlate node="licensePlateBack2"  position="BACK"  preferedType="SQUARISH" placementArea="0.1 0.17 0.1 0.17"/>
+        <licensePlate node="licensePlateBack3"  position="BACK"  preferedType="SQUARISH" placementArea="0.1 0.17 0.1 0.17"/>
+    </licensePlates>
+    -->
+	
+	<!-- 
+	<speedRotatingParts>
+        <speedRotatingPart node="JointFront" radius="0.1" />
+        <speedRotatingPart node="JointRear" radius="0.1" />
+        <speedRotatingPart node="DriveshaftRear" radius="0.1" />
+        <speedRotatingPart node="DriveshaftFront" radius="0.1" />
+    </speedRotatingParts> -->
+
+	<enterable>
+        <exitPoint node="exitPoint"/>
+        <enterReferenceNode node="DAF_XF_105"/>
+        <characterNode node="player_skin" cameraMinDistance="1.5" spineRotation="-90 0 90">
+            <target ikChain="rightFoot"	targetNode="player_rightFoot"/>
+            <target ikChain="leftFoot" 	targetNode="player_leftFoot"/>
+            <target ikChain="rightArm" 	targetNode="player_rightHand"/>
+            <target ikChain="leftArm" 	targetNode="player_leftHand"/>
+        </characterNode>
+        <cameras>
+            <camera node="outdoorCamera" rotatable="true" rotateNode="outdoorCameraTarget" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="4" transMax="50" translation="0 0 14" rotation="0 0 0">
+                <raycastNode node="raycastNode1"/>
+                <raycastNode node="raycastNode2"/>
+                <raycastNode node="raycastNode3"/>
+            </camera>
+            <camera node="indoorCamera" rotatable="true" limit="false" useWorldXZRotation="true" rotMinX="0" rotMaxX="0" transMin="0" transMax="0" useMirror="true" isInside="true" rotYSteeringRotSpeed="30"/>
+        </cameras>
+        <mirrors>
+            <mirror node="mirror01decal" prio="1"/>
+            <mirror node="mirror02decal" prio="1"/>
+            <mirror node="mirror03decal" prio="1"/>
+            <mirror node="mirror04decal" prio="1"/>
+        </mirrors>
+    </enterable>
+
+	<motorized>
+        <motorConfigurations title="$l10n_configuration_engine">
+            <motorConfiguration name="450" hp="450" price="0">
+              <motor torqueScale="4" minRpm="1500" maxRpm="4200" maxForwardSpeed="85" maxBackwardSpeed="15" brakeForce="9.0" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.0005">
+                  <torque normRpm="850"  torque="1"/>
+                  <torque normRpm="1000" torque="1.7"/>
+                  <torque normRpm="1450" torque="1.8"/>
+                  <torque normRpm="2000" torque="2"/>
+                  <torque normRpm="2500" torque="2.2"/>
+                  <torque normRpm="3000" torque="1.3"/>
+              </motor>
+                <transmission minForwardGearRatio="10" maxForwardGearRatio="250" minBackwardGearRatio="40" maxBackwardGearRatio="250"/>
+            </motorConfiguration>
+            <motorConfiguration name="510" hp="510" price="3000">
+              <motor torqueScale="6" minRpm="1500" maxRpm="4200" maxForwardSpeed="110" maxBackwardSpeed="15" brakeForce="9.0" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.0005">
+                  <torque normRpm="850"  torque="2"/>
+                  <torque normRpm="1000" torque="2.7"/>
+                  <torque normRpm="1450" torque="2.8"/>
+                  <torque normRpm="2000" torque="3"/>
+                  <torque normRpm="2500" torque="3.2"/>
+                  <torque normRpm="3000" torque="2.3"/>
+              </motor>
+                <transmission minForwardGearRatio="10" maxForwardGearRatio="250" minBackwardGearRatio="40" maxBackwardGearRatio="250"/>
+            </motorConfiguration>
+        </motorConfigurations>
+
+        <consumerConfigurations>
+            <consumerConfiguration>
+                <consumer fillUnitIndex="1" usage="150" fillType="diesel" />
+				<!-- @todo add addblue (DEF) -->
+            </consumerConfiguration>
+        </consumerConfigurations>
+
+        <differentialConfigurations>
+            <differentialConfiguration>
+                <differentials>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.3" wheelIndex1="3" wheelIndex2="4"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.3" wheelIndex1="1" wheelIndex2="2"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.2" differentialIndex1="1" differentialIndex2="2"/>
+                </differentials>
+            </differentialConfiguration>
+        </differentialConfigurations>
+
+        <dashboards>
+            <dashboard displayType="ANIMATION" valueType="rpm" animName="rpmDisplay" minValueAnim="0" maxValueAnim="4000"/>
+            <dashboard displayType="ANIMATION" valueType="speed" animName="speedDisplay" minValueAnim="0" maxValueAnim="160"/>
+        </dashboards>
+		
+        <exhaustEffects>
+            <exhaustEffect node="exhaustParticlesNormalR" 			filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.1 0.1 0.1 0.05" maxRpmColor="0 0 0 9" minRpmScale="0.09" maxRpmScale="0.8" xzRotationsOffset="0 0" xzRotationsForward="-250 0" xzRotationsBackward="50 0" xzRotationsLeft="0 100" xzRotationsRight="0 -100"/>
+            <exhaustEffect node="exhaustParticlesNormalL" 			filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.1 0.1 0.1 0.05" maxRpmColor="0 0 0 9" minRpmScale="0.09" maxRpmScale="0.8" xzRotationsOffset="0 0" xzRotationsForward="-250 0" xzRotationsBackward="50 0" xzRotationsLeft="0 100" xzRotationsRight="0 -100"/>
+            <exhaustEffect node="exhaustParticlesBalerL_standing" 	filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.1 0.1 0.1 0.05" maxRpmColor="0 0 0 9" minRpmScale="0.09" maxRpmScale="0.8" xzRotationsOffset="0 0" xzRotationsForward="-250 0" xzRotationsBackward="50 0" xzRotationsLeft="0 100" xzRotationsRight="0 -100"/>
+            <exhaustEffect node="exhaustParticlesBalerR_standing" 	filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.1 0.1 0.1 0.05" maxRpmColor="0 0 0 9" minRpmScale="0.09" maxRpmScale="0.8" xzRotationsOffset="0 0" xzRotationsForward="-250 0" xzRotationsBackward="50 0" xzRotationsLeft="0 100" xzRotationsRight="0 -100"/>
+            <exhaustEffect node="exhaustParticlesBalerL_side" 		filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.1 0.1 0.1 0.05" maxRpmColor="0 0 0 9" minRpmScale="0.09" maxRpmScale="0.8" xzRotationsOffset="0 0" xzRotationsForward="-250 0" xzRotationsBackward="50 0" xzRotationsLeft="0 100" xzRotationsRight="0 -100"/>
+            <exhaustEffect node="exhaustParticlesBalerR_side" 		filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.1 0.1 0.1 0.05" maxRpmColor="0 0 0 9" minRpmScale="0.09" maxRpmScale="0.8" xzRotationsOffset="0 0" xzRotationsForward="-250 0" xzRotationsBackward="50 0" xzRotationsLeft="0 100" xzRotationsRight="0 -100"/>
+        </exhaustEffects>
+        <motorStartDuration>2500</motorStartDuration>
+        		
+    </motorized>
+
+	<drivable>
+
+        <steeringWheel node="steeringWheel" indoorRotation="360" outdoorRotation="37"/>
+    </drivable>
+
+
+	<cylindered>
+        <movingTools>
+		<!-- liftable axles -->
+            <movingTool node="LiftAxles" playSound="true" wheelIndices="5 6 7 8">
+                     <controls axis="AXIS_CRANE_ARM3" invertAxis="false" mouseSpeedFactor="0.5" iconName="CRANE_ARM2_TRANSLATE"/>
+                      <translation transSpeed="0.6" transAcceleration="80" transMax="0.121" transMin="0" translationAxis="2"/>
+      			</movingTool>
+		<!-- liftable axles -->
+        </movingTools>
+    </cylindered>
+
+	<fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="diesel" capacity="450">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="fuelDisplay" groups="MOTOR_ACTIVE"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+	<attacherJoints>
+        <attacherJoint node="normalVehicle_attacherJoint" jointType="trailerLow" lowerRotLimit="90 90 90" allowsJointLimitMovement="false">
+            <schema position="1 0" rotation="0" invertX="false"/>
+        </attacherJoint>
+        <attacherJoint node="normalVehicle_attacherJoint" jointType="trailer" lowerRotLimit="90 90 90" allowsJointLimitMovement="false">
+            <schema position="1 0" rotation="0" invertX="false"/>
+        </attacherJoint>
+        <attacherJoint node="normalVehicle_5thWheel" jointType="semitrailer" lowerRotLimit="12 175 90" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="true">
+            <schema position="1 0" rotation="0" invertX="false"/>
+        </attacherJoint>
+    </attacherJoints>
+
+	<animations>
+        <animation name="speedDisplay">
+            <part node="speedNeedle" startTime="0" endTime="1" startRot="0 0 55" endRot="0 0 -280"/>
+        </animation>
+        <animation name="rpmDisplay">
+            <part node="rpmNeedle" startTime="0" endTime="1" startRot="0 0 -40" endRot="0 0 -220"/>
+        </animation>
+        <animation name="fuelDisplay">
+            <part node="fuelNeedle" startTime="0" endTime="1" startRot="0 0 55" endRot="0 0 100"/>
+        </animation>
+
+        <animation name="wiperFrontAnimation">
+            <part node="wiperFront01" startTime="0" endTime="1" startRot="0 0 0" endRot="0 -12 -90"/>
+            <part node="wiperFront01" startTime="1" endTime="2" startRot="0 -12 -90" endRot="0 0 0"/>
+            <part node="wiperFront02" startTime="0" endTime="1" startRot="0 0 0" endRot="0 -14 -90"/>
+            <part node="wiperFront02" startTime="1" endTime="2" startRot="0 -14 -90" endRot="0 0 0"/>
+            <part node="wiperFront03" startTime="0" endTime="1" startRot="0 0 0" endRot="0 -12 -90"/>
+            <part node="wiperFront03" startTime="1" endTime="2" startRot="0 -12 -90" endRot="0 0 0"/>
+        </animation>
+
+        <animation name="Ramps">
+            <part node="ramps" startTime="0" endTime="2" startTrans="0 0.125 -2.527" endTrans="0 0.125 -7.143"/>
+            <part node="ramps_2" startTime="2" endTime="4" startRot="0 0 0" endRot="-16 0 0"/>
+        </animation>
+    </animations>
+	
+    <wipers>
+        <wiper animName="wiperFrontAnimation" >
+            <state animSpeed="0.75" animPause="2.0" />
+            <state animSpeed="0.75" animPause="0.0" />
+            <state animSpeed="1.10" animPause="0.0" />
+        </wiper>
+    </wipers>
+	
+    <ai>
+		<agent width="2.65" length="7.25" height="2.85" lengthOffset="2.78" frontOffset="5.02" />
+        <collisionTrigger node="aiCollisiontrigger"/>
+    </ai>
+
+	 <dashboard>
+        <groups>
+            <group name="MOTOR_STARTING" isMotorStarting="true"/>
+            <group name="MOTOR_ACTIVE"   isMotorStarting="true" isMotorRunning="true"/>
+        </groups>
+        <default>
+          <dashboard displayType="EMITTER" 		node="dashLight_yellow" 	groups="MOTOR_STARTING" idleValue="0" intensity="0.5" />
+          <dashboard displayType="EMITTER" 		node="dashLight_green" 		groups="MOTOR_STARTING" idleValue="0" intensity="0.5" />
+          <dashboard displayType="EMITTER" 		node="dashLight_red" 		groups="MOTOR_STARTING" idleValue="0" intensity="0.5" />
+          <dashboard displayType="VISIBILITY" 	node="timeLight" 			groups="MOTOR_ACTIVE" />
+          <dashboard displayType="VISIBILITY" 	node="screenLight" 			groups="MOTOR_ACTIVE" />
+          <dashboard displayType="VISIBILITY" 	node="dashLights" 			groups="MOTOR_STARTING" />
+          <dashboard displayType="VISIBILITY" 	node="onboardComputerON"	groups="MOTOR_STARTING" />
+          <dashboard displayType="VISIBILITY" 	node="onboardComputer" 		groups="MOTOR_ACTIVE" />
+        </default>
+    </dashboard>
+
+	<foliageBending>
+          <bendingNode minX="-1.7" maxX="1.7" minZ="-3" maxZ="3" yOffset="0.4"/>
+     </foliageBending>
+
+    <connectionHoses>
+        <target attacherJointIndices="3" 	type="airDoubleRed" 	node="airDoubleStorage"	socket="air_red"/>
+        <target attacherJointIndices="3" 	type="airDoubleYellow"	node="airDoubleControl" socket="air_yellow"/>
+        <target attacherJointIndices="3" 	type="electric" 		node="backElectric" 	socket="electric"/>
+        <target attacherJointIndices="3" 	type="hydraulicIn" 		node="hydraulic01_in"/>
+        <target attacherJointIndices="3" 	type="hydraulicOut" 	node="hydraulic01_out"/>
+        <target attacherJointIndices="3" 	type="hydraulicIn" 		node="hydraulic02_in"/>
+        <target attacherJointIndices="3" 	type="hydraulicOut" 	node="hydraulic02_out"/>
+
+        <target attacherJointIndices="1 2" 	type="airDoubleRed" 	node="airDoubleStorage2" socket="air_red"/>
+        <target attacherJointIndices="1 2" 	type="airDoubleYellow" 	node="airDoubleControl2" socket="air_yellow"/>
+        <target attacherJointIndices="1 2" 	type="electric" 		node="backElectric2" 	socket="electric"/>
+        <target attacherJointIndices="1 2" 	type="hydraulicIn" 		node="hydraulic03_in"/>
+        <target attacherJointIndices="1 2" 	type="hydraulicOut" 	node="hydraulic03_out"/>
+        <target attacherJointIndices="1 2" 	type="hydraulicIn" 		node="hydraulic04_in"/>
+        <target attacherJointIndices="1 2" 	type="hydraulicOut" 	node="hydraulic04_out"/>
+    </connectionHoses>
+
+    <dynamicMountAttacher triggerNode="dynamicMountTrigger" rootNode="DAF_XF_105" jointNode="DAF_XF_105" forceAcceleration="30"/>
+
+	<suspensions>
+        <suspension node="cabinSuspension"   			weight="400" minRotation="-6 0 -6" 				maxRotation="6 0 6" 			suspensionParametersX="120 10"	suspensionParametersZ="120 10" />
+        <suspension node="seat"              			weight="150" minTranslation="-0.05 -0.15 0.0" 	maxTranslation="0.05 0.15 0.0"	suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+        <suspension useCharacterTorso="true" 			weight="90"  minRotation="0 -5 -5" 				maxRotation="0 5 5" 			suspensionParametersY="7 1" 	suspensionParametersZ="7 1" />
+
+    	<suspension node="spaceCab_antennaSpringL" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+    	<suspension node="spaceCab_antennaSecL_01" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+    	<suspension node="spaceCab_antennaSecL_02" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+    	<suspension node="spaceCab_antennaSecL_03" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+    	<suspension node="spaceCab_antennaSecL_04" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+		<suspension node="spaceCab_antennaTopL" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+
+    	<suspension node="spaceCab_antennaSpringR" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+    	<suspension node="spaceCab_antennaSecR_01" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+    	<suspension node="spaceCab_antennaSecR_02" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+    	<suspension node="spaceCab_antennaSecR_03" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+    	<suspension node="spaceCab_antennaSecR_04" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+		<suspension node="spaceCab_antennaTopR" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+
+		<suspension node="comfortCab_antennaSecL_01" 	weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+    	<suspension node="comfortCab_antennaSecL_02" 	weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+		<suspension node="comfortCab_antennaSecL_03" 	weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+		<suspension node="comfortCab_antennaSecL_04"	weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+		<suspension node="comfortCab_antennaTopL" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+
+		<suspension node="comfortCab_antennaSecR_01" 	weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+    	<suspension node="comfortCab_antennaSecR_02" 	weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+		<suspension node="comfortCab_antennaSecR_03" 	weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+		<suspension node="comfortCab_antennaSecR_04" 	weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+		<suspension node="comfortCab_antennaTopR" 		weight="250" minRotation="-2 0 -2" 				maxRotation="2 0 2" 			suspensionParametersX="20 4" 	suspensionParametersY="5 1" suspensionParametersZ="20 4" />
+    </suspensions>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+    <baseMaterial>
+		<material name="default" baseNode="cabinBase_Vis">
+			<shaderParameter name="colorMat0" value="SHARED_GREY2"/>
+		</material>
+    </baseMaterial>
+	
+	<baseMaterialConfigurations price="1000" useDefaultColors="true" defaultColorIndex="8" title="l10n_vehicle_color">
+		<material name="default" shaderParameter="colorMat0"/>
+	</baseMaterialConfigurations>
+	
+<!-- @todo check to only have this configuration visible for baler -->
+    <tensionBelts>
+        <tensionBeltsConfigurations title="$l10n_configuration_tensionbelts">
+            <tensionBeltsConfiguration name="$l10n_configuration_tensionbelts_no">
+            </tensionBeltsConfiguration>
+            <tensionBeltsConfiguration name="$l10n_configuration_tensionbelts_yes">
+                <tensionBelts linkNode="tensionBelts" rootNode="DAF_XF_105" jointNode="DAF_XF_105" width="0.075" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="0.1" defaultOffsetSide="0.1" defaultHeight="4" activationTrigger="beltActivationTrigger">
+                    <tensionBelt startNode="startPoint01" endNode="startPoint01End" offsetLeft="0.2" />
+                    <tensionBelt startNode="startPoint02" endNode="startPoint02End" />
+                    <tensionBelt startNode="startPoint03" endNode="startPoint03End" />
+                    <tensionBelt startNode="startPoint04" endNode="startPoint04End" />
+                    <tensionBelt startNode="startPoint05" endNode="startPoint05End" />
+                    <tensionBelt startNode="startPoint06" endNode="startPoint06End" />
+                    <tensionBelt startNode="startPoint07" endNode="startPoint07End" />
+                    <tensionBelt startNode="startPoint08" endNode="startPoint08End" />
+                    <tensionBelt startNode="startPoint09" endNode="startPoint09End" offsetRight="0.2" />
+                    <sounds>
+                        <addBelt    template="beltOpen" />
+                        <removeBelt template="beltClose" />
+                    </sounds>
+                </tensionBelts>
+            </tensionBeltsConfiguration>
+        </tensionBeltsConfigurations>
+    </tensionBelts>
+
+
+    <designConfigurations title="$l10n_configuration_cabinetype">
+        <designConfiguration name="$l10n_configuration_cabinetype_ComfortCab" price="0">
+            <objectChange node="comfortCab" 						visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_acc" 					visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_antennas" 				visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="smokes" 							visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_Sunvisor_shared" 		visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_interior" 				visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_upholstery" 				visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_roofshutter" 			visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_curtains" 				visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_interiorLights"			visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_speakers" 				visibilityActive="true" 				visibilityInactive="false"/>
+
+            <objectChange node="comfortCab_staticLights" 			visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_spotlights_real" 		visibilityActive="true" 				visibilityInactive="false"/>
+
+            <objectChange node="comfortCab_beacons" 				visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_mainLight" 				visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_reverseLight" 			visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="comfortCab_Sunvisor_shared" 			visibilityActive="true" 				visibilityInactive="false"/>
+
+            <objectChange node="comfortCab_spotlights" 				visibilityActive="true" 				visibilityInactive="false"/>
+			<!--Collisions-->
+            <objectChange node="colPartSpace" 						compoundChildActive="false" />
+			<!--Collisions-->
+        </designConfiguration>
+        <designConfiguration name="$l10n_configuration_cabinetype_SpaceCab" price="3000">
+            <objectChange node="spaceCab" 							visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="spaceCab_acc" 						visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="spaceCab_antennas" 					visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="spaceCab_interior" 					visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="spaceCab_parts"  					visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="mirrorLights_shared" 				visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="spaceCab_staticLights" 				visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="spaceCab_spotlights_real"  			visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="spaceCab_speakers" 					visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="spaceCab_beacons" 					visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="spaceSunvisor_shared" 				visibilityActive="true" 				visibilityInactive="false"/>
+        </designConfiguration>
+    </designConfigurations>
+
+	<design2Configurations title="$l10n_configuration_bullbar">
+		<design2Configuration name="$l10n_configuration_bullbar_no" price="0">
+		</design2Configuration>
+		<design2Configuration name="$l10n_configuration_bullbar_bullbar" price="1000">
+			<objectChange node="bullBar" 							visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="bullBar_lights" 					visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="bullBar_spotlightL_01" 				visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="bullBar_spotlightL_02" 				visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="bullBar_spotlightR_01" 				visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="bullBar_spotlightR_02" 				visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="bullBar_lights_real" 				visibilityActive="true" 				visibilityInactive="false"/>
+		</design2Configuration>
+		<design2Configuration name="$l10n_configuration_bullbar_stonecatcher" price="500">
+			<objectChange node="stoneCatcher" 						visibilityActive="true" 				visibilityInactive="false"/>
+		</design2Configuration>
+		<design2Configuration name="$l10n_configuration_bullbar_both" price="1500">
+			<objectChange node="bullBar" 							visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="stoneCatcher" 						visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="bullBar_lights" 					visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="bullBar_spotlightL_01" 				visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="bullBar_spotlightL_02" 				visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="bullBar_spotlightR_01" 				visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="bullBar_spotlightR_02" 				visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="bullBar_lights_real" 				visibilityActive="true" 				visibilityInactive="false"/>
+		</design2Configuration>
+	</design2Configurations>
+	
+	<design3Configurations title="$l10n_configuration_exhaust">
+		<design3Configuration name="$l10n_configuration_exhaust_stacks" price="0">
+			<objectChange node="standingPipesBaler" 				visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="sidePipesBaler" 					visibilityActive="false" 				visibilityInactive="true"/>
+		</design3Configuration>
+		<design3Configuration name="$l10n_configuration_exhaust_side" price="0">
+			<objectChange node="sidePipesBaler" 					visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="standingPipesBaler" 				visibilityActive="false" 				visibilityInactive="true"/>
+		</design3Configuration>
+	</design3Configurations>
+
+    <vehicleTypeConfigurations title="$l10n_configuration_chassistype">
+        <vehicleTypeConfiguration name="$l10n_configuration_chassistype_semi" price="0" vehicleType="baseDrivable">
+          <objectChange node="normalVehicle_conf" 					visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="normalVehicle_chassis" 				visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="dynamicMountTrigger" 					visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="normalVehicle_liftAxle" 				visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="mudFlap_Component4" 					translationActive="0 0.58 -3.531"/>
+          <!--StaticLights-->
+          <objectChange node="sideBarLight_normal" 					visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="sideMarkersNormal_shared" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="BumperNormal" 						visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="NormalplateNumberLightLB" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="NormalplateNumberLightRB" 			visibilityActive="true" 				visibilityInactive="false"/>
+		  
+          <!-- <objectChange node="turnLightR" 							visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="turnLightL" 							visibilityActive="true" 				visibilityInactive="false"/> -->
+          <objectChange node="normalVehicle_reverseLights" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="rearLight_normal_conf_shared" 		visibilityActive="true" 				visibilityInactive="false"/>
+          <!--StaticLights-->
+          <objectChange node="normalVehicle_lights_real" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="normalVehicle_turnR_real" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="normalVehicle_turnL_real" 			visibilityActive="true" 				visibilityInactive="false"/>
+           <objectChange node="sideBarlights_normal_real" 			visibilityActive="true" 				visibilityInactive="false"/>
+          
+		  <objectChange node="normaVehicle_spoilerskirts" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="normalvehicle_fenderSpoiler" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="normalVehicle_shortSpoilers" 			visibilityActive="false" 				visibilityInactive="true"/>
+          <objectChange node="normalVehicle_licenseplateF" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="normalVehicle_licenseplateB" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="normalVehicle_brakeLights_real" 		translationActive="0 0 0"/>
+          <objectChange node="normalVehicle_reverseLights_real" 	translationActive="0 -0.046 4.046"/>
+          
+		  <objectChange node="normalVehicle_5thWheel" 				translationActive="0 1.377 -2.267"/>
+          <objectChange node="normalVehicle_attacherJoint" 			translationActive="0 0.79 -3.713"/>
+          <objectChange node="normalVehicle_connectionHoses" 		translationActive="0 0.03 2.809"/>
+          
+		  <!--Collisions-->
+          <objectChange node="ColFloor" 							compoundChildActive="false" />
+          <objectChange node="ColRack" 								compoundChildActive="false" />
+          <objectChange node="ColSkirtsBaler" 						compoundChildActive="false" />
+          <objectChange node="ColSkirts2Baler" 						compoundChildActive="false" />
+          <objectChange node="ColBumperBaler" 						compoundChildActive="false" />
+          <objectChange node="ramp_col" 							compoundChildActive="false" />
+          <objectChange node="ColCushenL" 							compoundChildActive="false" />
+          <objectChange node="ColCushenR" 							compoundChildActive="false" />
+          <!--Collisions-->
+
+          <objectChange node="normalVehicle_wheelChangeR" 			translationActive="0 -0.05 0" 			translationInactive="-0.032 -0.04 -0.81"/>
+          <objectChange node="normalVehicle_wheelChangeL" 			translationActive="0 -0.05 0" 			translationInactive="-0.032 -0.04 -0.81"/>
+          <objectChange node="normalVehicle_liftAxle" 				translationActive="0 0 0" 				translationInactive="0 0.2 -3.458"/>
+          <objectChange node="normalVehicle_liftAxle" 				visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="balerVehicle_liftAxle" 				translationActive="0 0.1 3.458"			translationInactive="0 0 0"/>
+          <objectChange node="balerVehicle_liftAxle" 				visibilityActive="false" 				visibilityInactive="true"/>
+        
+		</vehicleTypeConfiguration>
+        <vehicleTypeConfiguration name="$l10n_configuration_chassistype_baler" price="0" 	vehicleType="PalletAutoLoaderCar">
+          <objectChange node="balerVehicle_conf" 					visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="balerVehicle_liftAxle" 				visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="mudFlap_Component4" 					translationActive="0 0.58 -7.109"/>
+          <!--StaticLights-->
+          <objectChange node="rearLight_baler_conf_shared" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="balerVehicle_contourLights" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="SideBarLichtBalerL" 					visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="SideBarLichtBalerR" 					visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="sideMarkersBaler" 					visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="BalerplateNumberLightLB" 				visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="BalerplateNumberLightRB" 				visibilityActive="true" 				visibilityInactive="false"/>
+          <!--StaticLights-->
+          <objectChange node="balerVehicle_lights_real" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="balerVehicle_turnR_real" 				visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="balerVehicle_turnL_real" 				visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="sideBarlights_baler_real" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="balerVehicle_licenseplateF" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="balerVehicle_licenseplateB" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="ramps" 								visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="Daf Logo" 							visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="normaVehicle_spoilerskirts" 			visibilityActive="false" 				visibilityInactive="true"/>
+          <objectChange node="normalvehicle_fenderSpoiler" 			visibilityActive="false" 				visibilityInactive="true"/>
+          <objectChange node="normalVehicle_shortSpoilers" 			visibilityActive="true" 				visibilityInactive="false"/>
+          <objectChange node="normalVehicle_brakeLights_real" 		translationActive="0 0.332 -3.023"/>
+          <objectChange node="normalVehicle_reverseLights_real" 	translationActive="0 0.117 0.97"/>
+          <objectChange node="normalVehicle_attacherJoint" 			translationActive="0 0.79 -7.055"/>
+          <objectChange node="normalVehicle_connectionHoses" 		translationActive="0 0 -0.538"/>
+          <!--Collisions-->
+          <objectChange node="ColSkirtsNormal" 						compoundChildActive="false" />
+          <objectChange node="ColRearNormal" 						compoundChildActive="false" />
+          <!--Collisions-->
+
+          <objectChange node="normalVehicle_wheelChangeR" 			translationActive="-0.032 -0.04 -0.81"	translationInactive="0 0 0"/>
+          <objectChange node="normalVehicle_wheelChangeL" 			translationActive="-0.032 -0.04 -0.81" 	translationInactive="0 0 0"/>
+          <objectChange node="normalVehicle_liftAxle" 				translationActive="0 0.1 -3.458" 		translationInactive="0 0 0"/>
+          <objectChange node="normalVehicle_liftAxle" 				visibilityActive="false" 				visibilityInactive="true"/>
+          <objectChange node="balerVehicle_liftAxle" 				translationActive="0 0 0" 				translationInactive="0 0.2 3.458"/>
+          <objectChange node="balerVehicle_liftAxle" 				visibilityActive="true" 				visibilityInactive="false"/>
+		  
+	  
+
+		</vehicleTypeConfiguration>
+    </vehicleTypeConfigurations>
+
+	<!-- @todo check to only have this configuration visible for baler -->
+	<foldable>
+		<foldingConfigurations title="$l10n_configuration_ramps">
+			<foldingConfiguration name="$l10n_configuration_ramps_no">
+				<objectChange node="ramps" 							visibilityActive="false" 				visibilityInactive="true"/>
+			</foldingConfiguration>
+			<foldingConfiguration name="$l10n_configuration_ramps_yes">
+				<foldingParts>
+					<foldingPart animationName="Ramps" speedScale="1"/>
+					<objectChange node="ramps" 						visibilityActive="true" 				visibilityInactive="false"/>
+				</foldingParts>
+			</foldingConfiguration>
+		</foldingConfigurations>
+	</foldable>
+
+
+
+    <i3dMappings>
+        <i3dMapping id="DAF_XF_105" 							node="0>" />
+		
+        <i3dMapping id="outdoorCameraTarget" 					node="0>0" />	
+        <i3dMapping id="outdoorCamera" 							node="0>0|0" />
+        <i3dMapping id="raycastNode1" 							node="0>0|1" />
+        <i3dMapping id="raycastNode2" 							node="0>0|2" />
+        <i3dMapping id="raycastNode3" 							node="0>0|3" />
+		
+        <i3dMapping id="indoorCamera" 							node="0>1" />
+		
+        <i3dMapping id="wheelInner_03FL" 						node="0>2|0" />
+        <i3dMapping id="wheelInner_03FR" 						node="0>2|1" />
+        <i3dMapping id="wheelInner_01FL" 						node="0>2|2" />
+        <i3dMapping id="wheelInner_01FR" 						node="0>2|3" />
+        <i3dMapping id="wheelInner_02FL" 						node="0>2|4" />
+        <i3dMapping id="wheelInner_02FR" 						node="0>2|5" />
+		
+        <i3dMapping id="normalVehicle_wheelChangeR" 			node="0>3|0" />
+        <i3dMapping id="normalVwheelInner_03BR" 				node="0>3|0|0" />
+        <i3dMapping id="normalVwheelInner_01BR" 				node="0>3|0|1" />
+        <i3dMapping id="normalVwheelInner_02BR" 				node="0>3|0|2" />
+        <i3dMapping id="normalVehicle_wheelChangeL" 			node="0>3|1" />
+        <i3dMapping id="normalVwheelInner_03BL" 				node="0>3|1|0" />
+        <i3dMapping id="normalVwheelInner_01BL" 				node="0>3|1|1" />
+        <i3dMapping id="normalVwheelInner_02BL" 				node="0>3|1|2" />
+		
+        <i3dMapping id="dynamicMountTrigger" 					node="0>4" />
+        <i3dMapping id="aiCollisiontrigger" 					node="0>5" />
+        <i3dMapping id="trafficCollisionTrigger" 				node="0>6" />
+		
+        <i3dMapping id="LiftAxles" 								node="0>8" />
+        <i3dMapping id="normalVehicle_liftAxle" 				node="0>8|0" />
+        <i3dMapping id="normalVwheelInner_03_liftaxle_R" 		node="0>8|0|0" />
+        <i3dMapping id="normalVwheelInner_03_liftaxle_L" 		node="0>8|0|1" />
+        <i3dMapping id="normalVwheelInner_01_liftaxle_R" 		node="0>8|0|3" />
+        <i3dMapping id="normalVwheelInner_01_liftaxle_L" 		node="0>8|0|4" />
+        <i3dMapping id="normalVwheelInner_02_liftaxle_R" 		node="0>8|0|5" />
+        <i3dMapping id="normalVwheelInner_02_liftaxle_L" 		node="0>8|0|6" />
+        <i3dMapping id="balerVehicle_liftAxle" 					node="0>8|1" />
+        <i3dMapping id="balerVwheelInner_03_liftaxle_L" 		node="0>8|1|0" />
+        <i3dMapping id="balerVwheelInner_03_liftaxle_R" 		node="0>8|1|1" />
+        <i3dMapping id="balerVwheelInner_01_liftaxle_L" 		node="0>8|1|3" />
+        <i3dMapping id="balerVwheelInner_01_liftaxle_R" 		node="0>8|1|4" />
+        <i3dMapping id="balerVwheelInner_02_liftaxle_L" 		node="0>8|1|5" />
+        <i3dMapping id="balerVwheelInner_02_liftaxle_R" 		node="0>8|1|6" />
+				
+        <i3dMapping id="exitPoint" 								node="0>9" />
+		
+        <i3dMapping id="normalVehicle_chassis" 					node="0>11|0" />
+		
+        <i3dMapping id="backElectric" 							node="0>11|0|4|7|0|0|0" />
+        <i3dMapping id="hydraulic01_out" 						node="0>11|0|4|7|0|1|0" />
+        <i3dMapping id="hydraulic01_in" 						node="0>11|0|4|7|0|2|0" />
+        <i3dMapping id="airDoubleStorage" 						node="0>11|0|4|7|0|3|0" />
+        <i3dMapping id="airDoubleControl" 						node="0>11|0|4|7|0|4|0" />
+        <i3dMapping id="hydraulic02_out" 						node="0>11|0|4|7|0|5|0" />
+        <i3dMapping id="hydraulic02_in" 						node="0>11|0|4|7|0|6|0" />
+		
+        <i3dMapping id="normalVehicle_licenseplateF" 			node="0>11|1|0|0|2"/> <!-- @todo replace with licenseplate ingame -->
+        <i3dMapping id="normalVehicle_licenseplateB" 			node="0>11|1|0|0|3"/> <!-- @todo replace with licenseplate ingame -->
+        <i3dMapping id="balerVehicle_licenseplateF" 			node="0>11|1|0|0|4"/> <!-- @todo replace with licenseplate ingame -->
+        <i3dMapping id="balerVehicle_licenseplateB" 			node="0>11|1|0|0|5"/> <!-- @todo replace with licenseplate ingame -->
+        <i3dMapping id="Daf Logo" 								node="0>11|1|0|1|2"/>
+        <i3dMapping id="bullBar" 								node="0>11|1|0|2"/>
+        <i3dMapping id="bullBar_lights" 						node="0>11|1|0|3"/> <!-- @todo Check material -->
+		
+        <i3dMapping id="standardLightLow" 						node="0>12|0|0" />
+        <i3dMapping id="standardLightHigh" 						node="0>12|0|0" /> <!-- Double entry -->
+        <i3dMapping id="normalVehicle_lights_real" 				node="0>12|0|1" />
+        <i3dMapping id="NormalLightLow" 						node="0>12|0|1|0" />
+        <i3dMapping id="NormalLightHigh" 						node="0>12|0|1|0" /> <!-- Double entry -->
+        <i3dMapping id="balerVehicle_lights_real" 				node="0>12|0|2" />
+        <i3dMapping id="BalerLightLow" 							node="0>12|0|2|0" />
+        <i3dMapping id="BalerLightHigh" 						node="0>12|0|2|0" /> <!-- Double entry -->	
+        <i3dMapping id="bullBar_lights_real" 					node="0>12|1|0" />
+        <i3dMapping id="workLightFrontLow" 						node="0>12|1|0|0" />
+        <i3dMapping id="workLightFrontHigh" 					node="0>12|1|0|0" /> <!-- Double entry -->
+        <i3dMapping id="highBeamHigh" 							node="0>12|1|1" />
+        <i3dMapping id="highBeamLow" 							node="0>12|1|1" /> <!-- Double entry -->
+        <i3dMapping id="normalVehicle_brakeLights_real" 		node="0>12|2"/>
+        <i3dMapping id="brakeLights_red" 						node="0>12|2|0"/>
+        <i3dMapping id="normalVehicle_turnR_real" 				node="0>12|3|0"/>
+        <i3dMapping id="NormalturnLightRB" 						node="0>12|3|0|0"/>
+        <i3dMapping id="NormalturnLightR" 						node="0>12|3|0|1"/>
+        <i3dMapping id="balerVehicle_turnR_real" 				node="0>12|3|1"/>
+        <i3dMapping id="BalerturnLightRB" 						node="0>12|3|1|0"/>
+        <i3dMapping id="StandardturnLightRF" 					node="0>12|3|2"/>
+        <i3dMapping id="normalVehicle_turnL_real" 				node="0>12|4|0"/>
+        <i3dMapping id="NormalturnLightLB" 						node="0>12|4|0|0"/>
+        <i3dMapping id="NormalturnLightL" 						node="0>12|4|0|1"/>
+        <i3dMapping id="balerVehicle_turnL_real" 				node="0>12|4|1"/>
+        <i3dMapping id="BalerturnLightLB" 						node="0>12|4|1|0"/>
+        <i3dMapping id="StandardturnLightLF" 					node="0>12|4|2"/>
+        <i3dMapping id="normalVehicle_reverseLights_real" 		node="0>12|5"/>
+        <i3dMapping id="reverseLight" 							node="0>12|5|0"/>
+		
+        <i3dMapping id="sideBarlights_normal_real"				node="0>12|6|0"/>
+        <i3dMapping id="sideBarlightL_normal_01_real"			node="0>12|6|0|0|0"/>
+        <i3dMapping id="sideBarlightL_normal_02_real"			node="0>12|6|0|0|1"/>
+        <i3dMapping id="sideBarlightL_normal_03_real"			node="0>12|6|0|0|2"/>
+        <i3dMapping id="sideBarlightL_normal_04_real"			node="0>12|6|0|0|3"/>
+        <i3dMapping id="sideBarlightR_normal_01_real"			node="0>12|6|0|1|0"/>
+        <i3dMapping id="sideBarlightR_normal_02_real"			node="0>12|6|0|1|1"/>
+        <i3dMapping id="sideBarlightR_normal_03_real"			node="0>12|6|0|1|2"/>
+        <i3dMapping id="sideBarlightR_normal_04_real"			node="0>12|6|0|1|3"/>
+		
+        <i3dMapping id="sideBarlights_baler_real"				node="0>12|6|1"/>
+        <i3dMapping id="sideBarlightL_balerL_01_real"			node="0>12|6|1|0|0"/>
+        <i3dMapping id="sideBarlightL_balerL_02_real"			node="0>12|6|1|0|1"/>
+        <i3dMapping id="sideBarlightL_balerL_03_real"			node="0>12|6|1|0|2"/>
+        <i3dMapping id="sideBarlightL_balerL_04_real"			node="0>12|6|1|0|3"/>
+        <i3dMapping id="sideBarlightL_balerL_05_real"			node="0>12|6|1|0|4"/>
+        <i3dMapping id="sideBarlightL_balerL_06_real"			node="0>12|6|1|0|5"/>
+        <i3dMapping id="sideBarlightR_balerR_01_real"			node="0>12|6|1|1|0"/>
+        <i3dMapping id="sideBarlightR_balerR_02_real"			node="0>12|6|1|1|1"/>
+        <i3dMapping id="sideBarlightR_balerR_03_real"			node="0>12|6|1|1|2"/>
+        <i3dMapping id="sideBarlightR_balerR_04_real"			node="0>12|6|1|1|3"/>
+        <i3dMapping id="sideBarlightR_balerR_05_real"			node="0>12|6|1|1|4"/>
+        <i3dMapping id="sideBarlightR_balerR_06_real"			node="0>12|6|1|1|5"/>
+		
+        <i3dMapping id="cabinSuspension" 						node="0>13|0" />
+        <i3dMapping id="cabinBase_Vis" 							node="0>13|0|0" />
+		
+		<i3dMapping id="comfortCab" 							node="0>13|0|6" />
+		
+		<i3dMapping id="spaceCab" 								node="0>13|0|7" />
+		
+		<i3dMapping id="normaVehicle_spoilerskirts" 			node="0>13|0|7|2" />
+		
+        <i3dMapping id="roofLightstaticR_01" 					node="0>13|0|7|4|0" /> <!-- possible remove because of new lights -->
+        <i3dMapping id="roofLightstaticR_02" 					node="0>13|0|7|4|1" /> <!-- possible remove because of new lights -->
+        <i3dMapping id="roofLightstaticL_02" 					node="0>13|0|7|4|2" /> <!-- possible remove because of new lights -->
+        <i3dMapping id="roofLightstaticL_01" 					node="0>13|0|7|4|3" /> <!-- possible remove because of new lights -->
+		
+        <i3dMapping id="lightBoxhLow_space" 					node="0>13|0|7|5|2" />
+        <i3dMapping id="lightBoxHigh_space" 					node="0>13|0|7|5|2" /><!-- Double entry -->
+        <i3dMapping id="normalVehicle_shortSpoilers" 			node="0>13|0|7|6"/>
+		
+        <i3dMapping id="comfortCab_spotlights" 					node="0>13|0|8"/>
+		
+        <i3dMapping id="speedNeedle" 							node="0>13|0|9|0|0"/>
+        <i3dMapping id="rpmNeedle" 								node="0>13|0|9|0|1"/>
+        <i3dMapping id="fuelNeedle" 							node="0>13|0|9|0|2"/>
+		<i3dMapping id="comfortCab_acc" 						node="0>13|0|9|1|2" />
+		<i3dMapping id="seat" 									node="0>13|0|9|1|3" />
+		<i3dMapping id="spaceCab_acc" 							node="0>13|0|9|1|8" />
+        <i3dMapping id="screenLight" 							node="0>13|0|9|1|4|2|1|0|0" />
+        <i3dMapping id="timeLight" 								node="0>13|0|9|1|4|2|1|1" />
+        <i3dMapping id="wiperFront01" 							node="0>13|0|9|1|5|0|0" />
+        <i3dMapping id="wiperFront02" 							node="0>13|0|9|1|5|1|0" />
+        <i3dMapping id="wiperFront03" 							node="0>13|0|9|1|5|2|0" />	
+        <i3dMapping id="mirror01decal" 							node="0>13|0|9|1|7|0|0|0|0" />
+        <i3dMapping id="mirror02decal" 							node="0>13|0|9|1|7|0|0|0|1" />
+        <i3dMapping id="mirror03decal" 							node="0>13|0|9|1|7|1|0|0|0" />
+        <i3dMapping id="mirror04decal" 							node="0>13|0|9|1|7|1|0|0|1" />
+        <i3dMapping id="normalvehicle_fenderSpoiler" 			node="0>13|0|9|1|8|0|0|0|0|0" />
+        <i3dMapping id="stoneCatcher" 							node="0>13|0|9|2|0|0" />
+				
+		<i3dMapping id="comfortCab_Sunvisor_shared" 			node="0>13|0|12|0|0" />
+		<i3dMapping id="comfortSunvisorL_01" 					node="0>13|0|12|0|0|0" />
+		<i3dMapping id="comfortSunvisorL_02" 					node="0>13|0|12|0|0|1" />
+		<i3dMapping id="comfortSunvisorL_03" 					node="0>13|0|12|0|0|2" />
+		<i3dMapping id="comfortSunvisorL_04" 					node="0>13|0|12|0|0|3" />
+		<i3dMapping id="comfortSunvisorL_05" 					node="0>13|0|12|0|0|4" />
+		<i3dMapping id="comfortSunvisorR_01" 					node="0>13|0|12|0|0|5" />
+		<i3dMapping id="comfortSunvisorR_02" 					node="0>13|0|12|0|0|6" />
+		<i3dMapping id="comfortSunvisorR_03" 					node="0>13|0|12|0|0|7" />
+		<i3dMapping id="comfortSunvisorR_04" 					node="0>13|0|12|0|0|8" />
+		<i3dMapping id="comfortSunvisorR_05" 					node="0>13|0|12|0|0|9" />
+		
+		<i3dMapping id="spaceSunvisor_shared" 					node="0>13|0|12|0|1" />
+		<i3dMapping id="spaceSunvisorL_01" 						node="0>13|0|12|0|1|0" />
+		<i3dMapping id="spaceSunvisorL_02" 						node="0>13|0|12|0|1|1" />
+		<i3dMapping id="spaceSunvisorL_03" 						node="0>13|0|12|0|1|2" />
+		<i3dMapping id="spaceSunvisorL_04" 						node="0>13|0|12|0|1|3" />
+		<i3dMapping id="spaceSunvisorL_05" 						node="0>13|0|12|0|1|4" />
+		<i3dMapping id="spaceSunvisorR_01" 						node="0>13|0|12|0|1|5" />
+		<i3dMapping id="spaceSunvisorR_02" 						node="0>13|0|12|0|1|6" />
+		<i3dMapping id="spaceSunvisorR_03" 						node="0>13|0|12|0|1|7" />
+		<i3dMapping id="spaceSunvisorR_04" 						node="0>13|0|12|0|1|8" />
+		<i3dMapping id="spaceSunvisorR_05" 						node="0>13|0|12|0|1|9" />
+		
+		<i3dMapping id="comfortCab_Sunvisor_shared" 			node="0>13|0|12|0|0" />
+		
+		<i3dMapping id="mirrorLights_shared" 					node="0>13|0|12|0|2" />
+		<i3dMapping id="mirrorLightL" 							node="0>13|0|12|0|2|0" />
+		<i3dMapping id="mirrorLightR" 							node="0>13|0|12|0|2|1" />
+		
+        <i3dMapping id="spaceCab_staticLights" 					node="0>13|0|12|1|0" />
+        <i3dMapping id="comfortCab_staticLights" 				node="0>13|0|12|1|1" />
+		
+        <i3dMapping id="comfortHellaL" 							node="0>13|0|12|1|1|0" /> <!-- @todo check for shared lights -->
+        <i3dMapping id="comfortHellaR" 							node="0>13|0|12|1|1|1" /> <!-- @todo check for shared lights -->
+		
+        <i3dMapping id="spaceLightL_02_Static" 					node="0>13|0|12|1|0|0|0|0" />
+        <i3dMapping id="spaceLightR_02_Static" 					node="0>13|0|12|1|0|1|0|0" />
+        <i3dMapping id="spaceLightL_01_Static" 					node="0>13|0|12|1|0|2|0|0" />
+        <i3dMapping id="spaceLightR_01_Static" 					node="0>13|0|12|1|0|3|0|0" />
+		
+        <i3dMapping id="fenderTurnlightR" 						node="0>13|0|12|2|0" />
+        <i3dMapping id="fenderTurnlightL" 						node="0>13|0|12|3|0" />
+		
+        <i3dMapping id="rooftopWorkinglightsLB" 				node="0>13|0|12|4|0" /> <!-- @todo check for shared lights -->
+        <i3dMapping id="rooftopWorkinglightsRB" 				node="0>13|0|12|4|1" /> <!-- @todo check for shared lights -->
+		
+		<i3dMapping id="dashboardLight_beam" 					node="0>13|0|12|5" />
+		<i3dMapping id="dashboardLight_turnL" 					node="0>13|0|12|6|0" />
+		<i3dMapping id="dashboardLight_turnR" 					node="0>13|0|12|6|1" />
+		
+        <i3dMapping id="comfortCab_mainLight" 					node="0>13|0|12|7|0" /> <!-- @todo check because of warning about Corona -->
+        <i3dMapping id="frontLightLow1" 						node="0>13|0|12|7|0|0" />
+        <i3dMapping id="frontLightHigh1" 						node="0>13|0|12|7|0|0" /><!-- Double entry -->
+        <i3dMapping id="turnLightRightFender" 					node="0>13|0|12|7|1|0"/>
+        <i3dMapping id="turnLightLeftFender" 					node="0>13|0|12|7|2|0"/>
+        <i3dMapping id="comfortCab_reverseLight" 				node="0>13|0|12|7|3"/>
+        <i3dMapping id="reverseLightHigh1" 						node="0>13|0|12|7|3|0"/>
+        <i3dMapping id="reverseLightHigh2" 						node="0>13|0|12|7|3|1"/>
+        <i3dMapping id="comfortCab_beacons" 					node="0>13|0|12|7|4"/>
+        <i3dMapping id="comfortCab_beacon_01" 					node="0>13|0|12|7|4|0"/>
+        <i3dMapping id="comfortCab_beacon_02" 					node="0>13|0|12|7|4|1"/>
+        <i3dMapping id="spaceCab_spotlights_real" 				node="0>13|0|12|7|5" /> 
+        <i3dMapping id="SpaceLow" 								node="0>13|0|12|7|5|0" /> 
+        <i3dMapping id="SpaceHigh" 								node="0>13|0|12|7|5|0" /> <!-- possible remove because of new lights --><!-- Double entry -->
+        <i3dMapping id="comfortCab_spotlights_real" 			node="0>13|0|12|7|6" />
+        <i3dMapping id="ComfortLow" 							node="0>13|0|12|7|6|0" />
+        <i3dMapping id="ComfortHigh" 							node="0>13|0|12|7|6|0" /><!-- Double entry -->
+        <i3dMapping id="spaceCab_beacons" 						node="0>13|0|12|7|7" />
+        <i3dMapping id="spaceCab_beacon_01" 					node="0>13|0|12|7|7|0" />
+        <i3dMapping id="spaceCab_beacons_02" 					node="0>13|0|12|7|7|1" />
+		
+        <i3dMapping id="DashLow" 								node="0>13|0|12|8|0" />
+        <i3dMapping id="DashHigh" 								node="0>13|0|12|8|0" /><!-- Double entry -->
+        <i3dMapping id="dashLights" 							node="0>13|0|12|8|1" />
+        <i3dMapping id="dashLight_yellow" 						node="0>13|0|12|8|1|0" />
+        <i3dMapping id="dashLight_green" 						node="0>13|0|12|8|1|1" />
+        <i3dMapping id="dashLight_red" 							node="0>13|0|12|8|1|2" />
+		
+        <i3dMapping id="flasherL_01" 							node="0>13|0|12|9|0" />
+        <i3dMapping id="flasherR_01" 							node="0>13|0|12|9|1" />
+		
+		
+        <i3dMapping id="PoppyLight_static" 						node="0>13|0|13|0|0|2" />
+		
+        <i3dMapping id="smokes" 								node="0>13|0|13|0|1" />
+		
+        <i3dMapping id="comfortCab_speakers" 					node="0>13|0|13|0|2|0" />
+        <i3dMapping id="spaceCab_speakers" 						node="0>13|0|13|0|2|1" />
+		
+        <i3dMapping id="comfortCab_interior" 					node="0>13|0|13|1" />
+        <i3dMapping id="spaceCab_interior" 						node="0>13|0|13|2" />
+        <i3dMapping id="comfortCab_upholstery" 					node="0>13|0|13|3" />
+        <i3dMapping id="comfortCab_roofshutter" 				node="0>13|0|13|5" />
+        <i3dMapping id="comfortCab_curtains" 					node="0>13|0|13|6" />
+        <i3dMapping id="comfortCab_interiorLights" 				node="0>13|0|13|7" />
+        <i3dMapping id="comfortCab_interiorLightL" 				node="0>13|0|13|7|0|0" /> <!-- @todo Maybe need to be a shared light -->
+        <i3dMapping id="comfortCab_interiorLightR" 				node="0>13|0|13|7|1|0" /> <!-- @todo Maybe need to be a shared light -->
+		
+        <!-- <i3dMapping id="InteriorLightLow" 						node="0>13|0|13|7|3" />
+        <i3dMapping id="InteriorLightHigh" 						node="0>13|0|13|7|3" /> --><!-- Double entry -->
+		
+        <i3dMapping id="InteriorLight_01" 						node="0>13|0|13|7|4" />
+        <i3dMapping id="InteriorLight_02" 						node="0>13|0|13|7|5" />
+        <i3dMapping id="InteriorLight_03" 						node="0>13|0|13|7|6" />
+		
+        <i3dMapping id="spaceCab_parts" 						node="0>13|0|13|8" /> <!-- @todo check lights in this transformgroup to see if it can change to shared -->
+        <i3dMapping id="interiorRooflightL_Static" 				node="0>13|0|13|8|3|0|0" />
+        <i3dMapping id="interiorRooflightR_Static" 				node="0>13|0|13|8|3|1|0" />
+        <i3dMapping id="InteriorLightLow1" 						node="0>13|0|13|8|3|2" />
+        <i3dMapping id="InteriorLightHigh1" 					node="0>13|0|13|8|3|2" /><!-- Double entry -->
+        <i3dMapping id="onboardComputerON" 						node="0>13|0|13|11|1" />
+        <i3dMapping id="onboardComputer" 						node="0>13|0|13|11|2" />
+        <i3dMapping id="onboardComputerLight" 					node="0>13|0|13|11|3" />
+		
+		
+        <i3dMapping id="steeringWheel" 							node="0>13|0|14|0"/>
+        <i3dMapping id="player_rightHand" 						node="0>13|0|14|0|0" />	
+        <i3dMapping id="player_leftHand" 						node="0>13|0|14|0|1" />
+		
+        <i3dMapping id="spaceCab_antennas" 						node="0>13|0|16|0" />
+        <i3dMapping id="spaceCab_antennaSpringL" 				node="0>13|0|16|0|0|0" />
+        <i3dMapping id="spaceCab_antennaSecL_01" 				node="0>13|0|16|0|0|0|0" />
+        <i3dMapping id="spaceCab_antennaSecL_02" 				node="0>13|0|16|0|0|0|0|0" />
+        <i3dMapping id="spaceCab_antennaSecL_03" 				node="0>13|0|16|0|0|0|0|0|0" />
+        <i3dMapping id="spaceCab_antennaSecL_04" 				node="0>13|0|16|0|0|0|0|0|0|0" />
+        <i3dMapping id="spaceCab_antennaTopL" 					node="0>13|0|16|0|0|0|0|0|0|0|0" />
+	
+		<i3dMapping id="spaceCab_antennaSpringR" 				node="0>13|0|16|0|1|0" />
+        <i3dMapping id="spaceCab_antennaSecR_01" 				node="0>13|0|16|0|1|0|0" />
+        <i3dMapping id="spaceCab_antennaSecR_02" 				node="0>13|0|16|0|1|0|0|0" />
+        <i3dMapping id="spaceCab_antennaSecR_03" 				node="0>13|0|16|0|1|0|0|0|0" />
+        <i3dMapping id="spaceCab_antennaSecR_04" 				node="0>13|0|16|0|1|0|0|0|0|0" />
+        <i3dMapping id="spaceCab_antennaTopR" 					node="0>13|0|16|0|1|0|0|0|0|0|0" />
+				
+		<i3dMapping id="comfortCab_antennas" 					node="0>13|0|16|1" />
+		<i3dMapping id="comfortCab_antennaSecL_01" 				node="0>13|0|16|1|0|0" />
+        <i3dMapping id="comfortCab_antennaSecL_02" 				node="0>13|0|16|1|0|0|0" />
+        <i3dMapping id="comfortCab_antennaSecL_03" 				node="0>13|0|16|1|0|0|0|0" />
+        <i3dMapping id="comfortCab_antennaSecL_04" 				node="0>13|0|16|1|0|0|0|0|0" />
+        <i3dMapping id="comfortCab_antennaTopL" 				node="0>13|0|16|1|0|0|0|0|0|0" />
+		
+		<i3dMapping id="comfortCab_antennaSecR_01" 				node="0>13|0|16|1|0|1" />
+        <i3dMapping id="comfortCab_antennaSecR_02" 				node="0>13|0|16|1|0|1|0" />
+        <i3dMapping id="comfortCab_antennaSecR_03" 				node="0>13|0|16|1|0|1|0|0" />
+        <i3dMapping id="comfortCab_antennaSecR_04" 				node="0>13|0|16|1|0|1|0|0|0" />
+        <i3dMapping id="comfortCab_antennaTopR" 				node="0>13|0|16|1|0|1|0|0|0|0" />
+		
+        <i3dMapping id="normalVehicle_conf" 					node="0>13|1" />		
+        <i3dMapping id="exhaustParticlesNormalR" 				node="0>13|1|7|14" />
+        <i3dMapping id="exhaustParticlesNormalL" 				node="0>13|1|7|15" />
+		
+        <i3dMapping id="balerVehicle_conf" 						node="0>13|2" />
+        <i3dMapping id="standingPipesBaler" 					node="0>13|2|2|0" />
+        <i3dMapping id="exhaustParticlesBalerL_standing" 		node="0>13|2|2|0|14" />
+        <i3dMapping id="exhaustParticlesBalerR_standing" 		node="0>13|2|2|0|15" />
+        <i3dMapping id="sidePipesBaler" 						node="0>13|2|2|1" />
+        <i3dMapping id="exhaustParticlesBalerL_side" 			node="0>13|2|2|1|1" />
+        <i3dMapping id="exhaustParticlesBalerR_side" 			node="0>13|2|2|1|2" />
+
+
+        <i3dMapping id="normalVehicle_connectionHoses" 			node="0>13|4" />
+        <i3dMapping id="backElectric2" 							node="0>13|4|0|0|0|0" />
+        <i3dMapping id="hydraulic03_out" 						node="0>13|4|0|0|1|0" />
+        <i3dMapping id="hydraulic03_in" 						node="0>13|4|0|0|2|0" />
+        <i3dMapping id="airDoubleControl2" 						node="0>13|4|0|0|3|0" />
+        <i3dMapping id="airDoubleStorage2" 						node="0>13|4|0|0|4|0" />
+        <i3dMapping id="hydraulic04_out" 						node="0>13|4|0|0|5|0" />
+        <i3dMapping id="hydraulic04_in" 						node="0>13|4|0|0|6|0" />
+		
+		<i3dMapping id="headLight_L_glassStatic"				node="0>14|0|0|0|0|0" />
+		<i3dMapping id="headLight_R_glassStatic"				node="0>14|0|0|1|0|0" />
+		
+		<i3dMapping id="fogLight_L_02_glassStatic"				node="0>14|0|1|0|0|0" />
+		<i3dMapping id="fogLight_R_02_glassStatic"				node="0>14|0|1|1|0|0" />
+		<i3dMapping id="fogLight_L_01_glassStatic"				node="0>14|0|1|2|0|0" />
+		<i3dMapping id="fogLight_R_01_glassStatic"				node="0>14|0|1|3|0|0" />
+		
+		<i3dMapping id="NormalbumperL" 							node="0>14|0|2|0|0" />
+		<i3dMapping id="NormalbumperR" 							node="0>14|0|2|0|1" />
+		
+		<i3dMapping id="plateNumberLightRF" 					node="0>14|0|2|1|0" />
+		<i3dMapping id="plateNumberLightLF" 					node="0>14|0|2|1|1" />
+		<i3dMapping id="NormalplateNumberLightLB" 				node="0>14|0|2|1|2" />
+		<i3dMapping id="NormalplateNumberLightRB" 				node="0>14|0|2|1|3" />
+		<i3dMapping id="BalerplateNumberLightLB" 				node="0>14|0|2|1|4" />
+		<i3dMapping id="BalerplateNumberLightRB" 				node="0>14|0|2|1|5" />
+		
+		
+		<i3dMapping id="BumperNormal" 							node="0>14|0|2|0" />
+		<i3dMapping id="NormalplateNumberLightLB" 				node="0>14|0|2|1|2" />
+		<i3dMapping id="NormalplateNumberLightRB" 				node="0>14|0|2|1|3" />
+		
+		<i3dMapping id="sideBarLight_normal" 					node="0>14|0|2|2" />
+		<i3dMapping id="sideBarlightL_normal_01" 				node="0>14|0|2|2|0|0" />
+		<i3dMapping id="sideBarlightL_normal_02" 				node="0>14|0|2|2|0|1" />
+		<i3dMapping id="sideBarlightL_normal_03" 				node="0>14|0|2|2|0|2" />
+		<i3dMapping id="sideBarlightL_normal_04" 				node="0>14|0|2|2|0|3" />
+		
+		<i3dMapping id="sideBarlightR_normal_01" 				node="0>14|0|2|2|1|0" />
+		<i3dMapping id="sideBarlightR_normal_02" 				node="0>14|0|2|2|1|1" />
+		<i3dMapping id="sideBarlightR_normal_03" 				node="0>14|0|2|2|1|2" />
+		<i3dMapping id="sideBarlightR_normal_04" 				node="0>14|0|2|2|1|3" />
+		
+		<i3dMapping id="SideBarLichtBalerL" 					node="0>14|0|2|3|0" />
+		<i3dMapping id="sideBarlightL_baler_01" 				node="0>14|0|2|3|0|0" /> 
+		<i3dMapping id="sideBarlightL_baler_02" 				node="0>14|0|2|3|0|1" /> 
+		<i3dMapping id="sideBarlightL_baler_03" 				node="0>14|0|2|3|0|2" /> 
+		<i3dMapping id="sideBarlightL_baler_04" 				node="0>14|0|2|3|0|3" /> 
+		<i3dMapping id="sideBarlightL_baler_05" 				node="0>14|0|2|3|0|4" /> 
+		<i3dMapping id="sideBarlightL_baler_06" 				node="0>14|0|2|3|0|5" /> 
+		<i3dMapping id="SideBarLichtBalerR" 					node="0>14|0|2|3|1" />
+		<i3dMapping id="sideBarlightR_baler_01" 				node="0>14|0|2|3|1|0" /> 
+		<i3dMapping id="sideBarlightR_baler_02" 				node="0>14|0|2|3|1|1" /> 
+		<i3dMapping id="sideBarlightR_baler_03" 				node="0>14|0|2|3|1|2" /> 
+		<i3dMapping id="sideBarlightR_baler_04" 				node="0>14|0|2|3|1|3" /> 
+		<i3dMapping id="sideBarlightR_baler_05" 				node="0>14|0|2|3|1|4" /> 
+		<i3dMapping id="sideBarlightR_baler_06" 				node="0>14|0|2|3|1|5" />
+				
+		<i3dMapping id="balerVehicle_contourLights" 			node="0>14|0|2|4" />
+		<i3dMapping id="countourLightBalerL_01" 				node="0>14|0|2|4|0|0" />
+		<i3dMapping id="countourLightBalerL_02" 				node="0>14|0|2|4|0|1" />
+		<i3dMapping id="countourLightBalerL_03" 				node="0>14|0|2|4|0|2" />
+		<i3dMapping id="countourLightBalerL_04" 				node="0>14|0|2|4|0|3" />
+		<i3dMapping id="countourLightBalerL_05" 				node="0>14|0|2|4|0|4" />
+		<i3dMapping id="countourLightBalerR_01" 				node="0>14|0|2|4|1|0" />
+		<i3dMapping id="countourLightBalerR_02" 				node="0>14|0|2|4|1|1" />
+		<i3dMapping id="countourLightBalerR_03" 				node="0>14|0|2|4|1|2" />
+		<i3dMapping id="countourLightBalerR_04" 				node="0>14|0|2|4|1|3" />
+		<i3dMapping id="countourLightBalerR_05" 				node="0>14|0|2|4|1|4" />
+		
+		<i3dMapping id="sideMarkersNormal_shared" 				node="0>14|0|2|5" />
+		<i3dMapping id="sideMarkerNormalL_01" 					node="0>14|0|2|5|0|0" />
+		<i3dMapping id="sideMarkerNormalL_02" 					node="0>14|0|2|5|0|1" />
+		<i3dMapping id="sideMarkerNormalL_03" 					node="0>14|0|2|5|0|2" />
+		<i3dMapping id="sideMarkerNormalL_04" 					node="0>14|0|2|5|0|3" />
+		<i3dMapping id="sideMarkerNormalR_01" 					node="0>14|0|2|5|1|0" />
+		<i3dMapping id="sideMarkerNormalR_02" 					node="0>14|0|2|5|1|1" />
+		<i3dMapping id="sideMarkerNormalR_03" 					node="0>14|0|2|5|1|2" />
+		<i3dMapping id="sideMarkerNormalR_04" 					node="0>14|0|2|5|1|3" />
+
+		<i3dMapping id="sideMarkersBaler" 						node="0>14|0|2|6" />
+		<i3dMapping id="sideMarkerBalerL_01"					node="0>14|0|2|6|0|0" />
+		<i3dMapping id="sideMarkerBalerR_01"					node="0>14|0|2|6|1|0" />
+		
+		<i3dMapping id="beamLightL_static" 						node="0>14|1|0|0|0" />
+		<i3dMapping id="beamLightR_static" 						node="0>14|1|1|0|0" />
+		
+		<i3dMapping id="bullBar_spotlightL_01" 					node="0>14|1|2" /> <!-- @todo check material -->
+		<i3dMapping id="bullBar_spotlightL_02" 					node="0>14|1|3" /> <!-- @todo check material -->
+		<i3dMapping id="bullBar_spotlightR_01" 					node="0>14|1|4" /> <!-- @todo check material -->
+		<i3dMapping id="bullBar_spotlightR_02" 					node="0>14|1|5" /> <!-- @todo check material -->
+	
+        
+        <i3dMapping id="turnLightRF_static" 					node="0>14|3|0" />
+        <i3dMapping id="turnLightLF_static" 					node="0>14|4|0" />
+		
+        <i3dMapping id="normalVehicle_reverseLights" 			node="0>14|5" /> <!-- @todo check to make shared -->
+        <i3dMapping id="normalVehicle_reverseLightL" 			node="0>14|5|0" /> <!-- @todo check to make shared -->
+        <i3dMapping id="normalVehicle_reverseLightR" 			node="0>14|5|1" /> <!-- @todo check to make shared -->
+		
+        <i3dMapping id="rearLight_normal_conf_shared" 			node="0>14|6" />
+        <i3dMapping id="rearLight_normal_conf_L1" 				node="0>14|6|0" />
+        <i3dMapping id="rearLight_normal_conf_L2" 				node="0>14|6|1" />
+        <i3dMapping id="rearLight_normal_conf_L3" 				node="0>14|6|2" />
+        <i3dMapping id="rearLight_normal_conf_R1" 				node="0>14|6|3" />
+        <i3dMapping id="rearLight_normal_conf_R2" 				node="0>14|6|4" />
+        <i3dMapping id="rearLight_normal_conf_R3" 				node="0>14|6|5" />
+		
+        <i3dMapping id="rearLight_baler_conf_shared" 			node="0>14|7" />
+        <i3dMapping id="rearLight_balerl_conf_L1" 				node="0>14|7|0" />
+        <i3dMapping id="rearLight_balerl_conf_L2" 				node="0>14|7|1" />
+        <i3dMapping id="rearLight_balerl_conf_L3" 				node="0>14|7|2" />
+        <i3dMapping id="rearLight_balerl_conf_L4" 				node="0>14|7|3" />
+        <i3dMapping id="rearLight_balerl_conf_R1" 				node="0>14|7|4" />
+        <i3dMapping id="rearLight_balerl_conf_R2" 				node="0>14|7|5" />
+        <i3dMapping id="rearLight_balerl_conf_R3" 				node="0>14|7|6" />
+        <i3dMapping id="rearLight_balerl_conf_R4" 				node="0>14|7|7" />
+		
+        <i3dMapping id="reverseLight_balerl_conf_L1" 			node="0>14|7|8" />
+        <i3dMapping id="reverseLight_balerl_conf_R1" 			node="0>14|7|9" />
+		
+        <i3dMapping id="normalVehicle_5thWheel" 				node="0>15|0" />
+        <i3dMapping id="normalVehicle_attacherJoint" 			node="0>15|1" />
+        <i3dMapping id="balerVehicle_attacherJoint" 			node="0>15|2" />
+		
+        <i3dMapping id="player_skin" 							node="0>16|0" />	
+        <i3dMapping id="player_rightFoot" 						node="0>16|1" />	
+        <i3dMapping id="player_leftFoot" 						node="0>16|2" />
+		
+		
+        <i3dMapping id="ColFloor" 								node="0>17|0" />
+        <i3dMapping id="ColRack" 								node="0>17|1" />
+        <i3dMapping id="ColSkirtsBaler" 						node="0>17|2" />
+        <i3dMapping id="ColSkirts2Baler" 						node="0>17|3" />
+        <i3dMapping id="ColBumperBaler" 						node="0>17|4" />
+        <i3dMapping id="ColSkirtsNormal" 						node="0>17|5" />
+        <i3dMapping id="ColRearNormal" 							node="0>17|6" />
+        <i3dMapping id="colPartSpace" 							node="0>17|7" />
+        <i3dMapping id="ColCushenL" 							node="0>17|9" />
+        <i3dMapping id="ColCushenR" 							node="0>17|10" />
+        <i3dMapping id="colCabine" 								node="0>17|11" />
+
+        <i3dMapping id="tensionBelts" 							node="0>18" />
+        <i3dMapping id="startPoint01" 							node="0>18|1" />
+        <i3dMapping id="startPoint01End" 						node="0>18|1|0" />
+        <i3dMapping id="startPoint02" 							node="0>18|2" />
+        <i3dMapping id="startPoint02End" 						node="0>18|2|0" />
+        <i3dMapping id="startPoint03" 							node="0>18|3" />
+        <i3dMapping id="startPoint03End" 						node="0>18|3|0" />
+        <i3dMapping id="startPoint04" 							node="0>18|4" />
+        <i3dMapping id="startPoint04End" 						node="0>18|4|0" />
+        <i3dMapping id="startPoint05" 							node="0>18|5" />
+        <i3dMapping id="startPoint05End" 						node="0>18|5|0" />
+        <i3dMapping id="startPoint06" 							node="0>18|6" />
+        <i3dMapping id="startPoint06End" 						node="0>18|6|0" />
+        <i3dMapping id="startPoint07" 							node="0>18|7" />
+        <i3dMapping id="startPoint07End" 						node="0>18|7|0" />
+        <i3dMapping id="startPoint08" 							node="0>18|8" />
+        <i3dMapping id="startPoint08End" 						node="0>18|8|0" />
+        <i3dMapping id="startPoint09" 							node="0>18|9" />
+        <i3dMapping id="startPoint09End" 						node="0>18|9|0" />
+        <i3dMapping id="beltActivationTrigger" 					node="0>18|10" />
+		
+        <i3dMapping id="ramps" 									node="0>19" />
+        <i3dMapping id="ramps_2" 								node="0>19|0" />
+        <i3dMapping id="ramp_col" 								node="0>19|0|2" />
+
+		<!-- Autoload -->
+        <i3dMapping id="Autoloader" 							node="0>20" />
+        <i3dMapping id="pickupTriggerLeft" 						node="0>20|0" />
+        <i3dMapping id="pickupTriggerRight" 					node="0>20|1" />	
+        <i3dMapping id="loadTrigger" 							node="0>20|2" />
+        <i3dMapping id="loadingBase" 							node="0>20|3" />
+		<!-- Autoload -->
+		
+        <i3dMapping id="MudFlapFL" 								node="1>" />
+        <i3dMapping id="MudFlapFR" 								node="2>" />
+        <i3dMapping id="mudFlap_Component4" 					node="3>" />
+		
+
+    </i3dMappings>
+</vehicle>
