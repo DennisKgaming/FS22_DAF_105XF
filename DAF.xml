@@ -448,10 +448,10 @@
           </low>
           <high>
               <light node="standardLightHigh"		lightTypes="0"/>
-              <light node="0>12|0|1|1"		lightTypes="0" intensity="0.50" />
-              <light node="0>12|0|1|2"		lightTypes="0" intensity="0.50" />
-              <light node="0>12|0|2|1"		lightTypes="0" intensity="0.50" />
-              <light node="0>12|0|2|2"		lightTypes="0" intensity="0.50" />
+              <light node="rearLightL_normal_real"	lightTypes="0" intensity="0.50" />
+              <light node="rearLightR_normal_real"	lightTypes="0" intensity="0.50" />
+              <light node="rearLightL_baler_real"	lightTypes="0" intensity="0.50" />
+              <light node="rearLightR_baler_real"	lightTypes="0" intensity="0.50" />
               <light node="frontLightHigh1"			lightTypes="0"/>
               <light node="NormalLightHigh"			lightTypes="0" />
               <light node="BalerLightHigh"			lightTypes="0" />
@@ -626,10 +626,10 @@
         <!--SideMarkers Baler-->
 		
 		<!--
-        <defaultLight shaderNode="0>14|0|3|0" lightTypes="0" />
-        <defaultLight shaderNode="0>14|0|3|1" lightTypes="0" />
-        <defaultLight shaderNode="0>14|0|3|2" lightTypes="0" />
-        <defaultLight shaderNode="0>14|0|3|3" lightTypes="0" />
+        <defaultLight shaderNode="bumperStickL_red" 	lightTypes="0" />
+        <defaultLight shaderNode="bumperStickL_white" 	lightTypes="0" />
+        <defaultLight shaderNode="bumperStickR_red" 	lightTypes="0" />
+        <defaultLight shaderNode="bumperStickR_white" 	lightTypes="0" />
 		-->
 		
 		<defaultLight 		shaderNode="PoppyLight_static" 				lightTypes="0" />
@@ -1246,9 +1246,13 @@
         <i3dMapping id="normalVehicle_lights_real" 				node="0>12|0|1" />
         <i3dMapping id="NormalLightLow" 						node="0>12|0|1|0" />
         <i3dMapping id="NormalLightHigh" 						node="0>12|0|1|0" /> <!-- Double entry -->
+        <i3dMapping id="rearLightL_normal_real" 				node="0>12|0|1|1" />
+        <i3dMapping id="rearLightR_normal_real" 				node="0>12|0|1|2" />
         <i3dMapping id="balerVehicle_lights_real" 				node="0>12|0|2" />
         <i3dMapping id="BalerLightLow" 							node="0>12|0|2|0" />
-        <i3dMapping id="BalerLightHigh" 						node="0>12|0|2|0" /> <!-- Double entry -->	
+        <i3dMapping id="BalerLightHigh" 						node="0>12|0|2|0" /> <!-- Double entry -->
+        <i3dMapping id="rearLightL_baler_real" 					node="0>12|0|2|1" />
+        <i3dMapping id="rearLightR_baler_real" 					node="0>12|0|2|2" />
         <i3dMapping id="bullBar_lights_real" 					node="0>12|1|0" />
         <i3dMapping id="workLightFrontLow" 						node="0>12|1|0|0" />
         <i3dMapping id="workLightFrontHigh" 					node="0>12|1|0|0" /> <!-- Double entry -->
@@ -1577,6 +1581,11 @@
 		<i3dMapping id="sideMarkersBaler" 						node="0>14|0|2|6" />
 		<i3dMapping id="sideMarkerBalerL_01"					node="0>14|0|2|6|0|0" />
 		<i3dMapping id="sideMarkerBalerR_01"					node="0>14|0|2|6|1|0" />
+		
+		<i3dMapping id="bumperStickL_red"						node="0>14|0|3|0" />
+		<i3dMapping id="bumperStickL_white"						node="0>14|0|3|1" />
+		<i3dMapping id="bumperStickR_red"						node="0>14|0|3|2" />
+		<i3dMapping id="bumperStickR_white"						node="0>14|0|3|3" />
 		
 		<i3dMapping id="beamLightL_static" 						node="0>14|1|0|0|0" />
 		<i3dMapping id="beamLightR_static" 						node="0>14|1|1|0|0" />
