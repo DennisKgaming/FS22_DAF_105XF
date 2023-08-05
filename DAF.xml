@@ -64,8 +64,8 @@
 	<aPalletAutoLoader>
 		<aPalletAutoLoaderConfigurations title="$l10n_function_PalletAutoload_Trailer">
 		
-			<!-- <aPalletAutoLoaderConfiguration name="$l10n_configuration_autoLoad_dis">
-			</aPalletAutoLoaderConfiguration> -->
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_autoLoad_dis">
+			</aPalletAutoLoaderConfiguration>
 		
 			<aPalletAutoLoaderConfiguration name="$l10n_configuration_PalletAutoload_Trailer" maxObjects="80" useBales="true" useTensionBelts="true" supportedObject="data/objects/pallets" UnloadRightOffset="-3 -1 0" UnloadLeftOffset="3 -1 0">
 				<trigger node="loadTrigger"/>
@@ -373,7 +373,7 @@
       <sharedLight linkNode="comfortSunvisorR_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
       <sharedLight linkNode="comfortSunvisorR_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
       <sharedLight linkNode="comfortSunvisorR_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-	  <!-- @todo: mirrorlights are now blinking. Remove or change -->
+	  
       <sharedLight linkNode="mirrorLightL" 				node="0" filename="shared/assets/lights/lizard/rearLight19Orange.xml"/>
       <sharedLight linkNode="mirrorLightR" 				node="0" filename="shared/assets/lights/lizard/rearLight19Orange.xml"/>
 	  
@@ -448,10 +448,10 @@
           </low>
           <high>
               <light node="standardLightHigh"		lightTypes="0"/>
-              <light node="0>12|0|1|1"		lightTypes="0" intensity="0.50" /> <!-- @todo make named node -->
-              <light node="0>12|0|1|2"		lightTypes="0" intensity="0.50" /> <!-- @todo make named node -->
-              <light node="0>12|0|2|1"		lightTypes="0" intensity="0.50" /> <!-- @todo make named node -->
-              <light node="0>12|0|2|2"		lightTypes="0" intensity="0.50" /> <!-- @todo make named node -->
+              <light node="rearLightL_normal_real"	lightTypes="0" intensity="0.50" />
+              <light node="rearLightR_normal_real"	lightTypes="0" intensity="0.50" />
+              <light node="rearLightL_baler_real"	lightTypes="0" intensity="0.50" />
+              <light node="rearLightR_baler_real"	lightTypes="0" intensity="0.50" />
               <light node="frontLightHigh1"			lightTypes="0"/>
               <light node="NormalLightHigh"			lightTypes="0" />
               <light node="BalerLightHigh"			lightTypes="0" />
@@ -510,7 +510,7 @@
         <defaultLight 		shaderNode="comfortSunvisorL_04" 			lightTypes="0" intensity="0.25" />
         <defaultLight 		shaderNode="comfortSunvisorR_01" 			lightTypes="0" intensity="0.25" />
         <defaultLight 		shaderNode="comfortSunvisorR_02" 			lightTypes="0" intensity="0.25" />
-        <defaultLight		 shaderNode="comfortSunvisorR_03" 			lightTypes="0" intensity="0.25" />
+        <defaultLight		shaderNode="comfortSunvisorR_03" 			lightTypes="0" intensity="0.25" />
         <defaultLight 		shaderNode="comfortSunvisorR_04" 			lightTypes="0" intensity="0.25" />
 			
         <defaultLight 		shaderNode="comfortHellaL" 					lightTypes="2" />
@@ -520,14 +520,14 @@
         <!--SpaceCab-->
 		<defaultLight 		shaderNode="interiorRooflightL_Static" 		lightTypes="0" />
         <defaultLight 		shaderNode="interiorRooflightR_Static" 		lightTypes="0" />
-        <defaultLight 		shaderNode="spaceSunvisorL_01" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorL_02" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorL_03" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorL_04" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorR_01" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorR_02" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorR_03" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorR_04" 				lightTypes="0" intensity="0.50" />
+        <defaultLight 		shaderNode="spaceSunvisorL_01" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorL_02" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorL_03" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorL_04" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorR_01" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorR_02" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorR_03" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorR_04" 				lightTypes="0" intensity="0.25" />
 		
         <defaultLight 		shaderNode="spaceLightL_02_Static" 			lightTypes="2" />
         <defaultLight 		shaderNode="spaceLightR_02_Static" 			lightTypes="2" />
@@ -621,18 +621,18 @@
 		<!--SideMarkers Normal-->
 		
 		<!--SideMarkers Baler-->
-        <defaultLight 		shaderNode="sideMarkerBalerL_01" 			lightTypes="0" />
-        <defaultLight 		shaderNode="sideMarkerBalerR_01" 			lightTypes="0" />
+        <defaultLight 		shaderNode="sideMarkerBalerL_01" 			lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="sideMarkerBalerR_01" 			lightTypes="0" intensity="0.5" />
         <!--SideMarkers Baler-->
 		
 		<!--
-        <defaultLight shaderNode="0>14|0|3|0" lightTypes="0" />
-        <defaultLight shaderNode="0>14|0|3|1" lightTypes="0" />
-        <defaultLight shaderNode="0>14|0|3|2" lightTypes="0" />
-        <defaultLight shaderNode="0>14|0|3|3" lightTypes="0" />
+        <defaultLight shaderNode="bumperStickL_red" 	lightTypes="0" />
+        <defaultLight shaderNode="bumperStickL_white" 	lightTypes="0" />
+        <defaultLight shaderNode="bumperStickR_red" 	lightTypes="0" />
+        <defaultLight shaderNode="bumperStickR_white" 	lightTypes="0" />
 		-->
 		
-		<defaultLight 		shaderNode="PoppyLight_static" 				lightTypes="0" />
+		<defaultLight 		shaderNode="PoppyLight_static" 				lightTypes="0" intensity="0.5" />
 
         <defaultLight 		shaderNode="comfortCab_interiorLightL" 		lightTypes="0" />
         <defaultLight 		shaderNode="comfortCab_interiorLightR" 		lightTypes="0" />
@@ -674,9 +674,8 @@
             <beaconLight node="spaceCab_beacon_01" 		filename="$data/shared/assets/beaconLights/lizard/beaconLight01.xml"/>
             <beaconLight node="spaceCab_beacons_02" 	filename="$data/shared/assets/beaconLights/lizard/beaconLight01.xml"/>
 
-
         </beaconLights>
-		<!-- @todo Looks like these aren't working -->
+		
         <dashboards>
             <dashboard displayType="EMITTER" 	valueType="lightState" 		node="dashboardLight_beam" 	idleValue="0" intensity="0.5" lightTypes="1" groups="MOTOR_ACTIVE"/>
             <dashboard displayType="EMITTER" 	valueType="turnLightLeft"  	node="dashboardLight_turnL" idleValue="0" intensity="0.5" groups="MOTOR_ACTIVE"/>
@@ -756,7 +755,7 @@
         <consumerConfigurations>
             <consumerConfiguration>
                 <consumer fillUnitIndex="1" usage="150" fillType="diesel" />
-				<!-- @todo add addblue (DEF) -->
+				
             </consumerConfiguration>
         </consumerConfigurations>
 
@@ -953,7 +952,7 @@
 		<material name="default" shaderParameter="colorMat0"/>
 	</baseMaterialConfigurations>
 	
-<!-- @todo check to only have this configuration visible for baler -->
+
     <tensionBelts>
         <tensionBeltsConfigurations title="$l10n_configuration_tensionbelts">
             <tensionBeltsConfiguration name="$l10n_configuration_tensionbelts_no">
@@ -1159,7 +1158,6 @@
 		</vehicleTypeConfiguration>
     </vehicleTypeConfigurations>
 
-	<!-- @todo check to only have this configuration visible for baler -->
 	<foldable>
 		<foldingConfigurations title="$l10n_configuration_ramps">
 			<foldingConfiguration name="$l10n_configuration_ramps_no">
@@ -1235,22 +1233,26 @@
         <i3dMapping id="hydraulic02_out" 						node="0>11|0|4|7|0|5|0" />
         <i3dMapping id="hydraulic02_in" 						node="0>11|0|4|7|0|6|0" />
 		
-        <i3dMapping id="normalVehicle_licenseplateF" 			node="0>11|1|0|0|2"/> <!-- @todo replace with licenseplate ingame -->
-        <i3dMapping id="normalVehicle_licenseplateB" 			node="0>11|1|0|0|3"/> <!-- @todo replace with licenseplate ingame -->
-        <i3dMapping id="balerVehicle_licenseplateF" 			node="0>11|1|0|0|4"/> <!-- @todo replace with licenseplate ingame -->
-        <i3dMapping id="balerVehicle_licenseplateB" 			node="0>11|1|0|0|5"/> <!-- @todo replace with licenseplate ingame -->
+        <i3dMapping id="normalVehicle_licenseplateF" 			node="0>11|1|0|0|2"/>
+        <i3dMapping id="normalVehicle_licenseplateB" 			node="0>11|1|0|0|3"/>
+        <i3dMapping id="balerVehicle_licenseplateF" 			node="0>11|1|0|0|4"/>
+        <i3dMapping id="balerVehicle_licenseplateB" 			node="0>11|1|0|0|5"/>
         <i3dMapping id="Daf Logo" 								node="0>11|1|0|1|2"/>
         <i3dMapping id="bullBar" 								node="0>11|1|0|2"/>
-        <i3dMapping id="bullBar_lights" 						node="0>11|1|0|3"/> <!-- @todo Check material -->
+        <i3dMapping id="bullBar_lights" 						node="0>11|1|0|3"/>
 		
         <i3dMapping id="standardLightLow" 						node="0>12|0|0" />
         <i3dMapping id="standardLightHigh" 						node="0>12|0|0" /> <!-- Double entry -->
         <i3dMapping id="normalVehicle_lights_real" 				node="0>12|0|1" />
         <i3dMapping id="NormalLightLow" 						node="0>12|0|1|0" />
         <i3dMapping id="NormalLightHigh" 						node="0>12|0|1|0" /> <!-- Double entry -->
+        <i3dMapping id="rearLightL_normal_real" 				node="0>12|0|1|1" />
+        <i3dMapping id="rearLightR_normal_real" 				node="0>12|0|1|2" />
         <i3dMapping id="balerVehicle_lights_real" 				node="0>12|0|2" />
         <i3dMapping id="BalerLightLow" 							node="0>12|0|2|0" />
-        <i3dMapping id="BalerLightHigh" 						node="0>12|0|2|0" /> <!-- Double entry -->	
+        <i3dMapping id="BalerLightHigh" 						node="0>12|0|2|0" /> <!-- Double entry -->
+        <i3dMapping id="rearLightL_baler_real" 					node="0>12|0|2|1" />
+        <i3dMapping id="rearLightR_baler_real" 					node="0>12|0|2|2" />
         <i3dMapping id="bullBar_lights_real" 					node="0>12|1|0" />
         <i3dMapping id="workLightFrontLow" 						node="0>12|1|0|0" />
         <i3dMapping id="workLightFrontHigh" 					node="0>12|1|0|0" /> <!-- Double entry -->
@@ -1368,8 +1370,8 @@
         <i3dMapping id="spaceCab_staticLights" 					node="0>13|0|12|1|0" />
         <i3dMapping id="comfortCab_staticLights" 				node="0>13|0|12|1|1" />
 		
-        <i3dMapping id="comfortHellaL" 							node="0>13|0|12|1|1|0" /> <!-- @todo check for shared lights -->
-        <i3dMapping id="comfortHellaR" 							node="0>13|0|12|1|1|1" /> <!-- @todo check for shared lights -->
+        <i3dMapping id="comfortHellaL" 							node="0>13|0|12|1|1|0" />
+        <i3dMapping id="comfortHellaR" 							node="0>13|0|12|1|1|1" />
 		
         <i3dMapping id="spaceLightL_02_Static" 					node="0>13|0|12|1|0|0|0|0" />
         <i3dMapping id="spaceLightR_02_Static" 					node="0>13|0|12|1|0|1|0|0" />
@@ -1379,14 +1381,14 @@
         <i3dMapping id="fenderTurnlightR" 						node="0>13|0|12|2|0" />
         <i3dMapping id="fenderTurnlightL" 						node="0>13|0|12|3|0" />
 		
-        <i3dMapping id="rooftopWorkinglightsLB" 				node="0>13|0|12|4|0" /> <!-- @todo check for shared lights -->
-        <i3dMapping id="rooftopWorkinglightsRB" 				node="0>13|0|12|4|1" /> <!-- @todo check for shared lights -->
+        <i3dMapping id="rooftopWorkinglightsLB" 				node="0>13|0|12|4|0" />
+        <i3dMapping id="rooftopWorkinglightsRB" 				node="0>13|0|12|4|1" />
 		
 		<i3dMapping id="dashboardLight_beam" 					node="0>13|0|12|5" />
 		<i3dMapping id="dashboardLight_turnL" 					node="0>13|0|12|6|0" />
 		<i3dMapping id="dashboardLight_turnR" 					node="0>13|0|12|6|1" />
 		
-        <i3dMapping id="comfortCab_mainLight" 					node="0>13|0|12|7|0" /> <!-- @todo check because of warning about Corona -->
+        <i3dMapping id="comfortCab_mainLight" 					node="0>13|0|12|7|0" />
         <i3dMapping id="frontLightLow1" 						node="0>13|0|12|7|0|0" />
         <i3dMapping id="frontLightHigh1" 						node="0>13|0|12|7|0|0" /><!-- Double entry -->
         <i3dMapping id="turnLightRightFender" 					node="0>13|0|12|7|1|0"/>
@@ -1431,8 +1433,8 @@
         <i3dMapping id="comfortCab_roofshutter" 				node="0>13|0|13|5" />
         <i3dMapping id="comfortCab_curtains" 					node="0>13|0|13|6" />
         <i3dMapping id="comfortCab_interiorLights" 				node="0>13|0|13|7" />
-        <i3dMapping id="comfortCab_interiorLightL" 				node="0>13|0|13|7|0|0" /> <!-- @todo Maybe need to be a shared light -->
-        <i3dMapping id="comfortCab_interiorLightR" 				node="0>13|0|13|7|1|0" /> <!-- @todo Maybe need to be a shared light -->
+        <i3dMapping id="comfortCab_interiorLightL" 				node="0>13|0|13|7|0|0" />
+        <i3dMapping id="comfortCab_interiorLightR" 				node="0>13|0|13|7|1|0" />
 		
         <!-- <i3dMapping id="InteriorLightLow" 						node="0>13|0|13|7|3" />
         <i3dMapping id="InteriorLightHigh" 						node="0>13|0|13|7|3" /> --><!-- Double entry -->
@@ -1441,7 +1443,7 @@
         <i3dMapping id="InteriorLight_02" 						node="0>13|0|13|7|5" />
         <i3dMapping id="InteriorLight_03" 						node="0>13|0|13|7|6" />
 		
-        <i3dMapping id="spaceCab_parts" 						node="0>13|0|13|8" /> <!-- @todo check lights in this transformgroup to see if it can change to shared -->
+        <i3dMapping id="spaceCab_parts" 						node="0>13|0|13|8" />
         <i3dMapping id="interiorRooflightL_Static" 				node="0>13|0|13|8|3|0|0" />
         <i3dMapping id="interiorRooflightR_Static" 				node="0>13|0|13|8|3|1|0" />
         <i3dMapping id="InteriorLightLow1" 						node="0>13|0|13|8|3|2" />
@@ -1580,21 +1582,26 @@
 		<i3dMapping id="sideMarkerBalerL_01"					node="0>14|0|2|6|0|0" />
 		<i3dMapping id="sideMarkerBalerR_01"					node="0>14|0|2|6|1|0" />
 		
+		<i3dMapping id="bumperStickL_red"						node="0>14|0|3|0" />
+		<i3dMapping id="bumperStickL_white"						node="0>14|0|3|1" />
+		<i3dMapping id="bumperStickR_red"						node="0>14|0|3|2" />
+		<i3dMapping id="bumperStickR_white"						node="0>14|0|3|3" />
+		
 		<i3dMapping id="beamLightL_static" 						node="0>14|1|0|0|0" />
 		<i3dMapping id="beamLightR_static" 						node="0>14|1|1|0|0" />
 		
-		<i3dMapping id="bullBar_spotlightL_01" 					node="0>14|1|2" /> <!-- @todo check material -->
-		<i3dMapping id="bullBar_spotlightL_02" 					node="0>14|1|3" /> <!-- @todo check material -->
-		<i3dMapping id="bullBar_spotlightR_01" 					node="0>14|1|4" /> <!-- @todo check material -->
-		<i3dMapping id="bullBar_spotlightR_02" 					node="0>14|1|5" /> <!-- @todo check material -->
+		<i3dMapping id="bullBar_spotlightL_01" 					node="0>14|1|2" />
+		<i3dMapping id="bullBar_spotlightL_02" 					node="0>14|1|3" />
+		<i3dMapping id="bullBar_spotlightR_01" 					node="0>14|1|4" />
+		<i3dMapping id="bullBar_spotlightR_02" 					node="0>14|1|5" />
 	
         
         <i3dMapping id="turnLightRF_static" 					node="0>14|3|0" />
         <i3dMapping id="turnLightLF_static" 					node="0>14|4|0" />
 		
-        <i3dMapping id="normalVehicle_reverseLights" 			node="0>14|5" /> <!-- @todo check to make shared -->
-        <i3dMapping id="normalVehicle_reverseLightL" 			node="0>14|5|0" /> <!-- @todo check to make shared -->
-        <i3dMapping id="normalVehicle_reverseLightR" 			node="0>14|5|1" /> <!-- @todo check to make shared -->
+        <i3dMapping id="normalVehicle_reverseLights" 			node="0>14|5" />
+        <i3dMapping id="normalVehicle_reverseLightL" 			node="0>14|5|0" />
+        <i3dMapping id="normalVehicle_reverseLightR" 			node="0>14|5|1" />
 		
         <i3dMapping id="rearLight_normal_conf_shared" 			node="0>14|6" />
         <i3dMapping id="rearLight_normal_conf_L1" 				node="0>14|6|0" />
