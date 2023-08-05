@@ -55,6 +55,7 @@
 			<configuration name="design3" 				index="1" />
 			<configuration name="folding" 				index="1" />
 			<configuration name="tensionBelts" 			index="1" />
+			<configuration name="aPalletAutoLoader" 	index="1" />
         </configurationSet>
         <configurationSet name="$l10n_configuration_chassistype_baler">
 			<configuration name="vehicleType" 			index="2" />
@@ -320,353 +321,351 @@
 
 	<lights>
 	
-      <sharedLight linkNode="fenderTurnlightR" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange_right.xml"/>
-      <sharedLight linkNode="fenderTurnlightL" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange_left.xml"/>
-		
+		<sharedLight linkNode="fenderTurnlightR" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange_right.xml"/>
+		<sharedLight linkNode="fenderTurnlightL" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange_left.xml"/>
+			
 		<!-- Rear lights normal configuration -->
-      <sharedLight linkNode="rearLight_normal_conf_L1" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
-      <sharedLight linkNode="rearLight_normal_conf_L2" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
-      <sharedLight linkNode="rearLight_normal_conf_L3" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
-      <sharedLight linkNode="rearLight_normal_conf_R1" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
-      <sharedLight linkNode="rearLight_normal_conf_R2" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
-      <sharedLight linkNode="rearLight_normal_conf_R3" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
-	  
+		<sharedLight linkNode="rearLight_normal_conf_L1" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+		<sharedLight linkNode="rearLight_normal_conf_L2" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+		<sharedLight linkNode="rearLight_normal_conf_L3" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+		<sharedLight linkNode="rearLight_normal_conf_R1" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+		<sharedLight linkNode="rearLight_normal_conf_R2" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+		<sharedLight linkNode="rearLight_normal_conf_R3" node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+		  
 		<!-- Rear lights baler configuration -->
-      <sharedLight linkNode="rearLight_balerl_conf_L1" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
-      <sharedLight linkNode="rearLight_balerl_conf_L2" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
-      <sharedLight linkNode="rearLight_balerl_conf_L3" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
-      <sharedLight linkNode="rearLight_balerl_conf_L4" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
-      <sharedLight linkNode="rearLight_balerl_conf_R1" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
-      <sharedLight linkNode="rearLight_balerl_conf_R2" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
-      <sharedLight linkNode="rearLight_balerl_conf_R3" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
-      <sharedLight linkNode="rearLight_balerl_conf_R4"	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
-	  
-      <sharedLight linkNode="NormalbumperL" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange.xml"/>
-      <sharedLight linkNode="NormalbumperR" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange.xml"/>
-	  
-      <sharedLight linkNode="plateNumberLightRF" 		node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
-      <sharedLight linkNode="plateNumberLightLF" 		node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
-      <sharedLight linkNode="NormalplateNumberLightLB"	node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
-      <sharedLight linkNode="NormalplateNumberLightRB" 	node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
-      <sharedLight linkNode="BalerplateNumberLightLB" 	node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
-      <sharedLight linkNode="BalerplateNumberLightRB" 	node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
-	  
-	  
-      <sharedLight linkNode="spaceSunvisorL_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="spaceSunvisorL_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="spaceSunvisorL_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="spaceSunvisorL_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="spaceSunvisorL_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="spaceSunvisorR_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="spaceSunvisorR_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="spaceSunvisorR_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="spaceSunvisorR_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="spaceSunvisorR_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-	  
-      <sharedLight linkNode="comfortSunvisorL_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="comfortSunvisorL_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="comfortSunvisorL_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="comfortSunvisorL_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="comfortSunvisorL_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="comfortSunvisorR_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="comfortSunvisorR_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="comfortSunvisorR_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="comfortSunvisorR_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-      <sharedLight linkNode="comfortSunvisorR_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
-	  
-      <sharedLight linkNode="mirrorLightL" 				node="0" filename="shared/assets/lights/lizard/rearLight19Orange.xml"/>
-      <sharedLight linkNode="mirrorLightR" 				node="0" filename="shared/assets/lights/lizard/rearLight19Orange.xml"/>
-	  
-	  
-     <sharedLight linkNode="sideBarlightL_normal_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightL_normal_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightL_normal_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightL_normal_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightR_normal_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightR_normal_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightR_normal_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightR_normal_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-	 
-     <sharedLight linkNode="sideBarlightL_baler_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightL_baler_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightL_baler_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightL_baler_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightL_baler_05" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightL_baler_06" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightR_baler_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightR_baler_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightR_baler_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightR_baler_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightR_baler_05" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-     <sharedLight linkNode="sideBarlightR_baler_06" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
-	 
-     <sharedLight linkNode="countourLightBalerL_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
-     <sharedLight linkNode="countourLightBalerL_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
-     <sharedLight linkNode="countourLightBalerL_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
-     <sharedLight linkNode="countourLightBalerL_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
-     <sharedLight linkNode="countourLightBalerL_05" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
-     <sharedLight linkNode="countourLightBalerR_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
-     <sharedLight linkNode="countourLightBalerR_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
-     <sharedLight linkNode="countourLightBalerR_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
-     <sharedLight linkNode="countourLightBalerR_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
-     <sharedLight linkNode="countourLightBalerR_05" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
-	 
-     <sharedLight linkNode="sideMarkerNormalL_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
-     <sharedLight linkNode="sideMarkerNormalL_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
-     <sharedLight linkNode="sideMarkerNormalL_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
-     <sharedLight linkNode="sideMarkerNormalL_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
-     <sharedLight linkNode="sideMarkerNormalR_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
-     <sharedLight linkNode="sideMarkerNormalR_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
-     <sharedLight linkNode="sideMarkerNormalR_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
-     <sharedLight linkNode="sideMarkerNormalR_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
-     
-	 <sharedLight linkNode="sideMarkerBalerL_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
-	 <sharedLight linkNode="sideMarkerBalerR_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
-	 
-	 <sharedLight linkNode="reverseLight_balerl_conf_L1"	node="0" filename="$data/shared/assets/lights/lizard/workingLight10.xml"/>
-	 <sharedLight linkNode="reverseLight_balerl_conf_R1"	node="0" filename="$data/shared/assets/lights/lizard/workingLight10.xml"/>
+		<sharedLight linkNode="rearLight_balerl_conf_L1" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+		<sharedLight linkNode="rearLight_balerl_conf_L2" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+		<sharedLight linkNode="rearLight_balerl_conf_L3" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+		<sharedLight linkNode="rearLight_balerl_conf_L4" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_left.xml"/>
+		<sharedLight linkNode="rearLight_balerl_conf_R1" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+		<sharedLight linkNode="rearLight_balerl_conf_R2" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+		<sharedLight linkNode="rearLight_balerl_conf_R3" 	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+		<sharedLight linkNode="rearLight_balerl_conf_R4"	node="0" filename="$data/shared/assets/lights/lizard/rearLight10_right.xml"/>
+		  
+		<sharedLight linkNode="NormalbumperL" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange.xml"/>
+		<sharedLight linkNode="NormalbumperR" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange.xml"/>
+		  
+		<sharedLight linkNode="plateNumberLightRF" 		node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+		<sharedLight linkNode="plateNumberLightLF" 		node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+		<sharedLight linkNode="NormalplateNumberLightLB"	node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+		<sharedLight linkNode="NormalplateNumberLightRB" 	node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+		<sharedLight linkNode="BalerplateNumberLightLB" 	node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+		<sharedLight linkNode="BalerplateNumberLightRB" 	node="0" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+		  
+		  
+		<sharedLight linkNode="spaceSunvisorL_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="spaceSunvisorL_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="spaceSunvisorL_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="spaceSunvisorL_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="spaceSunvisorL_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="spaceSunvisorR_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="spaceSunvisorR_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="spaceSunvisorR_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="spaceSunvisorR_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="spaceSunvisorR_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		  
+		<sharedLight linkNode="comfortSunvisorL_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="comfortSunvisorL_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="comfortSunvisorL_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="comfortSunvisorL_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="comfortSunvisorL_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="comfortSunvisorR_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="comfortSunvisorR_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="comfortSunvisorR_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="comfortSunvisorR_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		<sharedLight linkNode="comfortSunvisorR_05" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05White.xml"/>
+		  
+		<sharedLight linkNode="mirrorLightL" 				node="0" filename="shared/assets/lights/lizard/rearLight19Orange.xml"/>
+		<sharedLight linkNode="mirrorLightR" 				node="0" filename="shared/assets/lights/lizard/rearLight19Orange.xml"/>
+		  
+		  
+		<sharedLight linkNode="sideBarlightL_normal_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightL_normal_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightL_normal_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightL_normal_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightR_normal_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightR_normal_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightR_normal_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightR_normal_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		 
+		<sharedLight linkNode="sideBarlightL_baler_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightL_baler_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightL_baler_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightL_baler_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightL_baler_05" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightL_baler_06" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightR_baler_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightR_baler_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightR_baler_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightR_baler_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightR_baler_05" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideBarlightR_baler_06" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker11Orange.xml"/>
+		 
+		<sharedLight linkNode="countourLightBalerL_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+		<sharedLight linkNode="countourLightBalerL_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+		<sharedLight linkNode="countourLightBalerL_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+		<sharedLight linkNode="countourLightBalerL_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+		<sharedLight linkNode="countourLightBalerL_05" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+		<sharedLight linkNode="countourLightBalerR_01" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+		<sharedLight linkNode="countourLightBalerR_02" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+		<sharedLight linkNode="countourLightBalerR_03" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+		<sharedLight linkNode="countourLightBalerR_04" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+		<sharedLight linkNode="countourLightBalerR_05" 	node="0" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml"/>
+		 
+		<sharedLight linkNode="sideMarkerNormalL_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
+		<sharedLight linkNode="sideMarkerNormalL_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
+		<sharedLight linkNode="sideMarkerNormalL_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
+		<sharedLight linkNode="sideMarkerNormalL_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
+		<sharedLight linkNode="sideMarkerNormalR_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
+		<sharedLight linkNode="sideMarkerNormalR_02" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
+		<sharedLight linkNode="sideMarkerNormalR_03" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
+		<sharedLight linkNode="sideMarkerNormalR_04" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
+		 
+		<sharedLight linkNode="sideMarkerBalerL_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_left.xml"/>
+		<sharedLight linkNode="sideMarkerBalerR_01" 		node="0" filename="$data/shared/assets/lights/lizard/sideMarker05_right.xml"/>
+		 
+		<sharedLight linkNode="reverseLight_balerl_conf_L1"	node="0" filename="$data/shared/assets/lights/lizard/workingLight10.xml"/>
+		<sharedLight linkNode="reverseLight_balerl_conf_R1"	node="0" filename="$data/shared/assets/lights/lizard/workingLight10.xml"/>
 
-      <states>
-          <state lightTypes="0"/>
-          <state lightTypes="0 1"/>
-          <state lightTypes="0 1 2"/>
-      </states>
-      <realLights>
-          <low>
-              <light node="standardLightLow"		lightTypes="0" />
-              <light node="frontLightLow1"			lightTypes="0" />
-              <light node="NormalLightLow"			lightTypes="0" />
-              <light node="BalerLightLow"			lightTypes="0" />
-              <light node="lightBoxhLow_space"		lightTypes="0" />
-              <!-- <light node="InteriorLightLow"		lightTypes="0" /> -->
-              <!-- <light node="InteriorLightLow1"       lightTypes="0" /> -->
-              <light node="DashLow"					lightTypes="0" />
-              <light node="workLightFrontLow"		lightTypes="2"/>
-              <light node="highBeamLow"				lightTypes="1"/>
-              <light node="ComfortLow"				lightTypes="2" />
-              <light node="SpaceLow"				lightTypes="2" />
-          </low>
-          <high>
-              <light node="standardLightHigh"		lightTypes="0"/>
-              <light node="rearLightL_normal_real"	lightTypes="0" intensity="0.50" />
-              <light node="rearLightR_normal_real"	lightTypes="0" intensity="0.50" />
-              <light node="rearLightL_baler_real"	lightTypes="0" intensity="0.50" />
-              <light node="rearLightR_baler_real"	lightTypes="0" intensity="0.50" />
-              <light node="frontLightHigh1"			lightTypes="0"/>
-              <light node="NormalLightHigh"			lightTypes="0" />
-              <light node="BalerLightHigh"			lightTypes="0" />
-              <light node="lightBoxHigh_space"		lightTypes="0" />		
-              <!-- <light node="InteriorLightHigh"       lightTypes="0" /> -->
-			  
-              <!-- <light node="InteriorLight_01"		lightTypes="0" />
-              <light node="InteriorLight_02"		lightTypes="0" />
-              <light node="InteriorLight_03"		lightTypes="0" /> -->
-			  
-              <!-- <light node="InteriorLightHigh1"		lightTypes="0" /> -->
-              <light node="DashHigh"				lightTypes="0" />
-              <light node="workLightFrontHigh"		lightTypes="2"/>
-              <light node="highBeamHigh"			lightTypes="1"/>
-              <light node="SpaceHigh"				lightTypes="2" />
-              <light node="ComfortHigh"				lightTypes="2" />
-			  
-              <turnLightLeft		node="StandardturnLightLF"/>
-              <turnLightLeft		node="NormalturnLightLB"/>
-              <turnLightRight		node="StandardturnLightRF"/>
-              <turnLightRight		node="NormalturnLightRB"/>
-              <turnLightLeft		node="NormalturnLightL"/>
-              <turnLightRight		node="NormalturnLightR"/>
-              <turnLightLeft		node="turnLightLeftFender"/>
-              <turnLightRight		node="turnLightRightFender"/>
-              <turnLightLeft		node="BalerturnLightLB"/>
-              <turnLightRight		node="BalerturnLightRB"/>
-			  
-              <brakeLight			node="brakeLights_red"/>
-			  
-              <reverseLight			node="reverseLight"/>
-              <reverseLight			node="reverseLightHigh1"/>
-              <reverseLight			node="reverseLightHigh2"/>
-			  
-          </high>
-      </realLights>
-      <defaultLights>
-        <defaultLight 		shaderNode="headLight_L_glassStatic" 		lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="headLight_R_glassStatic" 		lightTypes="0" intensity="0.75" />
+		<states>
+			<state lightTypes="0"/>
+			<state lightTypes="0 1"/>
+			<state lightTypes="0 1 2"/>
+		</states>
 		
-        <defaultLight 		shaderNode="InteriorLight_01" 				lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="InteriorLight_02" 				lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="InteriorLight_03" 				lightTypes="0" intensity="0.75" />
+		<realLights>
+			<low>
+				<light node="standardLightLow"			lightTypes="0" />
+				<light node="frontLightLow1"			lightTypes="0" />
+				<light node="NormalLightLow"			lightTypes="0" />
+				<light node="BalerLightLow"				lightTypes="0" />
+				<light node="lightBoxhLow_space"		lightTypes="0" />
+				<light node="DashLow"					lightTypes="0" />
+				<light node="workLightFrontLow"			lightTypes="2"/>
+				<light node="highBeamLow"				lightTypes="1"/>
+				<light node="ComfortLow"				lightTypes="2" />
+				<light node="SpaceLow"					lightTypes="2" />
+			</low>
+			<high>
+				<light node="standardLightHigh"			lightTypes="0"/>
+				<light node="rearLightL_normal_real"	lightTypes="0" intensity="0.50" />
+				<light node="rearLightR_normal_real"	lightTypes="0" intensity="0.50" />
+				<light node="rearLightL_baler_real"		lightTypes="0" intensity="0.50" />
+				<light node="rearLightR_baler_real"		lightTypes="0" intensity="0.50" />
+				<light node="frontLightHigh1"			lightTypes="0"/>
+				<light node="NormalLightHigh"			lightTypes="0" />
+				<light node="BalerLightHigh"			lightTypes="0" />
+				<light node="lightBoxHigh_space"		lightTypes="0" />
+
+				<light node="comfortCab_InteriorLight_01_real"		lightTypes="0" />
+				<light node="comfortCab_InteriorLight_02_real"		lightTypes="0" />
+				<light node="comfortCab_InteriorLight_03_real"		lightTypes="0" />
+				
+				<light node="spaceCab_InteriorLight_01_real"		lightTypes="0" />
+				<light node="spaceCab_InteriorLight_02_real"		lightTypes="0" />
+				<light node="spaceCab_InteriorLight_03_real"		lightTypes="0" />
+
+				<light node="DashHigh"					lightTypes="0" />
+				<light node="workLightFrontHigh"		lightTypes="2"/>
+				<light node="highBeamHigh"				lightTypes="1"/>
+				<light node="SpaceHigh"					lightTypes="2" />
+				<light node="ComfortHigh"				lightTypes="2" />
+
+				<turnLightLeft		node="StandardturnLightLF"/>
+				<turnLightLeft		node="NormalturnLightLB"/>
+				<turnLightRight		node="StandardturnLightRF"/>
+				<turnLightRight		node="NormalturnLightRB"/>
+				<turnLightLeft		node="NormalturnLightL"/>
+				<turnLightRight		node="NormalturnLightR"/>
+				<turnLightLeft		node="turnLightLeftFender"/>
+				<turnLightRight		node="turnLightRightFender"/>
+				<turnLightLeft		node="BalerturnLightLB"/>
+				<turnLightRight		node="BalerturnLightRB"/>
+
+				<brakeLight			node="brakeLights_red"/>
+
+				<reverseLight		node="reverseLight"/>
+				<reverseLight		node="reverseLightHigh1"/>
+				<reverseLight		node="reverseLightHigh2"/>
+
+			</high>
+		</realLights>
+		<defaultLights>
+			<defaultLight 		shaderNode="headLight_L_glassStatic" 		lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="headLight_R_glassStatic" 		lightTypes="0" intensity="0.75" />
+			<!-- 
+			<defaultLight 		shaderNode="comfortCab_InteriorLight_01_real" 				lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="comfortCab_InteriorLight_02_real" 				lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="comfortCab_InteriorLight_03_real" 				lightTypes="0" intensity="0.75" /> -->
+				
+			<defaultLight 		shaderNode="fogLight_L_02_glassStatic" 		lightTypes="1" />
+			<defaultLight 		shaderNode="fogLight_R_02_glassStatic" 		lightTypes="1" />
+			<defaultLight 		shaderNode="fogLight_L_01_glassStatic" 		lightTypes="1" />
+			<defaultLight 		shaderNode="fogLight_R_01_glassStatic" 		lightTypes="1" />
 			
-        <defaultLight 		shaderNode="fogLight_L_02_glassStatic" 		lightTypes="1" />
-        <defaultLight 		shaderNode="fogLight_R_02_glassStatic" 		lightTypes="1" />
-        <defaultLight 		shaderNode="fogLight_L_01_glassStatic" 		lightTypes="1" />
-  		<defaultLight 		shaderNode="fogLight_R_01_glassStatic" 		lightTypes="1" />
-		
 
 
-        <!--ComfortCab-->
-        <defaultLight 		shaderNode="comfortSunvisorL_01" 			lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="comfortSunvisorL_02" 			lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="comfortSunvisorL_03" 			lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="comfortSunvisorL_04" 			lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="comfortSunvisorR_01" 			lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="comfortSunvisorR_02" 			lightTypes="0" intensity="0.25" />
-        <defaultLight		shaderNode="comfortSunvisorR_03" 			lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="comfortSunvisorR_04" 			lightTypes="0" intensity="0.25" />
+			<!--ComfortCab-->
+			<defaultLight 		shaderNode="comfortSunvisorL_01" 			lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="comfortSunvisorL_02" 			lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="comfortSunvisorL_03" 			lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="comfortSunvisorL_04" 			lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="comfortSunvisorR_01" 			lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="comfortSunvisorR_02" 			lightTypes="0" intensity="0.25" />
+			<defaultLight		shaderNode="comfortSunvisorR_03" 			lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="comfortSunvisorR_04" 			lightTypes="0" intensity="0.25" />
+				
+			<defaultLight 		shaderNode="comfortHellaL" 					lightTypes="2" />
+			<defaultLight 		shaderNode="comfortHellaR" 					lightTypes="2" />
+			<!--ComfortCab-->
+
+			<!--SpaceCab-->
+			<defaultLight 		shaderNode="interiorRooflightL_Static" 		lightTypes="0" />
+			<defaultLight 		shaderNode="interiorRooflightR_Static" 		lightTypes="0" />
+			<defaultLight 		shaderNode="spaceSunvisorL_01" 				lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="spaceSunvisorL_02" 				lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="spaceSunvisorL_03" 				lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="spaceSunvisorL_04" 				lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="spaceSunvisorR_01" 				lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="spaceSunvisorR_02" 				lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="spaceSunvisorR_03" 				lightTypes="0" intensity="0.25" />
+			<defaultLight 		shaderNode="spaceSunvisorR_04" 				lightTypes="0" intensity="0.25" />
 			
-        <defaultLight 		shaderNode="comfortHellaL" 					lightTypes="2" />
-        <defaultLight 		shaderNode="comfortHellaR" 					lightTypes="2" />
-        <!--ComfortCab-->
+			<defaultLight 		shaderNode="spaceLightL_02_Static" 			lightTypes="2" />
+			<defaultLight 		shaderNode="spaceLightR_02_Static" 			lightTypes="2" />
+			<defaultLight 		shaderNode="spaceLightL_01_Static" 			lightTypes="2" />
+			<defaultLight 		shaderNode="spaceLightR_01_Static" 			lightTypes="2" />
 
-        <!--SpaceCab-->
-		<defaultLight 		shaderNode="interiorRooflightL_Static" 		lightTypes="0" />
-        <defaultLight 		shaderNode="interiorRooflightR_Static" 		lightTypes="0" />
-        <defaultLight 		shaderNode="spaceSunvisorL_01" 				lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="spaceSunvisorL_02" 				lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="spaceSunvisorL_03" 				lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="spaceSunvisorL_04" 				lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="spaceSunvisorR_01" 				lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="spaceSunvisorR_02" 				lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="spaceSunvisorR_03" 				lightTypes="0" intensity="0.25" />
-        <defaultLight 		shaderNode="spaceSunvisorR_04" 				lightTypes="0" intensity="0.25" />
-		
-        <defaultLight 		shaderNode="spaceLightL_02_Static" 			lightTypes="2" />
-        <defaultLight 		shaderNode="spaceLightR_02_Static" 			lightTypes="2" />
-        <defaultLight 		shaderNode="spaceLightL_01_Static" 			lightTypes="2" />
-        <defaultLight 		shaderNode="spaceLightR_01_Static" 			lightTypes="2" />
+			<defaultLight 		shaderNode="roofLightstaticR_01" 			lightTypes="2" />
+			<defaultLight 		shaderNode="roofLightstaticR_02" 			lightTypes="2" />
+			<defaultLight 		shaderNode="roofLightstaticL_02" 			lightTypes="2" />
+			<defaultLight 		shaderNode="roofLightstaticL_01" 			lightTypes="2" />
+			<!--SpaceCab-->
 
-        <defaultLight 		shaderNode="roofLightstaticR_01" 			lightTypes="2" />
-        <defaultLight 		shaderNode="roofLightstaticR_02" 			lightTypes="2" />
-        <defaultLight 		shaderNode="roofLightstaticL_02" 			lightTypes="2" />
-        <defaultLight 		shaderNode="roofLightstaticL_01" 			lightTypes="2" />
-        <!--SpaceCab-->
+			
 
-        
+			<!--SideBarLightsNormal-->
+			<defaultLight 		shaderNode="sideBarlightL_normal_01" 		lightTypes="0" intensity="0.75"/>
+			<defaultLight 		shaderNode="sideBarlightL_normal_02" 		lightTypes="0" intensity="0.75"/>
+			<defaultLight 		shaderNode="sideBarlightL_normal_03" 		lightTypes="0" intensity="0.75"/>
+			<defaultLight 		shaderNode="sideBarlightL_normal_04" 		lightTypes="0" intensity="0.75"/>
+			<defaultLight 		shaderNode="sideBarlightR_normal_01" 		lightTypes="0" intensity="0.75"/>
+			<defaultLight 		shaderNode="sideBarlightR_normal_02" 		lightTypes="0" intensity="0.75"/>
+			<defaultLight 		shaderNode="sideBarlightR_normal_03" 		lightTypes="0" intensity="0.75"/>
+			<defaultLight 		shaderNode="sideBarlightR_normal_04" 		lightTypes="0" intensity="0.75"/>
+			<!--SideBarLightsNormal-->
+			
+			<!--SideBarLightsNormal Real-->
+			<defaultLight 		shaderNode="sideBarlightL_normal_01_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightL_normal_02_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightL_normal_03_real" 	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightL_normal_04_real" 	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_normal_01_real" 	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_normal_02_real" 	lightTypes="0" intensity="0.75" />
+			<defaultLight		shaderNode="sideBarlightR_normal_03_real" 	lightTypes="0" intensity="0.75" />
+			<defaultLight		shaderNode="sideBarlightR_normal_04_real" 	lightTypes="0" intensity="0.75" />
+			<!--SideBarLightsNormal Real-->
 
-        <!--SideBarLightsNormal-->
-		<defaultLight 		shaderNode="sideBarlightL_normal_01" 		lightTypes="0" intensity="0.75"/>
-        <defaultLight 		shaderNode="sideBarlightL_normal_02" 		lightTypes="0" intensity="0.75"/>
-        <defaultLight 		shaderNode="sideBarlightL_normal_03" 		lightTypes="0" intensity="0.75"/>
-        <defaultLight 		shaderNode="sideBarlightL_normal_04" 		lightTypes="0" intensity="0.75"/>
-        <defaultLight 		shaderNode="sideBarlightR_normal_01" 		lightTypes="0" intensity="0.75"/>
-  		<defaultLight 		shaderNode="sideBarlightR_normal_02" 		lightTypes="0" intensity="0.75"/>
-        <defaultLight 		shaderNode="sideBarlightR_normal_03" 		lightTypes="0" intensity="0.75"/>
-        <defaultLight 		shaderNode="sideBarlightR_normal_04" 		lightTypes="0" intensity="0.75"/>
-        <!--SideBarLightsNormal-->
-		
-		<!--SideBarLightsNormal Real-->
-        <defaultLight 		shaderNode="sideBarlightL_normal_01_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightL_normal_02_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightL_normal_03_real" 	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightL_normal_04_real" 	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_normal_01_real" 	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_normal_02_real" 	lightTypes="0" intensity="0.75" />
-        <defaultLight		shaderNode="sideBarlightR_normal_03_real" 	lightTypes="0" intensity="0.75" />
-        <defaultLight		shaderNode="sideBarlightR_normal_04_real" 	lightTypes="0" intensity="0.75" />
-		<!--SideBarLightsNormal Real-->
+			<!--SideBarLightsBaler-->
+			<defaultLight 		shaderNode="sideBarlightL_baler_01" 		lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightL_baler_02" 		lightTypes="0" intensity="0.75" />
+			<defaultLight		shaderNode="sideBarlightL_baler_03" 		lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightL_baler_04" 		lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightL_baler_05" 		lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightL_baler_06" 		lightTypes="0" intensity="0.75" />
 
-        <!--SideBarLightsBaler-->
-        <defaultLight 		shaderNode="sideBarlightL_baler_01" 		lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightL_baler_02" 		lightTypes="0" intensity="0.75" />
-        <defaultLight		shaderNode="sideBarlightL_baler_03" 		lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightL_baler_04" 		lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightL_baler_05" 		lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightL_baler_06" 		lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_baler_01" 		lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_baler_02" 		lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_baler_03" 		lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_baler_04" 		lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_baler_05" 		lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_baler_06" 		lightTypes="0" intensity="0.75" />
+			<!--SideBarLightsBaler-->
+			
+			<!--SideBarLightsBaler Real-->
+			<defaultLight 		shaderNode="sideBarlightL_balerL_01_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightL_balerL_02_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightL_balerL_03_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightL_balerL_04_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightL_balerL_05_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightL_balerL_06_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_balerR_01_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_balerR_02_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_balerR_03_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_balerR_04_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_balerR_05_real"	lightTypes="0" intensity="0.75" />
+			<defaultLight 		shaderNode="sideBarlightR_balerR_06_real"	lightTypes="0" intensity="0.75" />
+			<!--SideBarLightsBaler Real-->
 
-        <defaultLight 		shaderNode="sideBarlightR_baler_01" 		lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_baler_02" 		lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_baler_03" 		lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_baler_04" 		lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_baler_05" 		lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_baler_06" 		lightTypes="0" intensity="0.75" />
-		<!--SideBarLightsBaler-->
-		
-		<!--SideBarLightsBaler Real-->
-        <defaultLight 		shaderNode="sideBarlightL_balerL_01_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightL_balerL_02_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightL_balerL_03_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightL_balerL_04_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightL_balerL_05_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightL_balerL_06_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_balerR_01_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_balerR_02_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_balerR_03_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_balerR_04_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_balerR_05_real"	lightTypes="0" intensity="0.75" />
-        <defaultLight 		shaderNode="sideBarlightR_balerR_06_real"	lightTypes="0" intensity="0.75" />
-        <!--SideBarLightsBaler Real-->
+			<!--ContourLightsBaler-->
+			<defaultLight 		shaderNode="countourLightBalerL_01" 		lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="countourLightBalerL_02" 		lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="countourLightBalerL_03" 		lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="countourLightBalerL_04" 		lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="countourLightBalerL_05" 		lightTypes="0" intensity="0.5" />
 
-        <!--ContourLightsBaler-->
-        <defaultLight 		shaderNode="countourLightBalerL_01" 		lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="countourLightBalerL_02" 		lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="countourLightBalerL_03" 		lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="countourLightBalerL_04" 		lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="countourLightBalerL_05" 		lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="countourLightBalerR_01" 		lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="countourLightBalerR_02" 		lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="countourLightBalerR_03" 		lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="countourLightBalerR_04" 		lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="countourLightBalerR_05" 		lightTypes="0" intensity="0.5" />
+			<!--ContourLightsBaler-->
 
-        <defaultLight 		shaderNode="countourLightBalerR_01" 		lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="countourLightBalerR_02" 		lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="countourLightBalerR_03" 		lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="countourLightBalerR_04" 		lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="countourLightBalerR_05" 		lightTypes="0" intensity="0.5" />
-		<!--ContourLightsBaler-->
+			<!--SideMarkers Normal-->
+			<defaultLight 		shaderNode="sideMarkerNormalL_01" 			lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="sideMarkerNormalL_02" 			lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="sideMarkerNormalL_03" 			lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="sideMarkerNormalL_04" 			lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="sideMarkerNormalR_01" 			lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="sideMarkerNormalR_02" 			lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="sideMarkerNormalR_03" 			lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="sideMarkerNormalR_04" 			lightTypes="0" intensity="0.5" />
+			<!--SideMarkers Normal-->
+			
+			<!--SideMarkers Baler-->
+			<defaultLight 		shaderNode="sideMarkerBalerL_01" 			lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="sideMarkerBalerR_01" 			lightTypes="0" intensity="0.5" />
+			<!--SideMarkers Baler-->
+			
+			<!--
+			<defaultLight shaderNode="bumperStickL_red" 	lightTypes="0" />
+			<defaultLight shaderNode="bumperStickL_white" 	lightTypes="0" />
+			<defaultLight shaderNode="bumperStickR_red" 	lightTypes="0" />
+			<defaultLight shaderNode="bumperStickR_white" 	lightTypes="0" />
+			-->
+			
+			<defaultLight 		shaderNode="PoppyLight_static" 				lightTypes="0" intensity="0.5" />
 
-        <!--SideMarkers Normal-->
-		<defaultLight 		shaderNode="sideMarkerNormalL_01" 			lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="sideMarkerNormalL_02" 			lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="sideMarkerNormalL_03" 			lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="sideMarkerNormalL_04" 			lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="sideMarkerNormalR_01" 			lightTypes="0" intensity="0.5" />
-  		<defaultLight 		shaderNode="sideMarkerNormalR_02" 			lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="sideMarkerNormalR_03" 			lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="sideMarkerNormalR_04" 			lightTypes="0" intensity="0.5" />
-		<!--SideMarkers Normal-->
-		
-		<!--SideMarkers Baler-->
-        <defaultLight 		shaderNode="sideMarkerBalerL_01" 			lightTypes="0" intensity="0.5" />
-        <defaultLight 		shaderNode="sideMarkerBalerR_01" 			lightTypes="0" intensity="0.5" />
-        <!--SideMarkers Baler-->
-		
-		<!--
-        <defaultLight shaderNode="bumperStickL_red" 	lightTypes="0" />
-        <defaultLight shaderNode="bumperStickL_white" 	lightTypes="0" />
-        <defaultLight shaderNode="bumperStickR_red" 	lightTypes="0" />
-        <defaultLight shaderNode="bumperStickR_white" 	lightTypes="0" />
-		-->
-		
-		<defaultLight 		shaderNode="PoppyLight_static" 				lightTypes="0" intensity="0.5" />
+			<defaultLight 		shaderNode="beamLightL_static" 				lightTypes="1" />
+			<defaultLight 		shaderNode="beamLightR_static" 				lightTypes="1" /> 
 
-        <defaultLight 		shaderNode="comfortCab_interiorLightL" 		lightTypes="0" />
-        <defaultLight 		shaderNode="comfortCab_interiorLightR" 		lightTypes="0" />
+			<defaultLight 		shaderNode="bullBar_spotlightL_01" 			lightTypes="2" />
+			<defaultLight 		shaderNode="bullBar_spotlightL_02" 			lightTypes="2" />
+			<defaultLight 		shaderNode="bullBar_spotlightR_01" 			lightTypes="2" />
+			<defaultLight 		shaderNode="bullBar_spotlightR_02" 			lightTypes="2" />
+		</defaultLights>
 
-        <defaultLight 		shaderNode="beamLightL_static" 				lightTypes="1" />
-        <defaultLight 		shaderNode="beamLightR_static" 				lightTypes="1" /> 
+		<turnLights>
+			<turnLightLeft 	shaderNode="fenderTurnlightL"/>
+			<turnLightLeft 	shaderNode="turnLightLF_static"/>
+			<turnLightRight 	shaderNode="fenderTurnlightR"/>
+			<turnLightRight 	shaderNode="turnLightRF_static"/>
+		</turnLights>
 
-        <defaultLight 		shaderNode="bullBar_spotlightL_01" 			lightTypes="2" />
-        <defaultLight 		shaderNode="bullBar_spotlightL_02" 			lightTypes="2" />
-        <defaultLight 		shaderNode="bullBar_spotlightR_01" 			lightTypes="2" />
-        <defaultLight 		shaderNode="bullBar_spotlightR_02" 			lightTypes="2" />
-  		</defaultLights>
+		<reverseLights>
+			<reverseLight 	shaderNode="normalVehicle_reverseLightL"/>
+			<reverseLight 	shaderNode="normalVehicle_reverseLightR"/>
+			<reverseLight 	shaderNode="rooftopWorkinglightsLB"/>
+			<reverseLight 	shaderNode="rooftopWorkinglightsRB"/>
 
-      <turnLights>
-          <turnLightLeft 	shaderNode="fenderTurnlightL"/>
-          <turnLightLeft 	shaderNode="turnLightLF_static"/>
-          <turnLightRight 	shaderNode="fenderTurnlightR"/>
-          <turnLightRight 	shaderNode="turnLightRF_static"/>
-      </turnLights>
+			<reverseLight 	shaderNode="reverseLight_balerl_conf_L1"/>
+			<reverseLight 	shaderNode="reverseLight_balerl_conf_R1"/>
+		</reverseLights>
 
-      <reverseLights>
-          <reverseLight 	shaderNode="normalVehicle_reverseLightL"/>
-          <reverseLight 	shaderNode="normalVehicle_reverseLightR"/>
-          <reverseLight 	shaderNode="rooftopWorkinglightsLB"/>
-          <reverseLight 	shaderNode="rooftopWorkinglightsRB"/>
-
-          <reverseLight 	shaderNode="reverseLight_balerl_conf_L1"/>
-          <reverseLight 	shaderNode="reverseLight_balerl_conf_R1"/>
-      </reverseLights>
-
-      <sounds>
-          <switchLight template="SWITCH_01" linkNode="0>" />
-          <turnLight template="SWITCH_TURNLIGHT" linkNode="0>" />
-      </sounds>
+		<sounds>
+			<switchLight template="SWITCH_01" linkNode="0>" />
+			<turnLight template="SWITCH_TURNLIGHT" linkNode="0>" />
+		</sounds>
 
         <beaconLights>
             <beaconLight node="comfortCab_beacon_01" 	filename="$data/shared/assets/beaconLights/lizard/beaconLight01.xml"/>
@@ -1416,10 +1415,6 @@
         <i3dMapping id="dashLight_green" 						node="0>13|0|12|8|1|1" />
         <i3dMapping id="dashLight_red" 							node="0>13|0|12|8|1|2" />
 		
-        <i3dMapping id="flasherL_01" 							node="0>13|0|12|9|0" />
-        <i3dMapping id="flasherR_01" 							node="0>13|0|12|9|1" />
-		
-		
         <i3dMapping id="PoppyLight_static" 						node="0>13|0|13|0|0|2" />
 		
         <i3dMapping id="smokes" 								node="0>13|0|13|0|1" />
@@ -1432,22 +1427,21 @@
         <i3dMapping id="comfortCab_upholstery" 					node="0>13|0|13|3" />
         <i3dMapping id="comfortCab_roofshutter" 				node="0>13|0|13|5" />
         <i3dMapping id="comfortCab_curtains" 					node="0>13|0|13|6" />
+		
         <i3dMapping id="comfortCab_interiorLights" 				node="0>13|0|13|7" />
         <i3dMapping id="comfortCab_interiorLightL" 				node="0>13|0|13|7|0|0" />
-        <i3dMapping id="comfortCab_interiorLightR" 				node="0>13|0|13|7|1|0" />
-		
-        <!-- <i3dMapping id="InteriorLightLow" 						node="0>13|0|13|7|3" />
-        <i3dMapping id="InteriorLightHigh" 						node="0>13|0|13|7|3" /> --><!-- Double entry -->
-		
-        <i3dMapping id="InteriorLight_01" 						node="0>13|0|13|7|4" />
-        <i3dMapping id="InteriorLight_02" 						node="0>13|0|13|7|5" />
-        <i3dMapping id="InteriorLight_03" 						node="0>13|0|13|7|6" />
+        <i3dMapping id="comfortCab_interiorLightR" 				node="0>13|0|13|7|1|0" />		
+        <i3dMapping id="comfortCab_InteriorLight_01_real" 		node="0>13|0|13|7|2" />
+        <i3dMapping id="comfortCab_InteriorLight_02_real" 		node="0>13|0|13|7|3" />
+        <i3dMapping id="comfortCab_InteriorLight_03_real" 		node="0>13|0|13|7|4" />
 		
         <i3dMapping id="spaceCab_parts" 						node="0>13|0|13|8" />
         <i3dMapping id="interiorRooflightL_Static" 				node="0>13|0|13|8|3|0|0" />
         <i3dMapping id="interiorRooflightR_Static" 				node="0>13|0|13|8|3|1|0" />
-        <i3dMapping id="InteriorLightLow1" 						node="0>13|0|13|8|3|2" />
-        <i3dMapping id="InteriorLightHigh1" 					node="0>13|0|13|8|3|2" /><!-- Double entry -->
+        <i3dMapping id="spaceCab_InteriorLight_01_real" 		node="0>13|0|13|8|3|2" />
+        <i3dMapping id="spaceCab_InteriorLight_02_real" 		node="0>13|0|13|8|3|3" />
+        <i3dMapping id="spaceCab_InteriorLight_03_real" 		node="0>13|0|13|8|3|4" />
+		
         <i3dMapping id="onboardComputerON" 						node="0>13|0|13|11|1" />
         <i3dMapping id="onboardComputer" 						node="0>13|0|13|11|2" />
         <i3dMapping id="onboardComputerLight" 					node="0>13|0|13|11|3" />

@@ -20,17 +20,12 @@
     <File fileId="52" filename="$data/shared/window_diffuse.dds"/>
     <File fileId="69" filename="$data/shared/window_specular.dds"/>
     <File fileId="3" filename="Wheels/Texture/transparent.dds"/>
-    <File fileId="42" filename="texture/cvet_spec_dirt3.dds"/>
-    <File fileId="21" filename="texture/dirt_lite.dds"/>
-    <File fileId="5" filename="texture/gen_dirt_1.dds"/>
-    <File fileId="140" filename="texture/spec.dds"/>
-    <File fileId="45" filename="texture/window_specular.png"/>
     <File fileId="110" filename="texture/Ashray_B.dds"/>
     <File fileId="111" filename="texture/Ashray_S.dds"/>
     <File fileId="49" filename="texture/Blauw.png"/>
+    <File fileId="125" filename="texture/BoardComputer.dds"/>
     <File fileId="123" filename="texture/BoardComputerOFF.dds"/>
     <File fileId="124" filename="texture/BoardComputerON.dds"/>
-    <File fileId="125" filename="texture/BoardComputer.dds"/>
     <File fileId="129" filename="texture/C12.dds"/>
     <File fileId="114" filename="texture/CigTexture_notlit.png"/>
     <File fileId="86" filename="texture/Cuir.dds"/>
@@ -51,9 +46,7 @@
     <File fileId="34" filename="texture/Transparent.dds"/>
     <File fileId="130" filename="texture/Warning L.png"/>
     <File fileId="131" filename="texture/Warning R.png"/>
-    <File fileId="20" filename="texture/cremeColor_tex.png"/>
     <File fileId="118" filename="texture/Wood_base.dds"/>
-    <File fileId="53" filename="texture/logo_blackBG.dds"/>
     <File fileId="25" filename="texture/alpha.dds"/>
     <File fileId="76" filename="texture/beerCrate_diffuse.dds"/>
     <File fileId="126" filename="texture/black.dds"/>
@@ -61,6 +54,8 @@
     <File fileId="63" filename="texture/brownLeather_tex.dds"/>
     <File fileId="82" filename="texture/caseIH1455_diffuse.dds"/>
     <File fileId="83" filename="texture/caseIH1455_specular.dds"/>
+    <File fileId="20" filename="texture/cremeColor_tex.png"/>
+    <File fileId="42" filename="texture/cvet_spec_dirt3.dds"/>
     <File fileId="30" filename="texture/daf_XF_105.460_Couleur02_diffuse.png"/>
     <File fileId="99" filename="texture/daf_XF_105.460_Couleur_specular.png"/>
     <File fileId="50" filename="texture/daf_XF_105.460_MarchePied_diffuse.png"/>
@@ -76,9 +71,11 @@
     <File fileId="65" filename="texture/daf_XF_105.460_Tapis02_diffuse.png"/>
     <File fileId="100" filename="texture/dashboard_f241.dds"/>
     <File fileId="122" filename="texture/decoSpace.dds"/>
+    <File fileId="21" filename="texture/dirt_lite.dds"/>
     <File fileId="105" filename="texture/feux_TDB_diffuse.dds"/>
     <File fileId="41" filename="texture/fifth.dds"/>
     <File fileId="132" filename="texture/flatbedsemiV2diff.dds"/>
+    <File fileId="5" filename="texture/gen_dirt_1.dds"/>
     <File fileId="26" filename="texture/glass.dds"/>
     <File fileId="95" filename="texture/kelsaGlass_diffuse.png"/>
     <File fileId="93" filename="texture/kelsaLightbar_diffuse.png"/>
@@ -87,6 +84,7 @@
     <File fileId="32" filename="texture/kelsaSidebar_specular.dds"/>
     <File fileId="55" filename="texture/lbox.dds"/>
     <File fileId="141" filename="texture/lizardLogistics.png"/>
+    <File fileId="53" filename="texture/logo_blackBG.dds"/>
     <File fileId="56" filename="texture/man22sInterior_diffuse.png"/>
     <File fileId="57" filename="texture/man22sInterior_normal.png"/>
     <File fileId="84" filename="texture/material_1.dds"/>
@@ -106,12 +104,14 @@
     <File fileId="108" filename="texture/piece_2.dds"/>
     <File fileId="109" filename="texture/piece_3.dds"/>
     <File fileId="120" filename="texture/s2.dds"/>
+    <File fileId="140" filename="texture/spec.dds"/>
     <File fileId="96" filename="texture/stroboLight_diffuse.png"/>
     <File fileId="97" filename="texture/stroboLight_specular.png"/>
     <File fileId="80" filename="texture/tex1.dds"/>
     <File fileId="48" filename="texture/upg_shared.dds"/>
     <File fileId="44" filename="texture/visor glass.png"/>
     <File fileId="98" filename="texture/window_diffuse.png"/>
+    <File fileId="45" filename="texture/window_specular.png"/>
   </Files>
 
 
@@ -291,6 +291,9 @@
     <Material name="default" materialId="46">
       <Texture fileId="129"/>
     </Material>
+    <Material name="default" materialId="56" specularColor="1 1 1">
+      <Texture fileId="20"/>
+    </Material>
     <Material name="default" materialId="47">
       <Texture fileId="86"/>
       <Normalmap fileId="28"/>
@@ -329,9 +332,6 @@
       <Texture fileId="133"/>
       <Glossmap fileId="21"/>
       <CustomParameter name="RDT" value="1 1 0 0"/>
-    </Material>
-    <Material name="default" materialId="56" specularColor="1 1 1">
-      <Texture fileId="20"/>
     </Material>
     <Material name="default" materialId="57" specularColor="0.827451 1 0">
       <Texture fileId="118"/>
@@ -431,17 +431,20 @@
       <Texture fileId="93"/>
       <Glossmap fileId="94"/>
     </Material>
+    <Material name="lambert1" materialId="91">
+      <Texture fileId="20"/>
+    </Material>
     <Material name="lambert1" materialId="86">
       <Texture fileId="30"/>
+    </Material>
+    <Material name="lambert1" materialId="88">
+      <Texture fileId="30"/>
+      <Glossmap fileId="99"/>
     </Material>
     <Material name="lambert1" materialId="87" customShaderId="6">
       <Texture fileId="30"/>
       <Glossmap fileId="21"/>
       <CustomParameter name="RDT" value="1 1 0 0"/>
-    </Material>
-    <Material name="lambert1" materialId="88">
-      <Texture fileId="30"/>
-      <Glossmap fileId="99"/>
     </Material>
     <Material name="lambert1" materialId="89" customShaderId="6">
       <Texture fileId="90"/>
@@ -451,9 +454,6 @@
     <Material name="lambert1" materialId="90" alphaBlending="true">
       <Texture fileId="98"/>
       <Glossmap fileId="45"/>
-    </Material>
-    <Material name="lambert1" materialId="91">
-      <Texture fileId="20"/>
     </Material>
     <Material name="lambert1" materialId="92" diffuseColor="0 0 0 1" customShaderId="6">
       <Glossmap fileId="5"/>
@@ -1024,9 +1024,6 @@
         <TransformGroup name="realLights" translation="0 0.31 -0.25" scale="0.83 0.9 0.9" nodeId="669">
           <TransformGroup name="standardLights" nodeId="670">
             <Light name="standardLightHighLow" translation="0 0.835 3.695" rotation="176.324 0 180" nodeId="671" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="0.01" coneAngle="0" dropOff="0">
-              <Light name="BinnenBeam" translation="-0.403576 2.37033 1.43887" rotation="-71.1496 0 4.63215e-09" nodeId="672" type="spot" color="1 0 0" emitDiffuse="true" emitSpecular="true" range="2" coneAngle="120" dropOff="2"/>
-              <Light name="BinnenBeam" translation="0.404 2.37033 1.43887" rotation="-71.1496 0 4.63215e-09" nodeId="673" type="spot" color="1 0 0" emitDiffuse="true" emitSpecular="true" range="2" coneAngle="120" dropOff="2"/>
-              <Light name="BinnenBeam" translation="0 2.37 2" rotation="-71.1496 0 4.63215e-09" nodeId="674" type="spot" color="1 0 0" emitDiffuse="true" emitSpecular="true" range="2" coneAngle="120" dropOff="2"/>
               <Light name="highBeamLow" translation="0.283 -0.639 0.102" rotation="0 90 0" clipDistance="75" nodeId="675" type="spot" color="5 2 0" emitDiffuse="true" emitSpecular="true" range="0.5" coneAngle="100" dropOff="2"/>
               <Light name="highBeamLow" translation="-0.283 -0.639 0.102" rotation="0 -90 0" clipDistance="75" nodeId="676" type="spot" color="5 2 0" emitDiffuse="true" emitSpecular="true" range="0.5" coneAngle="100" dropOff="2"/>
               <TransformGroup name="FrontBeam" translation="2.63394e-08 -1.13629 -0.129246" rotation="-176.324 0 180" nodeId="677">
@@ -1879,10 +1876,6 @@
                   <Shape shapeId="134" name="dashLight_red" rotation="90 -0 0" nodeId="1336" materialIds="49" castsShadows="true" receiveShadows="true"/>
                 </TransformGroup>
               </TransformGroup>
-              <TransformGroup name="flashers" nodeId="1337">
-                <TransformGroup name="flasherL_01" translation="0.639521 1.80283 2.88535" rotation="0 0 -1.79357e-07" nodeId="1338"/>
-                <TransformGroup name="flasherR_01" translation="-0.64 1.80283 2.88535" rotation="0 0 -1.79357e-07" nodeId="1339"/>
-              </TransformGroup>
             </TransformGroup>
             <TransformGroup name="Interieur" nodeId="1340">
               <TransformGroup name="accessoires" nodeId="1341">
@@ -2037,11 +2030,9 @@
                 <Shape shapeId="159" name="rearLightCircleLEDRed_01" translation="-0.623179 3.19758 1.91717" rotation="-178.686 -0 -2.35917e-05" clipDistance="300" nodeId="1460" materialIds="127" castsShadows="true" receiveShadows="true">
                   <Shape shapeId="160" name="comfortCab_interiorLightR" translation="0 -0.0178779 0" clipDistance="35" nodeId="1461" materialIds="33" castsShadows="true" receiveShadows="true" decalLayer="1"/>
                 </Shape>
-                <Light name="InteriorLightHighLow" translation="0.636 3.27196 1.9193" rotation="-58.2395 0 1.19438e-06" visibility="false" nodeId="1462" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="1.85" coneAngle="50" dropOff="2"/>
-                <Light name="InteriorLightHighLow" translation="0.636 3.272 1.919" rotation="-58.239 -0 0" visibility="false" nodeId="1463" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="1024" shadowFarDistance="1000" shadowExtrusionDistance="200" pcssLightSize="50.7906" pcssLightDistance="0.66" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="1.5" coneAngle="130" dropOff="2"/>
-                <Light name="InteriorLight_01" translation="0.636 3.21222 2.04815" rotation="-96.0074 1.01553e-06 1.82307e-06" nodeId="1464" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="1.48" coneAngle="50" dropOff="2"/>
-                <Light name="InteriorLight_02" translation="-0.636 3.21222 2.04815" rotation="-96.0074 1.01553e-06 1.82307e-06" nodeId="1465" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="1.48" coneAngle="50" dropOff="2"/>
-                <Light name="InteriorLight_03" translation="-0.636 3.27196 1.9193" rotation="-58.2395 1.01553e-06 1.82307e-06" nodeId="1466" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="1.85" coneAngle="50" dropOff="2"/>
+                <Light name="InteriorLight_01_real" translation="0.636 3.21222 2.04815" rotation="-96.0074 1.01553e-06 1.82307e-06" nodeId="1464" type="spot" color="0.784 0.003 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="2" coneAngle="120" dropOff="2"/>
+                <Light name="InteriorLight_02_real" translation="-0.636 3.21222 2.04815" rotation="-96.0074 1.01553e-06 1.82307e-06" nodeId="1465" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="2" coneAngle="120" dropOff="2"/>
+                <Light name="InteriorLight_03_real" translation="-0.636 3.27196 1.9193" rotation="-58.2395 1.01553e-06 1.82307e-06" nodeId="1466" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="2" coneAngle="120" dropOff="2"/>
               </TransformGroup>
               <TransformGroup name="spaceCab_parts" nodeId="1467">
                 <TransformGroup name="model" translation="0.747673 2.88572 1.61596" rotation="-180 0 -180" scale="1.07 1 1.024" nodeId="1468">
@@ -2094,15 +2085,13 @@
                   <Shape shapeId="159" name="interiorRooflightR" translation="-0.623179 3.19758 1.91717" rotation="-178.686 -0 -2.35917e-05" clipDistance="300" nodeId="1507" materialIds="127" castsShadows="true" receiveShadows="true">
                     <Shape shapeId="160" name="interiorRooflightR_Static" translation="0 -0.0178779 0" clipDistance="35" nodeId="1508" materialIds="33" castsShadows="true" receiveShadows="true" decalLayer="1"/>
                   </Shape>
-                  <Light name="InteriorLightHighLow1" translation="0.636 3.27196 1.9193" rotation="-58.2395 -0 1.19438e-06" nodeId="1509" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="1.85" coneAngle="50" dropOff="2">
-                    <Light name="InteriorLight" translation="-1.272 -2.67649e-08 0" rotation="0 -0 1.19438e-06" nodeId="1510" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="1.85" coneAngle="50" dropOff="2"/>
-                    <Light name="InteriorLight" translation="0 -0.141 0.0170336" rotation="-37.768 -0 1.19438e-06" nodeId="1511" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="1.48" coneAngle="50" dropOff="2"/>
-                    <Light name="InteriorLight" translation="-1.272 -0.141 0.0170336" rotation="-37.7679 -0 1.19438e-06" nodeId="1512" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="1.48" coneAngle="50" dropOff="2"/>
-                  </Light>
+                  <Light name="InteriorLight_01_real" translation="0.636 3.21222 2.04815" rotation="-96.0074 1.01553e-06 1.82307e-06" nodeId="1886" type="spot" color="0.784 0.003 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50.7906" pcssLightDistance="0.66" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="2" coneAngle="120" dropOff="2"/>
+                  <Light name="InteriorLight_02_real" translation="-0.636 3.21222 2.04815" rotation="-96.0074 1.01553e-06 1.82307e-06" nodeId="1887" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50.7906" pcssLightDistance="0.66" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="2" coneAngle="120" dropOff="2"/>
+                  <Light name="InteriorLight_03_real" translation="-0.636 3.27196 1.9193" rotation="-58.2395 1.01553e-06 1.82307e-06" nodeId="1888" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50.7906" pcssLightDistance="0.66" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="2" coneAngle="120" dropOff="2"/>
                 </TransformGroup>
               </TransformGroup>
-              <TransformGroup name="VloerKleed" translation="0.751 2.69077 1.586" rotation="-180 0 -180" scale="1.06 1 1.06" nodeId="1513">
-                <Shape shapeId="151" name="VloerKleed" translation="0.004 -0.41772 -0.719232" rotation="180 -0 0" scale="0.969048 1 0.548089" nodeId="1514" materialIds="113" castsShadows="true" receiveShadows="true"/>
+              <TransformGroup name="Carpet" translation="0.751 2.69077 1.586" rotation="-180 0 -180" scale="1.06 1 1.06" nodeId="1513">
+                <Shape shapeId="151" name="Carpet" translation="0.004 -0.41772 -0.719232" rotation="180 -0 0" scale="0.969048 1 0.548089" nodeId="1514" materialIds="113" castsShadows="true" receiveShadows="true"/>
               </TransformGroup>
               <Shape shapeId="165" name="Pendalen" translation="0.654269 2.40541 1.80566" rotation="-180 0 -180" scale="0.591006 0.528943 1" nodeId="1515" materialIds="111" castsShadows="true" receiveShadows="true"/>
               <TransformGroup name="BoordComputerVP" nodeId="1516">
@@ -2112,7 +2101,7 @@
                 <Shape shapeId="166" name="onboardComputerLight" translation="0.367835 2.313 2.25498" rotation="158.027 43.235 179.391" scale="0.0851611 0.085 0.2" nodeId="1520" materialIds="25"/>
               </TransformGroup>
             </TransformGroup>
-            <TransformGroup name="sterringBase" translation="0.705687 2.41003 2.15979" rotation="-51.3277 -0 0" clipDistance="300" nodeId="1521">
+            <TransformGroup name="steeringBase" translation="0.705687 2.41003 2.15979" rotation="-51.3277 -0 0" clipDistance="300" nodeId="1521">
               <Shape shapeId="167" name="Stuur" translation="0.00805479 0.0116847 0" rotation="10.8297 -0 0" nodeId="1522" materialIds="23,38,38" castsShadows="true" receiveShadows="true">
                 <TransformGroup name="player_rightHand" translation="-0.205682 0.0044605 -0.0116569" rotation="-1.68199 7.19933 39.9173" nodeId="1523"/>
                 <TransformGroup name="player_leftHand" translation="0.20567 0.00251028 -0.0115942" rotation="-1.68199 -7.19933 -39.9173" nodeId="1524"/>
@@ -2444,11 +2433,11 @@
                 </TransformGroup>
               </TransformGroup>
             </TransformGroup>
-            <TransformGroup name="bumperStokken" translation="-0.002 0 0" scale="1.031 1 1" nodeId="1766">
-              <Shape shapeId="215" name="defaultRedStatic" translation="1.177 1.25331 2.705" scale="1.15 1 1.5" clipDistance="35" nodeId="1767" materialIds="32" castsShadows="true" receiveShadows="true" decalLayer="1"/>
-              <Shape shapeId="216" name="defaultWhiteStatic" translation="1.177 1.253 2.67106" scale="1.15 1 1.5" clipDistance="35" nodeId="1768" materialIds="32" castsShadows="true" receiveShadows="true" decalLayer="1"/>
-              <Shape shapeId="215" name="defaultRedStatic" translation="-1.348 1.25331 2.705" scale="1.15 1 1.5" clipDistance="35" nodeId="1769" materialIds="32" castsShadows="true" receiveShadows="true" decalLayer="1"/>
-              <Shape shapeId="216" name="defaultWhiteStatic" translation="-1.348 1.253 2.67106" scale="1.15 1 1.5" clipDistance="35" nodeId="1770" materialIds="32" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+            <TransformGroup name="bumperSticks" translation="-0.002 0 0" scale="1.031 1 1" nodeId="1766">
+              <Shape shapeId="215" name="bumperStickL_red" translation="1.177 1.25331 2.705" scale="1.15 1 1.5" clipDistance="35" nodeId="1767" materialIds="32" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <Shape shapeId="216" name="bumperStickL_white" translation="1.177 1.253 2.67106" scale="1.15 1 1.5" clipDistance="35" nodeId="1768" materialIds="32" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <Shape shapeId="215" name="bumperStickR_red" translation="-1.348 1.25331 2.705" scale="1.15 1 1.5" clipDistance="35" nodeId="1769" materialIds="32" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <Shape shapeId="216" name="bumperStickR_white" translation="-1.348 1.253 2.67106" scale="1.15 1 1.5" clipDistance="35" nodeId="1770" materialIds="32" castsShadows="true" receiveShadows="true" decalLayer="1"/>
             </TransformGroup>
           </TransformGroup>
           <TransformGroup name="Grootlicht" nodeId="1771">
@@ -2575,7 +2564,7 @@
           <Shape shapeId="234" name="loadTrigger" translation="0 -0.316882 -2.97262" scale="1 1.25502 0.528808" visibility="false" nodeId="1864" materialIds="143" castsShadows="true" receiveShadows="true" nonRenderable="true" renderedInViewports="false"/>
         </TransformGroup>
         <TransformGroup name="-" nodeId="1865"/>
-        <Camera name="GKbuildcam" translation="0.137721 3.33883 5.18847" rotation="-4.60912 2.30575 -1.23664e-06" nodeId="1866" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
+        <Camera name="GKbuildcam" translation="0.859199 3.04547 0.985953" rotation="165.994 35.8263 180" nodeId="1866" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
       </Shape>
       <Shape shapeId="235" name="MudFlapFL" translation="0.861 0.505 2.70505" rotation="-180 0 -180" dynamic="true" compound="true" collisionMask="2105599" density="10" clipDistance="200" nodeId="1867" materialIds="10" castsShadows="true" receiveShadows="true" nonRenderable="true">
         <TransformGroup name="MudFlap" translation="0.861 0 0" nodeId="1868">
