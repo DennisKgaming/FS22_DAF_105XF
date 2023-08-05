@@ -64,8 +64,8 @@
 	<aPalletAutoLoader>
 		<aPalletAutoLoaderConfigurations title="$l10n_function_PalletAutoload_Trailer">
 		
-			<!-- <aPalletAutoLoaderConfiguration name="$l10n_configuration_autoLoad_dis">
-			</aPalletAutoLoaderConfiguration> -->
+			<aPalletAutoLoaderConfiguration name="$l10n_configuration_autoLoad_dis">
+			</aPalletAutoLoaderConfiguration>
 		
 			<aPalletAutoLoaderConfiguration name="$l10n_configuration_PalletAutoload_Trailer" maxObjects="80" useBales="true" useTensionBelts="true" supportedObject="data/objects/pallets" UnloadRightOffset="-3 -1 0" UnloadLeftOffset="3 -1 0">
 				<trigger node="loadTrigger"/>
@@ -510,7 +510,7 @@
         <defaultLight 		shaderNode="comfortSunvisorL_04" 			lightTypes="0" intensity="0.25" />
         <defaultLight 		shaderNode="comfortSunvisorR_01" 			lightTypes="0" intensity="0.25" />
         <defaultLight 		shaderNode="comfortSunvisorR_02" 			lightTypes="0" intensity="0.25" />
-        <defaultLight		 shaderNode="comfortSunvisorR_03" 			lightTypes="0" intensity="0.25" />
+        <defaultLight		shaderNode="comfortSunvisorR_03" 			lightTypes="0" intensity="0.25" />
         <defaultLight 		shaderNode="comfortSunvisorR_04" 			lightTypes="0" intensity="0.25" />
 			
         <defaultLight 		shaderNode="comfortHellaL" 					lightTypes="2" />
@@ -520,14 +520,14 @@
         <!--SpaceCab-->
 		<defaultLight 		shaderNode="interiorRooflightL_Static" 		lightTypes="0" />
         <defaultLight 		shaderNode="interiorRooflightR_Static" 		lightTypes="0" />
-        <defaultLight 		shaderNode="spaceSunvisorL_01" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorL_02" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorL_03" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorL_04" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorR_01" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorR_02" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorR_03" 				lightTypes="0" intensity="0.50" />
-        <defaultLight 		shaderNode="spaceSunvisorR_04" 				lightTypes="0" intensity="0.50" />
+        <defaultLight 		shaderNode="spaceSunvisorL_01" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorL_02" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorL_03" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorL_04" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorR_01" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorR_02" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorR_03" 				lightTypes="0" intensity="0.25" />
+        <defaultLight 		shaderNode="spaceSunvisorR_04" 				lightTypes="0" intensity="0.25" />
 		
         <defaultLight 		shaderNode="spaceLightL_02_Static" 			lightTypes="2" />
         <defaultLight 		shaderNode="spaceLightR_02_Static" 			lightTypes="2" />
@@ -621,8 +621,8 @@
 		<!--SideMarkers Normal-->
 		
 		<!--SideMarkers Baler-->
-        <defaultLight 		shaderNode="sideMarkerBalerL_01" 			lightTypes="0" />
-        <defaultLight 		shaderNode="sideMarkerBalerR_01" 			lightTypes="0" />
+        <defaultLight 		shaderNode="sideMarkerBalerL_01" 			lightTypes="0" intensity="0.5" />
+        <defaultLight 		shaderNode="sideMarkerBalerR_01" 			lightTypes="0" intensity="0.5" />
         <!--SideMarkers Baler-->
 		
 		<!--
@@ -632,7 +632,7 @@
         <defaultLight shaderNode="bumperStickR_white" 	lightTypes="0" />
 		-->
 		
-		<defaultLight 		shaderNode="PoppyLight_static" 				lightTypes="0" />
+		<defaultLight 		shaderNode="PoppyLight_static" 				lightTypes="0" intensity="0.5" />
 
         <defaultLight 		shaderNode="comfortCab_interiorLightL" 		lightTypes="0" />
         <defaultLight 		shaderNode="comfortCab_interiorLightR" 		lightTypes="0" />
