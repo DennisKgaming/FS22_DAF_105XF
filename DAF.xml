@@ -627,12 +627,12 @@
 			<defaultLight 		shaderNode="sideMarkerBalerR_01" 			lightTypes="0" intensity="0.5" />
 			<!--SideMarkers Baler-->
 			
-			<!--
+			
 			<defaultLight shaderNode="bumperStickL_red" 	lightTypes="0" />
 			<defaultLight shaderNode="bumperStickL_white" 	lightTypes="0" />
 			<defaultLight shaderNode="bumperStickR_red" 	lightTypes="0" />
 			<defaultLight shaderNode="bumperStickR_white" 	lightTypes="0" />
-			-->
+			
 			
 			<defaultLight 		shaderNode="PoppyLight_static" 				lightTypes="0" intensity="0.5" />
 
