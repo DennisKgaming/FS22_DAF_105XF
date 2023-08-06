@@ -1027,14 +1027,9 @@
         </TransformGroup>
         <TransformGroup name="realLights" translation="0 0.31 -0.25" scale="0.83 0.9 0.9" nodeId="669">
           <TransformGroup name="standardLights" nodeId="670">
-            <Light name="standardLightHighLow" translation="0 0.835 3.695" rotation="176.324 0 180" nodeId="671" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="0.01" coneAngle="0" dropOff="0">
-              <Light name="highBeamLow" translation="0.283 -0.639 0.102" rotation="0 90 0" clipDistance="75" nodeId="672" type="spot" color="5 2 0" emitDiffuse="true" emitSpecular="true" range="0.5" coneAngle="100" dropOff="2"/>
-              <Light name="highBeamLow" translation="-0.283 -0.639 0.102" rotation="0 -90 0" clipDistance="75" nodeId="673" type="spot" color="5 2 0" emitDiffuse="true" emitSpecular="true" range="0.5" coneAngle="100" dropOff="2"/>
-              <TransformGroup name="FrontBeam" translation="2.63394e-08 -1.13629 -0.129246" rotation="-176.324 0 180" nodeId="674">
-                <Light name="frontLight" translation="1.11298 1.05907 -0.462813" rotation="176.324 0 180" nodeId="675" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2">
-                  <Light name="frontLight" translation="2.226 0 0" nodeId="676" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2"/>
-                </Light>
-              </TransformGroup>
+            <Light name="standardLight_real" translation="0 0.835 3.695" rotation="176.324 0 180" nodeId="671" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="0.01" coneAngle="0" dropOff="0">
+              <Light name="licenseplateFL" translation="0.283 -0.639 0.102" rotation="0 90 0" clipDistance="75" nodeId="672" type="spot" color="5 2 0" emitDiffuse="true" emitSpecular="true" range="0.5" coneAngle="100" dropOff="2"/>
+              <Light name="licenseplateFR" translation="-0.283 -0.639 0.102" rotation="0 -90 0" clipDistance="75" nodeId="673" type="spot" color="5 2 0" emitDiffuse="true" emitSpecular="true" range="0.5" coneAngle="100" dropOff="2"/>
             </Light>
             <TransformGroup name="normalVehicle_lights_real" nodeId="677">
               <Light name="NormalLightHighLow" translation="0 0.835 3.695" rotation="176.324 0 180" nodeId="678" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="0.01" coneAngle="0" dropOff="0">
@@ -1052,6 +1047,11 @@
               <Light name="rearLightL_baler_real" translation="1.21896 0.900228 -7.56373" rotation="20.9991 0.000239177 -180" nodeId="687" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="130" dropOff="2"/>
               <Light name="rearLightR_baler_real" translation="-1.219 0.900228 -7.56373" rotation="20.9991 0.000239177 -180" nodeId="688" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="130" dropOff="2"/>
             </TransformGroup>
+            <TransformGroup name="FrontBeam" translation="7.35183e-08 -0.307239 3.75113" rotation="7.35198 3.21145e-07 1.03058e-08" nodeId="674">
+              <Light name="frontLight_real" translation="1.11298 1.05907 -0.462813" rotation="176.324 0 180" nodeId="675" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2">
+                <Light name="frontLight" translation="2.226 0 0" nodeId="676" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2"/>
+              </Light>
+            </TransformGroup>
           </TransformGroup>
           <TransformGroup name="highBeam" nodeId="689">
             <TransformGroup name="bullBar_lights_real" nodeId="690">
@@ -1059,37 +1059,35 @@
                 <Light name="frontLight" translation="2.226 0 0" nodeId="692" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2"/>
               </Light>
             </TransformGroup>
-            <Light name="highBeamHighLow" translation="1.273 0.815405 3.37664" rotation="176.324 0 180" nodeId="693" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="60" coneAngle="100" dropOff="2">
+            <Light name="highBeam_real" translation="1.273 0.815405 3.37664" rotation="176.324 0 180" nodeId="693" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="60" coneAngle="100" dropOff="2">
               <Light name="frontLight" translation="2.546 0 0" nodeId="694" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="60" coneAngle="100" dropOff="2"/>
             </Light>
           </TransformGroup>
           <TransformGroup name="normalVehicle_brakeLights_real" nodeId="695">
-            <Light name="brakeLights_red" translation="1.219 0.505 -3.936" rotation="-45 0 0" nodeId="696" type="spot" color="1 0 0" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="130" dropOff="2">
+            <Light name="brakeLights_real_red" translation="1.219 0.505 -3.936" rotation="-45 0 0" nodeId="696" type="spot" color="1 0 0" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="130" dropOff="2">
               <Light name="Lightred" translation="-2.439 0 0" nodeId="697" type="spot" color="1 0 0" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="130" dropOff="2"/>
             </Light>
           </TransformGroup>
           <TransformGroup name="turnRight" translation="0 0 -1.49503" nodeId="698">
             <TransformGroup name="normalVehicle_turnR_real" nodeId="699">
-              <Light name="NormalturnLightRB " translation="-1.388 0.67325 -2.19865" rotation="-7.41306 0 0" clipDistance="75" nodeId="700" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
-              <Light name="NormalturnLightR" translation="-1.49856 0.601217 1.73117" rotation="-7.413 90 0" clipDistance="75" nodeId="701" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
+              <Light name="NormalturnLightRB_real" translation="-1.388 0.67325 -2.19865" rotation="-7.41306 0 0" clipDistance="75" nodeId="700" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
             </TransformGroup>
             <TransformGroup name="balerVehicle_turnR_real" nodeId="702">
-              <Light name="BalerturnLightRB" translation="-1.388 0.854 -5.472" rotation="-7.41306 0 0" clipDistance="75" nodeId="703" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
+              <Light name="BalerturnLightRB_real" translation="-1.388 0.854 -5.472" rotation="-7.41306 0 0" clipDistance="75" nodeId="703" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
             </TransformGroup>
-            <Light name="StandardturnLightRF" translation="-1.367 0.814 4.788" rotation="-7.413 -225 0.000166999" clipDistance="75" nodeId="704" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
+            <Light name="turnLightRF_real" translation="-1.367 0.814 4.788" rotation="-7.413 -225 0.000166999" clipDistance="75" nodeId="704" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
           </TransformGroup>
           <TransformGroup name="turnLeft" translation="0 0 -1.495" nodeId="705">
             <TransformGroup name="normalVehicle_turnL_real" nodeId="706">
-              <Light name="NormalturnLightLB" translation="1.387 0.67325 -2.19865" rotation="-7.413 0 0" clipDistance="75" nodeId="707" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
-              <Light name="NormalturnLightL" translation="1.534 0.597746 1.74858" rotation="-7.413 -90 0" clipDistance="75" nodeId="708" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
+              <Light name="NormalturnLightLB_real" translation="1.387 0.67325 -2.19865" rotation="-7.413 0 0" clipDistance="75" nodeId="707" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
             </TransformGroup>
             <TransformGroup name="balerVehicle_turnL_real" nodeId="709">
-              <Light name="BalerturnLightLB" translation="1.388 0.854 -5.472" rotation="-7.413 0 0" clipDistance="75" nodeId="710" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
+              <Light name="BalerturnLightLB_real" translation="1.388 0.854 -5.472" rotation="-7.413 0 0" clipDistance="75" nodeId="710" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
             </TransformGroup>
-            <Light name="StandardturnLightLF" translation="1.367 0.814 4.7884" rotation="-7.413 225 0.000166999" clipDistance="75" nodeId="711" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
+            <Light name="turnLightLF_real" translation="1.367 0.814 4.7884" rotation="-7.413 225 0.000166999" clipDistance="75" nodeId="711" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
           </TransformGroup>
           <TransformGroup name="normalVehicle_reverseLights_real" translation="4.06406e-08 -0.046 4.046" rotation="0 180 0" nodeId="712">
-            <Light name="reverseLight" translation="-0.346381 0.767158 8.08424" rotation="145 -0 -180" nodeId="713" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="160" dropOff="2">
+            <Light name="Normal_reverseLight_real" translation="-0.346381 0.767158 8.08424" rotation="145 -0 -180" nodeId="713" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="160" dropOff="2">
               <Light name="frontLight" translation="-0.692 0 0" nodeId="714" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="70" coneAngle="160" dropOff="2"/>
             </Light>
           </TransformGroup>
@@ -1830,8 +1828,8 @@
                 <Shape shapeId="130" name="dashboardLight_turnR" translation="0.007 0 0" rotation="90 -0 0" nodeId="1298" materialIds="49" castsShadows="true" receiveShadows="true"/>
               </TransformGroup>
               <TransformGroup name="beacons" translation="0 0.31 -0.25" scale="0.83 0.9 0.9" nodeId="1299">
-                <TransformGroup name="comfortCab_mainLight" translation="0 0.835 3.695" rotation="176.324 0 180" nodeId="1300">
-                  <Light name="frontLightHighLow" nodeId="1301" type="spot" color="0 0 0" emitDiffuse="true" emitSpecular="true" range="0.01" coneAngle="0" dropOff="0">
+                <TransformGroup name="comfortCab_accessorieLight" translation="0 0.835 3.695" rotation="176.324 0 180" nodeId="1300">
+                  <Light name="accessorieLight" nodeId="1301" type="spot" color="0 0 0" emitDiffuse="true" emitSpecular="true" range="0.01" coneAngle="0" dropOff="0">
                     <TransformGroup name="Corona" translation="2.87496e-07 -1.069 3.63248" rotation="176.324 0 -180" nodeId="1302">
                       <Shape shapeId="84" name="lightBox" translation="0.0212577 3.4588 3.165" rotation="90 180 0" scale="0.13 1e-06 0.147" nodeId="1303" materialIds="6" receiveShadows="true" distanceBlending="false"/>
                       <Shape shapeId="90" name="Licht:Michelin" translation="0.882 3.60127 3.03897" scale="1.22 1.11 1.2" nodeId="1304" materialIds="106" receiveShadows="true"/>
@@ -1840,34 +1838,34 @@
                   </Light>
                 </TransformGroup>
                 <TransformGroup name="turnR" translation="0 0 -1.49503" nodeId="1306">
-                  <Light name="turnLightRightFender" translation="-1.534 1.256 3.401" rotation="-7.413 90 0" clipDistance="75" nodeId="1307" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
+                  <Light name="turnLightFenderR_real" translation="-1.534 1.256 3.401" rotation="-7.413 90 0" clipDistance="75" nodeId="1307" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
                 </TransformGroup>
                 <TransformGroup name="turnL" translation="0 0 -1.495" nodeId="1308">
-                  <Light name="turnLightLeftFender" translation="1.534 1.256 3.40108" rotation="-7.413 -90 0" clipDistance="75" nodeId="1309" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
+                  <Light name="turnLightFenderL_real" translation="1.534 1.256 3.40108" rotation="-7.413 -90 0" clipDistance="75" nodeId="1309" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="140" dropOff="3"/>
                 </TransformGroup>
                 <TransformGroup name="comfortCab_reverseLight" translation="0 -0.046 4.046" rotation="0 180 0" nodeId="1310">
-                  <Light name="reverseLightHigh1" translation="-0.238687 3.694 2.99017" rotation="-210 13 180" nodeId="1311" type="spot" color="1 1 2" emitDiffuse="true" emitSpecular="true" range="90" coneAngle="100" dropOff="2"/>
-                  <Light name="reverseLightHigh2" translation="0.239 3.69424 2.99017" rotation="-210 -13 180" nodeId="1312" type="spot" color="1 1 2" emitDiffuse="true" emitSpecular="true" range="90" coneAngle="100" dropOff="2"/>
+                  <Light name="reverseLightL_real" translation="-0.238687 3.694 2.99017" rotation="-210 13 180" nodeId="1311" type="spot" color="1 1 2" emitDiffuse="true" emitSpecular="true" range="90" coneAngle="100" dropOff="2"/>
+                  <Light name="reverseLightR_real" translation="0.239 3.69424 2.99017" rotation="-210 -13 180" nodeId="1312" type="spot" color="1 1 2" emitDiffuse="true" emitSpecular="true" range="90" coneAngle="100" dropOff="2"/>
                 </TransformGroup>
-                <TransformGroup name="comfortCab_beacons" translation="0 0.186422 -1.514" nodeId="1313">
-                  <TransformGroup name="beaconLights1" translation="1.11965 3.446 4.661" scale="1.1 1.1 1.1" nodeId="1314"/>
-                  <TransformGroup name="beaconLights2" translation="-1.12 3.446 4.661" scale="1.1 1.1 1.1" nodeId="1315"/>
+                <TransformGroup name="comfortCab_beacons_shared" translation="0 0.186422 -1.514" nodeId="1313">
+                  <TransformGroup name="beaconLightsL" translation="1.11965 3.446 4.661" scale="1.1 1.1 1.1" nodeId="1314"/>
+                  <TransformGroup name="beaconLightsR" translation="-1.12 3.446 4.661" scale="1.1 1.1 1.1" nodeId="1315"/>
                 </TransformGroup>
                 <TransformGroup name="spaceCab_spotlights_real" nodeId="1316">
-                  <Light name="SpaceHighLow" translation="0.5 4.02929 3.2179" rotation="168.804 -0 -180" nodeId="1317" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2">
+                  <Light name="spaceCab_spots_real" translation="0.5 4.02929 3.2179" rotation="168.804 -0 -180" nodeId="1317" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2">
                     <Light name="frontLight" translation="1 0 0" nodeId="1318" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2"/>
                     <Light name="frontLight" translation="0.333895 0 0" nodeId="1319" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2"/>
                     <Light name="frontLight" translation="0.67 0 0" nodeId="1320" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2"/>
                   </Light>
                 </TransformGroup>
                 <TransformGroup name="comfortCab_spotlights_real" nodeId="1321">
-                  <Light name="ComfortHighLow" translation="0.743 3.42245 3.17252" rotation="176.324 0 180" nodeId="1322" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2">
+                  <Light name="comfortCab_spots_real" translation="0.743 3.42245 3.17252" rotation="176.324 0 180" nodeId="1322" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2">
                     <Light name="frontLight" translation="1.486 0 0" nodeId="1323" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" range="80" coneAngle="120" dropOff="2"/>
                   </Light>
                 </TransformGroup>
-                <TransformGroup name="spaceCab_beacons" translation="0 0.186422 -1.514" nodeId="1324">
-                  <TransformGroup name="beaconLights1" translation="0.769375 3.85452 4.83061" scale="1.1 1.1 1.1" nodeId="1325"/>
-                  <TransformGroup name="beaconLights2" translation="-0.769 3.85452 4.83061" scale="1.1 1.1 1.1" nodeId="1326"/>
+                <TransformGroup name="spaceCab_beacons_shared" translation="0 0.186422 -1.514" nodeId="1324">
+                  <TransformGroup name="beaconLightsL" translation="0.769375 3.85452 4.83061" scale="1.1 1.1 1.1" nodeId="1325"/>
+                  <TransformGroup name="beaconLightsR" translation="-0.769 3.85452 4.83061" scale="1.1 1.1 1.1" nodeId="1326"/>
                 </TransformGroup>
               </TransformGroup>
               <TransformGroup name="Dash" nodeId="1327">
@@ -2568,7 +2566,7 @@
           <Shape shapeId="234" name="loadTrigger" translation="0 -0.316882 -2.97262" scale="1 1.25502 0.528808" visibility="false" nodeId="1855" materialIds="143" castsShadows="true" receiveShadows="true" nonRenderable="true" renderedInViewports="false"/>
         </TransformGroup>
         <TransformGroup name="-" nodeId="1856"/>
-        <Camera name="GKbuildcam" translation="-0.966401 1.15748 3.98592" rotation="-14.9234 -2.96127 -1.14879e-06" nodeId="1857" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
+        <Camera name="GKbuildcam" translation="-2.75565 4.37926 9.77826" rotation="-9.19405 -21.9828 -1.50335e-06" nodeId="1857" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
       </Shape>
       <Shape shapeId="235" name="MudFlapFL" translation="0.861 0.505 2.70505" rotation="-180 0 -180" dynamic="true" compound="true" collisionMask="2105599" density="10" clipDistance="200" nodeId="1858" materialIds="10" castsShadows="true" receiveShadows="true" nonRenderable="true">
         <TransformGroup name="MudFlap" translation="0.861 0 0" nodeId="1859">
