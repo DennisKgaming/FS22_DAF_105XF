@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="kelsaLightbar.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Asset>
+        <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+    </Asset>
+    <Files>
+        <File fileId="3" filename="texture/kelsaGlass_diffuse.png"/>
+        <File fileId="1" filename="texture/kelsaLightbar_diffuse.png"/>
+        <File fileId="2" filename="texture/kelsaLightbar_specular.png"/>
+        <File fileId="4" filename="texture/stroboLight_diffuse.png"/>
+        <File fileId="5" filename="texture/stroboLight_specular.png"/>
+    </Files>
+    <Materials>
+        <Material name="kelsaGlass_vis" materialId="92" alphaBlending="true">
+            <Texture fileId="3"/>
+        </Material>
+        <Material name="kelsaLightbar_vis" materialId="93">
+            <Texture fileId="1"/>
+            <Glossmap fileId="2"/>
+        </Material>
+        <Material name="Material #302" materialId="126">
+            <Texture fileId="4"/>
+            <Glossmap fileId="5"/>
+        </Material>
+    </Materials>
+    <Shapes externalShapesFile="kelsaLightbar.i3d.shapes"/>
+    <Dynamics/>
+    <Scene>
+        <Shape shapeId="1" name="kelsaLightbar" translation="0 3.93834 3.17243" clipDistance="300" nodeId="1178" materialIds="93,92,126" castsShadows="true" receiveShadows="true"/>
+    </Scene>
+</i3D>
