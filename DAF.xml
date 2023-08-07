@@ -373,11 +373,7 @@
 		<sharedLight linkNode="comfortSunvisorR_02" 		node="0" filename="Lights/sideMarker05White.xml"/>
 		<sharedLight linkNode="comfortSunvisorR_03" 		node="0" filename="Lights/sideMarker05White.xml"/>
 		<sharedLight linkNode="comfortSunvisorR_04" 		node="0" filename="Lights/sideMarker05White.xml"/>
-		<sharedLight linkNode="comfortSunvisorR_05" 		node="0" filename="Lights/sideMarker05White.xml"/>
-		  
-		<sharedLight linkNode="mirrorLightL" 				node="0" filename="shared/assets/lights/lizard/rearLight19Orange.xml"/>
-		<sharedLight linkNode="mirrorLightR" 				node="0" filename="shared/assets/lights/lizard/rearLight19Orange.xml"/>
-		  
+		<sharedLight linkNode="comfortSunvisorR_05" 		node="0" filename="Lights/sideMarker05White.xml"/>		  
 		  
 		<sharedLight linkNode="sideBarlightL_normal_01" 	node="0" filename="Lights/sideMarker11Orange.xml"/>
 		<sharedLight linkNode="sideBarlightL_normal_02" 	node="0" filename="Lights/sideMarker11Orange.xml"/>
@@ -429,11 +425,12 @@
 
 		<states>
 			<aiState lightTypes="0" lightTypesWork="0 1"/>
-			<aiState lightTypes="1" lightTypesWork="0 1 2"/>
-			<state lightTypes="0"/>
-			<state lightTypes="0 1"/>
-			<state lightTypes="0 1 2"/>
-			<state lightTypes="0 1 2 3"/>
+			
+			<state lightTypes="0"/> <!-- Daylight -->
+			<state lightTypes="0 1"/> <!-- Daylight, Normal light -->
+			<state lightTypes="0 1 2"/> <!-- Daylight, Normal light, Beam -->
+			<state lightTypes="0 1 2 3"/> <!-- Daylight, Normal light, Beam, High beam -->
+			<state lightTypes="0 1 4"/> <!-- Daylight, Normal light, Worklight -->
 		</states>
 		
 		<realLights>
@@ -511,6 +508,9 @@
 				<light node="highBeam_real"						lightTypes="2"/>
 
 				<light node="workLightFront_real"				lightTypes="3"/>
+				
+				<light node="reverseLightL_real"				lightTypes="4"/>
+				<light node="reverseLightR_real"				lightTypes="4"/>
 
 				<turnLightLeft		node="turnLightLF_real"/>
 				<turnLightLeft		node="BalerturnLightLB_real"/>
@@ -533,6 +533,9 @@
 		<defaultLights>
 			<defaultLight 		shaderNode="headLight_L_glassStatic" 		lightTypes="0" intensity="0.75" />
 			<defaultLight 		shaderNode="headLight_R_glassStatic" 		lightTypes="0" intensity="0.75" />
+			
+			<defaultLight 		shaderNode="0>13|0|12|9|1|0" 		lightTypes="0" intensity="0.75" /> <!-- Mirror light static-->
+			<defaultLight 		shaderNode="0>13|0|12|9|2|0" 		lightTypes="0" intensity="0.75" /> <!-- Mirror light static-->
 				
 			<defaultLight 		shaderNode="fogLight_L_02_glassStatic" 		lightTypes="2" />
 			<defaultLight 		shaderNode="fogLight_R_02_glassStatic" 		lightTypes="2" />
@@ -542,23 +545,25 @@
 
 
 			<!--ComfortCab-->		
-			<defaultLight 		shaderNode="comfortHellaL" 					lightTypes="2" />
-			<defaultLight 		shaderNode="comfortHellaR" 					lightTypes="2" />
+			<defaultLight 		shaderNode="comfortHellaL_ring" 			lightTypes="0" />
+			<defaultLight 		shaderNode="comfortHellaL_center" 			lightTypes="3" intensity="5" />
+			<defaultLight 		shaderNode="comfortHellaR_ring" 			lightTypes="0" />
+			<defaultLight 		shaderNode="comfortHellaR_center" 			lightTypes="3" intensity="5" />
 			<!--ComfortCab-->
 
 			<!--SpaceCab-->
 			<defaultLight 		shaderNode="interiorRooflightL_Static" 		lightTypes="0" />
 			<defaultLight 		shaderNode="interiorRooflightR_Static" 		lightTypes="0" />
 						
-			<defaultLight 		shaderNode="spaceLightL_02_Static" 			lightTypes="2" />
-			<defaultLight 		shaderNode="spaceLightR_02_Static" 			lightTypes="2" />
-			<defaultLight 		shaderNode="spaceLightL_01_Static" 			lightTypes="2" />
-			<defaultLight 		shaderNode="spaceLightR_01_Static" 			lightTypes="2" />
+			<defaultLight 		shaderNode="spaceLightL_02_Static" 			lightTypes="2" intensity="5" />
+			<defaultLight 		shaderNode="spaceLightR_02_Static" 			lightTypes="2" intensity="5" />
+			<defaultLight 		shaderNode="spaceLightL_01_Static" 			lightTypes="2" intensity="5" />
+			<defaultLight 		shaderNode="spaceLightR_01_Static" 			lightTypes="2" intensity="5" />
 
-			<defaultLight 		shaderNode="roofLightstaticR_01" 			lightTypes="2" />
-			<defaultLight 		shaderNode="roofLightstaticR_02" 			lightTypes="2" />
-			<defaultLight 		shaderNode="roofLightstaticL_02" 			lightTypes="2" />
-			<defaultLight 		shaderNode="roofLightstaticL_01" 			lightTypes="2" />
+			<defaultLight 		shaderNode="roofLightstaticR_01" 			lightTypes="3" intensity="5" />
+			<defaultLight 		shaderNode="roofLightstaticR_02" 			lightTypes="3" intensity="5" />
+			<defaultLight 		shaderNode="roofLightstaticL_02" 			lightTypes="3" intensity="5" />
+			<defaultLight 		shaderNode="roofLightstaticL_01" 			lightTypes="3" intensity="5" />
 			<!--SpaceCab-->
 					
 			<defaultLight 		shaderNode="bumperStickL_red" 				lightTypes="0" intensity="1.5" />
@@ -572,10 +577,19 @@
 			<defaultLight 		shaderNode="beamLightL_static" 				lightTypes="1" />
 			<defaultLight 		shaderNode="beamLightR_static" 				lightTypes="1" /> 
 
-			<defaultLight 		shaderNode="bullBar_spotlightL_01" 			lightTypes="2" />
-			<defaultLight 		shaderNode="bullBar_spotlightL_02" 			lightTypes="2" />
-			<defaultLight 		shaderNode="bullBar_spotlightR_01" 			lightTypes="2" />
-			<defaultLight 		shaderNode="bullBar_spotlightR_02" 			lightTypes="2" />
+			<defaultLight 		shaderNode="bullBar_spotlightL_01_ring" 	lightTypes="0" />
+			<defaultLight 		shaderNode="bullBar_spotlightL_01_center" 	lightTypes="3" />
+			<defaultLight 		shaderNode="bullBar_spotlightL_02_ring" 	lightTypes="0" />
+			<defaultLight 		shaderNode="bullBar_spotlightL_02_center" 	lightTypes="3" />
+			<defaultLight 		shaderNode="bullBar_spotlightL_03_ring" 	lightTypes="0" />
+			<defaultLight 		shaderNode="bullBar_spotlightL_03_center" 	lightTypes="3" />
+			<defaultLight 		shaderNode="bullBar_spotlightL_04_ring" 	lightTypes="0" />
+			<defaultLight 		shaderNode="bullBar_spotlightL_04_center" 	lightTypes="3" />
+			
+			<defaultLight 		shaderNode="rooftopWorkinglightsLB" 		lightTypes="4" intensity="10" />
+			<defaultLight 		shaderNode="rooftopWorkinglightsRB" 		lightTypes="4" intensity="10" />
+			
+			
 		</defaultLights>
 
 		<turnLights>
@@ -586,13 +600,14 @@
 		</turnLights>
 
 		<reverseLights>
-			<reverseLight 		shaderNode="normalVehicle_reverseLightL"/>
-			<reverseLight 		shaderNode="normalVehicle_reverseLightR"/>
-			<reverseLight 		shaderNode="rooftopWorkinglightsLB"/>
-			<reverseLight 		shaderNode="rooftopWorkinglightsRB"/>
+			<reverseLight 		shaderNode="normalVehicle_reverseLightL" 	intensity="10" />
+			<reverseLight 		shaderNode="normalVehicle_reverseLightR" 	intensity="10" />
+			
+			<reverseLight 		shaderNode="rooftopWorkinglightsLB" 		intensity="10" />
+			<reverseLight 		shaderNode="rooftopWorkinglightsRB" 		intensity="10" />
 
-			<reverseLight 		shaderNode="reverseLight_balerl_conf_L1" intensity="10" />
-			<reverseLight 		shaderNode="reverseLight_balerl_conf_R1" intensity="10" />
+			<reverseLight 		shaderNode="reverseLight_balerl_conf_L1" 	intensity="10" />
+			<reverseLight 		shaderNode="reverseLight_balerl_conf_R1" 	intensity="10" />
 		</reverseLights>
 
 		<sounds>
@@ -924,7 +939,6 @@
             <objectChange node="comfortCab_interiorLights"			visibilityActive="true" 				visibilityInactive="false"/>
             <objectChange node="comfortCab_speakers" 				visibilityActive="true" 				visibilityInactive="false"/>
 
-            <objectChange node="comfortCab_staticLights" 			visibilityActive="true" 				visibilityInactive="false"/>
             <objectChange node="comfortCab_spotlights_real" 		visibilityActive="true" 				visibilityInactive="false"/>
 
             <objectChange node="comfortCab_beacons" 				visibilityActive="true" 				visibilityInactive="false"/>
@@ -958,10 +972,6 @@
 		<design2Configuration name="$l10n_configuration_bullbar_bullbar" price="1000">
 			<objectChange node="bullBar" 							visibilityActive="true" 				visibilityInactive="false"/>
 			<objectChange node="bullBar_lights" 					visibilityActive="true" 				visibilityInactive="false"/>
-			<objectChange node="bullBar_spotlightL_01" 				visibilityActive="true" 				visibilityInactive="false"/>
-			<objectChange node="bullBar_spotlightL_02" 				visibilityActive="true" 				visibilityInactive="false"/>
-			<objectChange node="bullBar_spotlightR_01" 				visibilityActive="true" 				visibilityInactive="false"/>
-			<objectChange node="bullBar_spotlightR_02" 				visibilityActive="true" 				visibilityInactive="false"/>
 			<objectChange node="bullBar_lights_real" 				visibilityActive="true" 				visibilityInactive="false"/>
 		</design2Configuration>
 		<design2Configuration name="$l10n_configuration_bullbar_stonecatcher" price="500">
@@ -971,10 +981,6 @@
 			<objectChange node="bullBar" 							visibilityActive="true" 				visibilityInactive="false"/>
 			<objectChange node="stoneCatcher" 						visibilityActive="true" 				visibilityInactive="false"/>
 			<objectChange node="bullBar_lights" 					visibilityActive="true" 				visibilityInactive="false"/>
-			<objectChange node="bullBar_spotlightL_01" 				visibilityActive="true" 				visibilityInactive="false"/>
-			<objectChange node="bullBar_spotlightL_02" 				visibilityActive="true" 				visibilityInactive="false"/>
-			<objectChange node="bullBar_spotlightR_01" 				visibilityActive="true" 				visibilityInactive="false"/>
-			<objectChange node="bullBar_spotlightR_02" 				visibilityActive="true" 				visibilityInactive="false"/>
 			<objectChange node="bullBar_lights_real" 				visibilityActive="true" 				visibilityInactive="false"/>
 		</design2Configuration>
 	</design2Configurations>
@@ -1157,6 +1163,10 @@
 		
         <i3dMapping id="normalVehicle_chassis" 					node="0>11|0" />
 		
+        <i3dMapping id="normalVehicle_reverseLights" 			node="0>11|0|0|4" />
+        <i3dMapping id="normalVehicle_reverseLightL" 			node="0>11|0|0|4|0|1" />
+        <i3dMapping id="normalVehicle_reverseLightR" 			node="0>11|0|0|4|1|1" />
+		
         <i3dMapping id="backElectric" 							node="0>11|0|4|7|0|0|0" />
         <i3dMapping id="hydraulic01_out" 						node="0>11|0|4|7|0|1|0" />
         <i3dMapping id="hydraulic01_in" 						node="0>11|0|4|7|0|2|0" />
@@ -1171,7 +1181,16 @@
         <i3dMapping id="balerVehicle_licenseplateB" 			node="0>11|1|0|0|5"/>
         <i3dMapping id="Daf Logo" 								node="0>11|1|0|1|2"/>
         <i3dMapping id="bullBar" 								node="0>11|1|0|2"/>
-        <i3dMapping id="bullBar_lights" 						node="0>11|1|0|3"/>
+		
+        <i3dMapping id="bullBar_lights" 						node="0>11|1|0|3"/>		
+		<i3dMapping id="bullBar_spotlightL_01_ring" 			node="0>11|1|0|3|0|0" />
+		<i3dMapping id="bullBar_spotlightL_01_center" 			node="0>11|1|0|3|0|1" />
+		<i3dMapping id="bullBar_spotlightL_02_ring" 			node="0>11|1|0|3|1|0" />
+		<i3dMapping id="bullBar_spotlightL_02_center" 			node="0>11|1|0|3|1|1" />
+		<i3dMapping id="bullBar_spotlightL_03_ring" 			node="0>11|1|0|3|2|0" />
+		<i3dMapping id="bullBar_spotlightL_03_center" 			node="0>11|1|0|3|2|1" />
+		<i3dMapping id="bullBar_spotlightL_04_ring" 			node="0>11|1|0|3|3|0" />
+		<i3dMapping id="bullBar_spotlightL_04_center" 			node="0>11|1|0|3|3|1" />
 		
         <i3dMapping id="standardLight_real" 					node="0>12|0|0" />
         <i3dMapping id="frontLight_real" 						node="0>12|0|3|0" />
@@ -1235,10 +1254,10 @@
 		
 		<i3dMapping id="normaVehicle_spoilerskirts" 			node="0>13|0|7|2" />
 		
-        <i3dMapping id="roofLightstaticR_01" 					node="0>13|0|7|4|0" /> <!-- possible remove because of new lights -->
-        <i3dMapping id="roofLightstaticR_02" 					node="0>13|0|7|4|1" /> <!-- possible remove because of new lights -->
-        <i3dMapping id="roofLightstaticL_02" 					node="0>13|0|7|4|2" /> <!-- possible remove because of new lights -->
-        <i3dMapping id="roofLightstaticL_01" 					node="0>13|0|7|4|3" /> <!-- possible remove because of new lights -->
+        <i3dMapping id="roofLightstaticR_01" 					node="0>13|0|7|4|0" />
+        <i3dMapping id="roofLightstaticR_02" 					node="0>13|0|7|4|1" />
+        <i3dMapping id="roofLightstaticL_02" 					node="0>13|0|7|4|2" />
+        <i3dMapping id="roofLightstaticL_01" 					node="0>13|0|7|4|3" />
 		
         <i3dMapping id="lightBox_space_real" 					node="0>13|0|7|5|2" />
         <i3dMapping id="normalVehicle_shortSpoilers" 			node="0>13|0|7|6"/>
@@ -1294,10 +1313,11 @@
 		<i3dMapping id="mirrorLightR" 							node="0>13|0|12|0|2|1" />
 		
         <i3dMapping id="spaceCab_staticLights" 					node="0>13|0|12|1|0" />
-        <i3dMapping id="comfortCab_staticLights" 				node="0>13|0|12|1|1" />
 		
-        <i3dMapping id="comfortHellaL" 							node="0>13|0|12|1|1|0" />
-        <i3dMapping id="comfortHellaR" 							node="0>13|0|12|1|1|1" />
+        <i3dMapping id="comfortHellaL_ring" 					node="0>13|0|8|0|0|0|0|0" />
+        <i3dMapping id="comfortHellaL_center" 					node="0>13|0|8|0|0|0|0|1" />
+        <i3dMapping id="comfortHellaR_ring" 					node="0>13|0|8|0|0|0|1|0" />
+        <i3dMapping id="comfortHellaR_center" 					node="0>13|0|8|0|0|0|1|1" />
 		
         <i3dMapping id="spaceLightL_02_Static" 					node="0>13|0|12|1|0|0|0|0" />
         <i3dMapping id="spaceLightR_02_Static" 					node="0>13|0|12|1|0|1|0|0" />
@@ -1307,8 +1327,8 @@
         <i3dMapping id="fenderTurnlightR" 						node="0>13|0|12|2|0" />
         <i3dMapping id="fenderTurnlightL" 						node="0>13|0|12|3|0" />
 		
-        <i3dMapping id="rooftopWorkinglightsLB" 				node="0>13|0|12|4|0" />
-        <i3dMapping id="rooftopWorkinglightsRB" 				node="0>13|0|12|4|1" />
+        <i3dMapping id="rooftopWorkinglightsLB" 				node="0>13|0|8|0|0|1|0|1" />
+        <i3dMapping id="rooftopWorkinglightsRB" 				node="0>13|0|8|0|0|1|1|1" />
 		
 		<i3dMapping id="dashboardLight_beam" 					node="0>13|0|12|5" />
 		<i3dMapping id="dashboardLight_turnL" 					node="0>13|0|12|6|0" />
@@ -1506,19 +1526,14 @@
 		
 		<i3dMapping id="beamLightL_static" 						node="0>14|1|0|0|0" />
 		<i3dMapping id="beamLightR_static" 						node="0>14|1|1|0|0" />
-		
-		<i3dMapping id="bullBar_spotlightL_01" 					node="0>14|1|2" />
-		<i3dMapping id="bullBar_spotlightL_02" 					node="0>14|1|3" />
-		<i3dMapping id="bullBar_spotlightR_01" 					node="0>14|1|4" />
-		<i3dMapping id="bullBar_spotlightR_02" 					node="0>14|1|5" />
 	
         
         <i3dMapping id="turnLightRF_static" 					node="0>14|3|0" />
         <i3dMapping id="turnLightLF_static" 					node="0>14|4|0" />
 		
-        <i3dMapping id="normalVehicle_reverseLights" 			node="0>14|5" />
-        <i3dMapping id="normalVehicle_reverseLightL" 			node="0>14|5|0" />
-        <i3dMapping id="normalVehicle_reverseLightR" 			node="0>14|5|1" />
+        <i3dMapping id="normalVehicle_reverseLights" 			node="0>11|0|0|4" />
+        <i3dMapping id="normalVehicle_reverseLightL" 			node="0>11|0|0|4|0|1" />
+        <i3dMapping id="normalVehicle_reverseLightR" 			node="0>11|0|0|4|1|1" />
 		
         <i3dMapping id="rearLight_normal_conf_shared" 			node="0>14|6" />
         <i3dMapping id="rearLight_normal_conf_L1" 				node="0>14|6|0" />
