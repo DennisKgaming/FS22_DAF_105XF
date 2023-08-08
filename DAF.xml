@@ -74,7 +74,7 @@
 					<pickupTrigger node="pickupTriggerLeft"/>
 					<pickupTrigger node="pickupTriggerRight"/>
 				</pickupTriggers>
-                <loadArea baseNode="loadingBase" leftRightCornerOffset="1.25 0 0" lenght="7.00" width="2.5" height="3.00"/>
+                <loadArea baseNode="loadingBase" leftRightCornerOffset="1.25 0 0" lenght="7.00" width="2.5" height="3.50"/>
                 <!-- <autoLoadObjectSettings>
                     <autoLoadObjectSetting name="squarebale120" maxObjects="90"/>
                 </autoLoadObjectSettings> -->
