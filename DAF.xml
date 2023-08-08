@@ -422,6 +422,11 @@
 		 
 		<sharedLight linkNode="reverseLight_balerl_conf_L1"	node="0" filename="Lights/workingLight10.xml"/>
 		<sharedLight linkNode="reverseLight_balerl_conf_R1"	node="0" filename="Lights/workingLight10.xml"/>
+		
+		<sharedLight linkNode="comfortCab_interiorLightL_static"	node="0" filename="Lights/rearLight20.xml"/>
+		<sharedLight linkNode="comfortCab_interiorLightR_static"	node="0" filename="Lights/rearLight20.xml"/>
+		<sharedLight linkNode="spaceCab_interiorRooflightL_Static"	node="0" filename="Lights/rearLight20.xml"/>
+		<sharedLight linkNode="spaceCab_interiorRooflightR_Static"	node="0" filename="Lights/rearLight20.xml"/>
 
 		<states>
 			<aiState lightTypes="0" lightTypesWork="0 1"/>
@@ -549,12 +554,10 @@
 			<defaultLight 		shaderNode="comfortHellaL_center" 			lightTypes="3" intensity="5" />
 			<defaultLight 		shaderNode="comfortHellaR_ring" 			lightTypes="0" />
 			<defaultLight 		shaderNode="comfortHellaR_center" 			lightTypes="3" intensity="5" />
+			
 			<!--ComfortCab-->
 
-			<!--SpaceCab-->
-			<defaultLight 		shaderNode="interiorRooflightL_Static" 		lightTypes="0" />
-			<defaultLight 		shaderNode="interiorRooflightR_Static" 		lightTypes="0" />
-						
+			<!--SpaceCab-->				
 			<defaultLight 		shaderNode="spaceLightL_02_Static" 			lightTypes="2" intensity="5" />
 			<defaultLight 		shaderNode="spaceLightR_02_Static" 			lightTypes="2" intensity="5" />
 			<defaultLight 		shaderNode="spaceLightL_01_Static" 			lightTypes="2" intensity="5" />
@@ -1372,15 +1375,15 @@
         <i3dMapping id="comfortCab_curtains" 					node="0>13|0|13|6" />
 		
         <i3dMapping id="comfortCab_interiorLights" 				node="0>13|0|13|7" />
-        <i3dMapping id="comfortCab_interiorLightL" 				node="0>13|0|13|7|0|0" />
-        <i3dMapping id="comfortCab_interiorLightR" 				node="0>13|0|13|7|1|0" />		
+        <i3dMapping id="comfortCab_interiorLightL_static" 		node="0>13|0|13|7|0" />
+        <i3dMapping id="comfortCab_interiorLightR_static" 		node="0>13|0|13|7|1" />		
         <i3dMapping id="comfortCab_InteriorLight_01_real" 		node="0>13|0|13|7|2" />
         <i3dMapping id="comfortCab_InteriorLight_02_real" 		node="0>13|0|13|7|3" />
         <i3dMapping id="comfortCab_InteriorLight_03_real" 		node="0>13|0|13|7|4" />
 		
         <i3dMapping id="spaceCab_parts" 						node="0>13|0|13|8" />
-        <i3dMapping id="interiorRooflightL_Static" 				node="0>13|0|13|8|3|0|0" />
-        <i3dMapping id="interiorRooflightR_Static" 				node="0>13|0|13|8|3|1|0" />
+        <i3dMapping id="spaceCab_interiorRooflightL_Static" 	node="0>13|0|13|8|3|0" />
+        <i3dMapping id="spaceCab_interiorRooflightR_Static" 	node="0>13|0|13|8|3|1" />
         <i3dMapping id="spaceCab_InteriorLight_01_real" 		node="0>13|0|13|8|3|2" />
         <i3dMapping id="spaceCab_InteriorLight_02_real" 		node="0>13|0|13|8|3|3" />
         <i3dMapping id="spaceCab_InteriorLight_03_real" 		node="0>13|0|13|8|3|4" />
