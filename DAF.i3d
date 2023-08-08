@@ -670,7 +670,7 @@
   <Scene>
       <Shape shapeId="1" name="DAF_XF_105" dynamic="true" compound="true" collisionMask="2105410" density="0.7" clipDistance="300" nodeId="393" materialIds="127" castsShadows="true" receiveShadows="true" nonRenderable="true">
         <TransformGroup name="outdoorCameraTarget" translation="0 1.909 0.586" rotation="-24 180 0" nodeId="394">
-          <Camera name="outdoorCamera" translation="0.336955 3.56976 -4.10987" rotation="138.739 5.94286 177.345" nodeId="395" fov="54.432" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
+          <Camera name="outdoorCamera" translation="0.391103 3.89735 -4.4837" rotation="138.739 5.94286 177.345" nodeId="395" fov="54.432" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
           <TransformGroup name="raycastNode1" translation="2.34474e-07 1.75719 -2.15354" rotation="156 4.57591e-06 180" nodeId="396"/>
           <TransformGroup name="raycastNode2" translation="-7.42268e-08 1.83897 1.74817" rotation="156 4.57591e-06 180" nodeId="397"/>
           <TransformGroup name="raycastNode3" translation="-1.34003e-06 -3.64052 7.23772" rotation="156 4.57591e-06 180" nodeId="398"/>
