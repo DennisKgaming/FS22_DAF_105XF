@@ -634,17 +634,16 @@
         </dashboards>
     </lights>
 	
-	<!--
-    <licensePlates defaultPlacement="BOTH">
-        <licensePlate node="licensePlateFront" position="FRONT"  preferedType="SQUARISH" placementArea="0.1 0.15 0.1 0.15"/>
-        <licensePlate node="licensePlateBack"  position="BACK"   preferedType="SQUARISH" placementArea="0.1 0.17 0.1 0.17"/>
-        <licensePlate node="licensePlateBack2"  position="BACK"  preferedType="SQUARISH" placementArea="0.1 0.17 0.1 0.17"/>
-        <licensePlate node="licensePlateBack3"  position="BACK"  preferedType="SQUARISH" placementArea="0.1 0.17 0.1 0.17"/>
-    </licensePlates>
-    -->
 	
-	<!-- 
-	<speedRotatingParts>
+    <licensePlates defaultPlacement="BOTH">
+        <licensePlate node="licensePlateF" 					position="FRONT"  	preferedType="ELONGATED" placementArea="0.1 0.25 0.1 0.17"/>
+        <licensePlate node="normalVehicle_licenseplateB"	position="BACK"   	preferedType="ELONGATED" placementArea="0.1 0.25 0.1 0.17"/>
+        <licensePlate node="balerVehicle_licenseplateB"  	position="BACK"  	preferedType="ELONGATED" placementArea="0.1 0.25 0.1 0.17"/>
+    </licensePlates>
+   
+	
+	
+	<!-- <speedRotatingParts>
         <speedRotatingPart node="JointFront" radius="0.1" />
         <speedRotatingPart node="JointRear" radius="0.1" />
         <speedRotatingPart node="DriveshaftRear" radius="0.1" />
@@ -1013,8 +1012,6 @@
           <objectChange node="NormalplateNumberLightLB" 			visibilityActive="true" 				visibilityInactive="false"/>
           <objectChange node="NormalplateNumberLightRB" 			visibilityActive="true" 				visibilityInactive="false"/>
 		  
-          <!-- <objectChange node="turnLightR" 							visibilityActive="true" 				visibilityInactive="false"/>
-          <objectChange node="turnLightL" 							visibilityActive="true" 				visibilityInactive="false"/> -->
           <objectChange node="normalVehicle_reverseLights" 			visibilityActive="true" 				visibilityInactive="false"/>
           <objectChange node="rearLight_normal_conf_shared" 		visibilityActive="true" 				visibilityInactive="false"/>
           <!--StaticLights-->
@@ -1026,7 +1023,6 @@
 		  <objectChange node="normaVehicle_spoilerskirts" 			visibilityActive="true" 				visibilityInactive="false"/>
           <objectChange node="normalvehicle_fenderSpoiler" 			visibilityActive="true" 				visibilityInactive="false"/>
           <objectChange node="normalVehicle_shortSpoilers" 			visibilityActive="false" 				visibilityInactive="true"/>
-          <objectChange node="normalVehicle_licenseplateF" 			visibilityActive="true" 				visibilityInactive="false"/>
           <objectChange node="normalVehicle_licenseplateB" 			visibilityActive="true" 				visibilityInactive="false"/>
           <objectChange node="normalVehicle_brakeLights_real" 		translationActive="0 0 0"/>
           <objectChange node="normalVehicle_reverseLights_real" 	translationActive="0 -0.046 4.046"/>
@@ -1071,7 +1067,6 @@
           <objectChange node="balerVehicle_turnR_real" 				visibilityActive="true" 				visibilityInactive="false"/>
           <objectChange node="balerVehicle_turnL_real" 				visibilityActive="true" 				visibilityInactive="false"/>
           <objectChange node="sideBarlights_baler_real" 			visibilityActive="true" 				visibilityInactive="false"/>
-          <objectChange node="balerVehicle_licenseplateF" 			visibilityActive="true" 				visibilityInactive="false"/>
           <objectChange node="balerVehicle_licenseplateB" 			visibilityActive="true" 				visibilityInactive="false"/>
           <objectChange node="ramps" 								visibilityActive="true" 				visibilityInactive="false"/>
           <objectChange node="Daf Logo" 							visibilityActive="true" 				visibilityInactive="false"/>
@@ -1178,10 +1173,10 @@
         <i3dMapping id="hydraulic02_out" 						node="0>11|0|4|7|0|5|0" />
         <i3dMapping id="hydraulic02_in" 						node="0>11|0|4|7|0|6|0" />
 		
-        <i3dMapping id="normalVehicle_licenseplateF" 			node="0>11|1|0|0|2"/>
+        <i3dMapping id="licensePlateF" 							node="0>11|1|0|0|2"/>
         <i3dMapping id="normalVehicle_licenseplateB" 			node="0>11|1|0|0|3"/>
-        <i3dMapping id="balerVehicle_licenseplateF" 			node="0>11|1|0|0|4"/>
-        <i3dMapping id="balerVehicle_licenseplateB" 			node="0>11|1|0|0|5"/>
+        <i3dMapping id="balerVehicle_licenseplateB" 			node="0>11|1|0|0|4"/>
+			
         <i3dMapping id="Daf Logo" 								node="0>11|1|0|1|2"/>
         <i3dMapping id="bullBar" 								node="0>11|1|0|2"/>
 		
@@ -1455,6 +1450,7 @@
 		<i3dMapping id="fogLight_L_01_glassStatic"				node="0>14|0|1|2|0|0" />
 		<i3dMapping id="fogLight_R_01_glassStatic"				node="0>14|0|1|3|0|0" />
 		
+		<i3dMapping id="BumperNormal" 							node="0>14|0|2|0" />
 		<i3dMapping id="NormalbumperL" 							node="0>14|0|2|0|0" />
 		<i3dMapping id="NormalbumperR" 							node="0>14|0|2|0|1" />
 		
@@ -1464,12 +1460,7 @@
 		<i3dMapping id="NormalplateNumberLightRB" 				node="0>14|0|2|1|3" />
 		<i3dMapping id="BalerplateNumberLightLB" 				node="0>14|0|2|1|4" />
 		<i3dMapping id="BalerplateNumberLightRB" 				node="0>14|0|2|1|5" />
-		
-		
-		<i3dMapping id="BumperNormal" 							node="0>14|0|2|0" />
-		<i3dMapping id="NormalplateNumberLightLB" 				node="0>14|0|2|1|2" />
-		<i3dMapping id="NormalplateNumberLightRB" 				node="0>14|0|2|1|3" />
-		
+				
 		<i3dMapping id="sideBarLight_normal" 					node="0>14|0|2|2" />
 		<i3dMapping id="sideBarlightL_normal_01" 				node="0>14|0|2|2|0|0" />
 		<i3dMapping id="sideBarlightL_normal_02" 				node="0>14|0|2|2|0|1" />
