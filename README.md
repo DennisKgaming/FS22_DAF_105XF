@@ -64,3 +64,5 @@ Comming soon
 We work long, hard, in our own free time at developing and improving our mods. If you like the mods, we would appreciate you support:
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=3D2ZJ2CPSM5QA)
+
+Keep in mind. Donations are never required to use any of the mods.
