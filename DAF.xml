@@ -396,6 +396,9 @@
 		<sharedLight linkNode="sideBarlightR_baler_04" 		node="0" filename="Lights/sideMarker11Orange.xml"/>
 		<sharedLight linkNode="sideBarlightR_baler_05" 		node="0" filename="Lights/sideMarker11Orange.xml"/>
 		<sharedLight linkNode="sideBarlightR_baler_06" 		node="0" filename="Lights/sideMarker11Orange.xml"/>
+		
+		<sharedLight linkNode="countourLightNormalL_01" 	node="0" filename="Lights/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="countourLightNormalR_01" 	node="0" filename="Lights/sideMarker11Orange.xml"/>
 		 
 		<sharedLight linkNode="countourLightBalerL_01" 		node="0" filename="Lights/sideMarker05Orange.xml"/>
 		<sharedLight linkNode="countourLightBalerL_02" 		node="0" filename="Lights/sideMarker05Orange.xml"/>
@@ -1525,6 +1528,9 @@
 		<i3dMapping id="sideMarkersBaler" 						node="0>14|0|2|6" />
 		<i3dMapping id="sideMarkerBalerL_01"					node="0>14|0|2|6|0|0" />
 		<i3dMapping id="sideMarkerBalerR_01"					node="0>14|0|2|6|1|0" />
+		
+		<i3dMapping id="countourLightNormalL_01"				node="0>14|0|2|7|0|0" />
+		<i3dMapping id="countourLightNormalR_01"				node="0>14|0|2|7|1|0" />
 		
 		<i3dMapping id="bumperStickL_red"						node="0>14|0|3|0" />
 		<i3dMapping id="bumperStickL_white"						node="0>14|0|3|1" />
