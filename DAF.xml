@@ -442,6 +442,7 @@
 			<low>
 				<light node="standardLight_real"				lightTypes="0" />
 				<light node="lightBox_space_real"				lightTypes="0" />
+				<light node="lightBox_comfortCab_real"			lightTypes="0" />
 				<light node="NormalLight_real"					lightTypes="0" />
 				<light node="BalerLight_real"					lightTypes="0" />
 				<light node="Dash_real"							lightTypes="0" />
@@ -483,6 +484,7 @@
 			</low>
 			<high>
 				<light node="lightBox_space_real"				lightTypes="0" />
+				<light node="lightBox_comfortCab_real"			lightTypes="0" />
 				<light node="accessorieLight_real"				lightTypes="0"/>
 			
 				<light node="comfortCab_InteriorLight_01_real"	lightTypes="0" />
@@ -949,6 +951,8 @@
             <objectChange node="comfortCab_Sunvisor_shared" 			visibilityActive="true" 				visibilityInactive="false"/>
 
             <objectChange node="comfortCab_spotlights" 				visibilityActive="true" 				visibilityInactive="false"/>
+            <objectChange node="lightBox_comfortCab" 				visibilityActive="true" 				visibilityInactive="false"/>
+						
 			<!--Collisions-->
             <objectChange node="colPartSpace" 						compoundChildActive="false" />
 			<!--Collisions-->
@@ -965,6 +969,7 @@
             <objectChange node="spaceCab_speakers" 					visibilityActive="true" 				visibilityInactive="false"/>
             <objectChange node="spaceCab_beacons" 					visibilityActive="true" 				visibilityInactive="false"/>
 			<objectChange node="spaceSunvisor_shared" 				visibilityActive="true" 				visibilityInactive="false"/>
+			<objectChange node="lightBox_spaceCab" 					visibilityActive="true" 				visibilityInactive="false"/>
         </designConfiguration>
     </designConfigurations>
 
@@ -1257,8 +1262,7 @@
         <i3dMapping id="roofLightstaticL_02" 					node="0>13|0|7|4|2" />
         <i3dMapping id="roofLightstaticL_01" 					node="0>13|0|7|4|3" />
 		
-        <i3dMapping id="lightBox_space_real" 					node="0>13|0|7|5|2" />
-        <i3dMapping id="normalVehicle_shortSpoilers" 			node="0>13|0|7|6"/>
+        <i3dMapping id="normalVehicle_shortSpoilers" 			node="0>13|0|7|5"/>
 		
         <i3dMapping id="comfortCab_spotlights" 					node="0>13|0|8"/>
 		
@@ -1419,6 +1423,15 @@
         <i3dMapping id="comfortCab_antennaSecR_03" 				node="0>13|0|16|1|0|1|0|0" />
         <i3dMapping id="comfortCab_antennaSecR_04" 				node="0>13|0|16|1|0|1|0|0|0" />
         <i3dMapping id="comfortCab_antennaTopR" 				node="0>13|0|16|1|0|1|0|0|0|0" />
+			
+		
+        <i3dMapping id="lightBox_spaceCab" 						node="0>13|0|18|0" />
+        <i3dMapping id="lightBox_Logistics_space" 				node="0>13|0|18|0|1" /> <!-- Company Lizard Logistics -->
+        <i3dMapping id="lightBox_space_real" 					node="0>13|0|18|0|2" />
+        <i3dMapping id="lightBox_light_Logistics_space" 		node="0>13|0|18|0|2|0|0" /> <!-- Company Lizard Logistics -->
+		
+        <i3dMapping id="lightBox_comfortCab" 					node="0>13|0|18|1" />
+        <i3dMapping id="lightBox_comfortCab_real" 				node="0>13|0|18|1|2" />
 		
         <i3dMapping id="normalVehicle_conf" 					node="0>13|1" />		
         <i3dMapping id="exhaustParticlesNormalR" 				node="0>13|1|7|14" />
