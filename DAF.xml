@@ -323,7 +323,7 @@
 	
 		<sharedLight linkNode="fenderTurnlightR" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange_right.xml"/>
 		<sharedLight linkNode="fenderTurnlightL" 			node="0" filename="$data/shared/assets/lights/lizard/rearLight23Orange_left.xml"/>
-			
+					
 		<!-- Rear lights normal configuration -->
 		<sharedLight linkNode="rearLight_normal_conf_L1" 	node="0" filename="Lights/rearLight10_left.xml"/>
 		<sharedLight linkNode="rearLight_normal_conf_L2" 	node="0" filename="Lights/rearLight10_left.xml"/>
@@ -601,9 +601,9 @@
 		</defaultLights>
 
 		<turnLights>
-			<turnLightLeft 		shaderNode="fenderTurnlightL"/>
+			<!-- <turnLightLeft 		shaderNode="fenderTurnlightL"/> -->
 			<turnLightLeft 		shaderNode="turnLightLF_static"/>
-			<turnLightRight 	shaderNode="fenderTurnlightR"/>
+			<!-- <turnLightRight 	shaderNode="fenderTurnlightR"/> -->
 			<turnLightRight 	shaderNode="turnLightRF_static"/>
 		</turnLights>
 
